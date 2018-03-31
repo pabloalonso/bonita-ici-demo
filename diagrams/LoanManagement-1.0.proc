@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_w6AT8DNIEeiyXpBWBWhfJQ" name="LoanManagement" author="bonita" bonitaVersion="7.6.3" bonitaModelVersion="7.6.0-002" configId="ACED000574001E4C6F616E4D616E6167656D656E74372E362E302D303032372E362E337370">
-    <elements xmi:type="process:Pool" xmi:id="_w6AT8TNIEeiyXpBWBWhfJQ" name="RequestLoan" welcomePageInternal="false" basedOnLookAndFeel="Default Application" version="1.0.0">
+    <elements xmi:type="process:Pool" xmi:id="_w6AT8TNIEeiyXpBWBWhfJQ" name="RequestLoan" welcomePageInternal="false" basedOnLookAndFeel="Default Application" version="1.0.0" displayName="Request a Loan">
       <elements xmi:type="process:Lane" xmi:id="_w6AT8jNIEeiyXpBWBWhfJQ" name="Customer" actor="_w6AUGzNIEeiyXpBWBWhfJQ">
         <elements xmi:type="process:StartEvent" xmi:id="_w6AT8zNIEeiyXpBWBWhfJQ" name="Request a Loan" outgoing="_irwckDP4EeiyXpBWBWhfJQ">
           <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_w6AT9DNIEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
@@ -14,6 +14,26 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_w6AT-jNIEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_w6AT-zNIEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_w6AT_DNIEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_KjGCgDUAEeiV2KwRHwWs2g" name="getTaskId" definitionId="scripting-groovy" event="ON_ENTER" definitionVersion="1.0.2">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_KjGCgTUAEeiV2KwRHwWs2g" definitionId="scripting-groovy" version="1.0.2" modelVersion="7.6.0-002">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_KjGCgjUAEeiV2KwRHwWs2g" key="script">
+                <expression xmi:type="expression:Expression" xmi:id="_KjGCgzUAEeiV2KwRHwWs2g" name="computeTaskURL()" content="String.format(&quot;/bonita/portal/resource/taskInstance/RequestLoan/1.0.0/Complete%%20Loan%%20application/content/?id=%d&amp;displayConfirmation=false&quot;, activityInstanceId)&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_KjGChDUAEeiV2KwRHwWs2g" name="activityInstanceId" content="activityInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_KjGChTUAEeiV2KwRHwWs2g">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_KjGChjUAEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_KjGChzUAEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_KjGCiDUAEeiV2KwRHwWs2g" name="result" content="result" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                <referencedElements xmi:type="definition:Output" xmi:id="_KjGCiTUAEeiV2KwRHwWs2g" name="result" type="java.lang.Object"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_KjGCijUAEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setTaskURL">
+                <inputTypes>java.lang.String</inputTypes>
+              </operator>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_ViMcATNNEeiyXpBWBWhfJQ">
             <leftOperand xmi:type="expression:Expression" xmi:id="_ViMcAjNNEeiyXpBWBWhfJQ" name="customerDocuments" content="customerDocuments" type="DOCUMENT_REF_TYPE" returnType="java.util.List">
               <referencedElements xmi:type="process:Document" xmi:id="_ViMcAzNNEeiyXpBWBWhfJQ" name="customerDocuments" multiple="true"/>
@@ -22,6 +42,15 @@
               <referencedElements xmi:type="process:ContractInput" xmi:id="_ViMcBTNNEeiyXpBWBWhfJQ" name="customerDocumentsDocumentInput" type="FILE" multiple="true"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_ViMcBjNNEeiyXpBWBWhfJQ" type="DOCUMENT_LIST_SET"/>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_U-FjEDTyEeiV2KwRHwWs2g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_U-FjETTyEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VpKgYDTyEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_U-FjEjTyEeiV2KwRHwWs2g" name="Validation Required" content="Validation Required"/>
+            <operator xmi:type="expression:Operator" xmi:id="_U-FjEzTyEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setStatus">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_w6AT_TNIEeiyXpBWBWhfJQ" name="loanRequested - Loan#isAllDocumentProvided" content="isAllDocumentProvided" interpreter="GROOVY" type="TYPE_JAVA_METHOD_CALL" returnType="java.lang.Boolean" returnTypeFixed="true">
             <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_XQcN4DNKEeiyXpBWBWhfJQ" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
@@ -33,7 +62,7 @@
           <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_w6AUAjNIEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <confirmationMessage xmi:type="expression:Expression" xmi:id="_w6AUAzNIEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_w6AUBDNIEeiyXpBWBWhfJQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_szXzoDTmEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_9mGq0DUDEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_w6AUBjNIEeiyXpBWBWhfJQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_ViMcADNNEeiyXpBWBWhfJQ" name="customerDocumentsDocumentInput" type="FILE" multiple="true"/>
@@ -45,14 +74,47 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_5ajt0TNKEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_5ajt0DNKEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_5ajt0jNKEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_YvzY0DUAEeiV2KwRHwWs2g" name="computeTaskURL" definitionId="scripting-groovy-script" event="ON_ENTER" definitionVersion="1.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_YvzY0TUAEeiV2KwRHwWs2g" definitionId="scripting-groovy-script" version="1.0.1" modelVersion="7.6.0-002">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_YvzY0jUAEeiV2KwRHwWs2g" key="script">
+                <expression xmi:type="expression:Expression" xmi:id="_YvzY0zUAEeiV2KwRHwWs2g" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_YvzY1DUAEeiV2KwRHwWs2g" key="variables"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_YvzY1TUAEeiV2KwRHwWs2g" key="fakeScriptExpression">
+                <expression xmi:type="expression:Expression" xmi:id="_YvzY1jUAEeiV2KwRHwWs2g" name="computeTaskURL()" content="String.format(&quot;/bonita/portal/resource/taskInstance/RequestLoan/1.0.0/Sign%%20contract/content/?id=%d&amp;displayConfirmation=false&quot;, activityInstanceId)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_YvzY1zUAEeiV2KwRHwWs2g" name="activityInstanceId" content="activityInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_YvzY2DUAEeiV2KwRHwWs2g">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_YvzY2TUAEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_YvzY2jUAEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_YvzY2zUAEeiV2KwRHwWs2g" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
+                <referencedElements xmi:type="definition:Output" xmi:id="_YvzY3DUAEeiV2KwRHwWs2g" name="result" type="java.lang.Object"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_YvzY3TUAEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setTaskURL">
+                <inputTypes>java.lang.String</inputTypes>
+              </operator>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_ojfisjNNEeiyXpBWBWhfJQ">
             <leftOperand xmi:type="expression:Expression" xmi:id="_ojfiszNNEeiyXpBWBWhfJQ" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4dE4ADPxEeiyXpBWBWhfJQ" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_JE8x4DTyEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_ojfitTNNEeiyXpBWBWhfJQ" name="loanRequestedInput.signature" content="loanRequestedInput.signature" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_ojfitjNNEeiyXpBWBWhfJQ" name="loanRequestedInput" type="COMPLEX"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_ojfitzNNEeiyXpBWBWhfJQ" type="JAVA_METHOD" expression="setSignature">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_mfEREDTzEeiV2KwRHwWs2g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_mfERETTzEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_m4bzUDTzEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_mfEREjTzEeiV2KwRHwWs2g" name="Validate Signed Contract" content="Validate Signed Contract"/>
+            <operator xmi:type="expression:Operator" xmi:id="_mfEREzTzEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setStatus">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
@@ -67,7 +129,7 @@
           <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_5sytVDNKEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <confirmationMessage xmi:type="expression:Expression" xmi:id="_5sytVTNKEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_5sytXDNKEeiyXpBWBWhfJQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_szXzoTTmEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_9mGq0TUDEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_5sytWzNKEeiyXpBWBWhfJQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_ojfisDNNEeiyXpBWBWhfJQ" name="loanRequestedInput" type="COMPLEX">
@@ -93,6 +155,15 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_rM4JETP4EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_rM4JEDP4EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_rM4JEjP4EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_5xzGADTzEeiV2KwRHwWs2g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5xzGATTzEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_6ToAsDTzEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5xzGAjTzEeiV2KwRHwWs2g" name="today()" content="import java.time.LocalDate&#xA;&#xA;LocalDate.now();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate"/>
+            <operator xmi:type="expression:Operator" xmi:id="_5xzGAzTzEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setCloseDate">
+              <inputTypes>java.time.LocalDate</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_rM4JFDP4EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_rM4JFTP4EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_rM4JFjP4EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -116,7 +187,7 @@
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_A-d_lzQZEeiV2KwRHwWs2g">
               <leftOperand xmi:type="expression:Expression" xmi:id="_A-d_mDQZEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_A-d_mTQZEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_JE9Y8DTyEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
               </leftOperand>
               <rightOperand xmi:type="expression:Expression" xmi:id="_A-d_mjQZEeiV2KwRHwWs2g" name="result" content="result" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
                 <referencedElements xmi:type="definition:Output" xmi:id="_A-d_mzQZEeiV2KwRHwWs2g" name="result" type="java.lang.Object"/>
@@ -126,17 +197,27 @@
               </operator>
             </outputs>
           </connectors>
-          <connectors xmi:type="process:Connector" xmi:id="_3RNXoDQ6EeiV2KwRHwWs2g" name="startBot" definitionId="scripting-groovy" event="ON_FINISH" definitionVersion="1.0.2">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_3RNXoTQ6EeiV2KwRHwWs2g" definitionId="scripting-groovy" version="1.0.2" modelVersion="7.6.0-002">
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_3RNXojQ6EeiV2KwRHwWs2g" key="script">
-                <expression xmi:type="expression:Expression" xmi:id="_3RNXozQ6EeiV2KwRHwWs2g" name="startBotForCurrentInstance()" content="import org.bonitasoft.engine.bpm.process.ProcessDeploymentInfo&#xA;import org.bonitasoft.engine.search.SearchOptions&#xA;import org.bonitasoft.engine.search.SearchOptionsBuilder&#xA;import org.bonitasoft.engine.search.SearchResult&#xA;&#xA;def SearchOptions searchOptions = new SearchOptionsBuilder(0, 20).filter(&quot;name&quot;, &quot;LoanRequestBot&quot;).done();&#xA;&#xA;def SearchResult&lt;ProcessDeploymentInfo> searchResult = apiAccessor.getProcessAPI().searchProcessDeploymentInfos(searchOptions)&#xA;def processDefinitionId = searchResult.result.get(0).processId&#xA;def instantiationInputs = new HashMap();&#xA;instantiationInputs.put(&quot;processInstanceIdInput&quot;, processInstanceId)&#xA;instantiationInputs.put(&quot;amountInput&quot;, loanRequested.amount)&#xA;&#xA;apiAccessor.getProcessAPI().startProcessWithInputs(processDefinitionId, instantiationInputs)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_3RNXpDQ6EeiV2KwRHwWs2g" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_3RNXpTQ6EeiV2KwRHwWs2g" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="com.bonitasoft.engine.api.APIAccessor"/>
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_3RNXpjQ6EeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+          <connectors xmi:type="process:Connector" xmi:id="_Aql7EDT6EeiV2KwRHwWs2g" name="startBot" definitionId="scripting-groovy" event="ON_FINISH" definitionVersion="1.0.2">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_Aql7ETT6EeiV2KwRHwWs2g" definitionId="scripting-groovy" version="1.0.2" modelVersion="7.6.0-002">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Aql7EjT6EeiV2KwRHwWs2g" key="script">
+                <expression xmi:type="expression:Expression" xmi:id="_Aql7EzT6EeiV2KwRHwWs2g" name="startBotForCurrentInstance()" content="import org.bonitasoft.engine.bpm.process.ProcessDeploymentInfo&#xA;import org.bonitasoft.engine.search.SearchOptions&#xA;import org.bonitasoft.engine.search.SearchOptionsBuilder&#xA;import org.bonitasoft.engine.search.SearchResult&#xA;&#xA;if(botActivated) {&#xA;&#x9;&#xA;&#x9;def SearchOptions searchOptions = new SearchOptionsBuilder(0, 20).filter(&quot;name&quot;, &quot;LoanRequestBot&quot;).done();&#xA;&#x9;&#xA;&#x9;def SearchResult&lt;ProcessDeploymentInfo> searchResult = apiAccessor.getProcessAPI().searchProcessDeploymentInfos(searchOptions)&#xA;&#x9;def processDefinitionId = searchResult.result.get(0).processId&#xA;&#x9;def instantiationInputs = new HashMap();&#xA;&#x9;instantiationInputs.put(&quot;processInstanceIdInput&quot;, processInstanceId)&#xA;&#x9;instantiationInputs.put(&quot;amountInput&quot;, loanRequested.amount)&#xA;&#x9;&#xA;&#x9;apiAccessor.getProcessAPI().startProcessWithInputs(processDefinitionId, instantiationInputs)&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_Aql7FDT6EeiV2KwRHwWs2g" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_Aql7FTT6EeiV2KwRHwWs2g" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="com.bonitasoft.engine.api.APIAccessor"/>
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_AqmiIDT6EeiV2KwRHwWs2g" name="botActivated" typeClassname="java.lang.Boolean"/>
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_AqmiITT6EeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
                 </expression>
               </parameters>
             </configuration>
           </connectors>
+          <operations xmi:type="expression:Operation" xmi:id="_3aavMDUEEeiV2KwRHwWs2g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_3aavMTUEEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4BL0QDUEEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_3aavMjUEEeiV2KwRHwWs2g" name="Completing..." content="Completing..."/>
+            <operator xmi:type="expression:Operator" xmi:id="_3aavMzUEEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setStatus">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_ecp-4TP4EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_ecp-4jP4EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_ecp-4zP4EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -148,6 +229,15 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_O3z7gDP5EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_O3zUcTP5EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_O3z7gTP5EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_A9hs4DT0EeiV2KwRHwWs2g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_A9hs4TT0EeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Bqb2MDT0EeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_A9hs4jT0EeiV2KwRHwWs2g" name="today()" content="import java.time.LocalDate&#xA;&#xA;LocalDate.now();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate"/>
+            <operator xmi:type="expression:Operator" xmi:id="_A9hs4zT0EeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setCloseDate">
+              <inputTypes>java.time.LocalDate</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_O3z7gzP5EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_O3z7hDP5EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_O3z7hTP5EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -160,6 +250,13 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_ZIjykTP5EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_ZIjykzP5EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_cuZKwDT_EeiV2KwRHwWs2g" name="walter.bates" definitionId="single-user" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_cuZKwTT_EeiV2KwRHwWs2g" definitionId="single-user" version="1.0.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cuZKwjT_EeiV2KwRHwWs2g" key="userId">
+              <expression xmi:type="expression:Expression" xmi:id="_cuZKwzT_EeiV2KwRHwWs2g" name="4" content="4" returnType="java.lang.Long" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_ZAV6sDNJEeiyXpBWBWhfJQ" name="Customer Councellor" actor="_w6AUGzNIEeiyXpBWBWhfJQ">
         <elements xmi:type="process:Task" xmi:id="_ahXBgDNJEeiyXpBWBWhfJQ" name="Validate Loan application" outgoing="_brKswDNKEeiyXpBWBWhfJQ" incoming="_2JPwADP4EeiyXpBWBWhfJQ" overrideActorsOfTheLane="false">
@@ -167,9 +264,33 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_UzDa4TNJEeiyXpBWBWhfJQ" name="Check documents are valid" content="Check documents are valid" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_UzDa4DNJEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_UzDa4jNJEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_NCTP4DUAEeiV2KwRHwWs2g" name="computeTaskURL" definitionId="scripting-groovy-script" event="ON_ENTER" definitionVersion="1.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_NCTP4TUAEeiV2KwRHwWs2g" definitionId="scripting-groovy-script" version="1.0.1" modelVersion="7.6.0-002">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_NCTP4jUAEeiV2KwRHwWs2g" key="script">
+                <expression xmi:type="expression:Expression" xmi:id="_NCTP4zUAEeiV2KwRHwWs2g" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_NCTP5DUAEeiV2KwRHwWs2g" key="variables"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_NCTP5TUAEeiV2KwRHwWs2g" key="fakeScriptExpression">
+                <expression xmi:type="expression:Expression" xmi:id="_NCTP5jUAEeiV2KwRHwWs2g" name="computeTaskURL()" content="String.format(&quot;/bonita/portal/resource/taskInstance/RequestLoan/1.0.0/Validate%%20Loan%%20application/content/?id=%d&amp;displayConfirmation=false&quot;, activityInstanceId)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_NCTP5zUAEeiV2KwRHwWs2g" name="activityInstanceId" content="activityInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_NCTP6DUAEeiV2KwRHwWs2g">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_NCTP6TUAEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_NCTP6jUAEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_NCTP6zUAEeiV2KwRHwWs2g" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
+                <referencedElements xmi:type="definition:Output" xmi:id="_NCTP7DUAEeiV2KwRHwWs2g" name="result" type="java.lang.Object"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_NCTP7TUAEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setTaskURL">
+                <inputTypes>java.lang.String</inputTypes>
+              </operator>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_-CtIMjNLEeiyXpBWBWhfJQ">
             <leftOperand xmi:type="expression:Expression" xmi:id="_-CtIMzNLEeiyXpBWBWhfJQ" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4dE4ATPxEeiyXpBWBWhfJQ" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_JE9Y8TTyEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_-CtINTNLEeiyXpBWBWhfJQ" name="documentValidation.allDocumentProvided" content="documentValidation.allDocumentProvided" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_-CtINjNLEeiyXpBWBWhfJQ" name="documentValidation" type="COMPLEX"/>
@@ -180,7 +301,7 @@
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_soJKMDQZEeiV2KwRHwWs2g">
             <leftOperand xmi:type="expression:Expression" xmi:id="_soJKMTQZEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_toudcDQZEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_JE9Y8jTyEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_soJKMjQZEeiV2KwRHwWs2g" name="isAcceptedByCouncellor()" content="if(documentValidation.councellorValidation) {&#xA;&#x9;return &quot;Accepted By Councellor&quot;&#xA;}&#xA;return &quot;Refused By Councellor&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_A2hIADQaEeiV2KwRHwWs2g" name="documentValidation" type="COMPLEX"/>
@@ -197,7 +318,7 @@
           <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_ahXolDNJEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <confirmationMessage xmi:type="expression:Expression" xmi:id="_ahYPoDNJEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_ahYPpzNJEeiyXpBWBWhfJQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_szXzojTmEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_9mGq0jUDEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_ahYPpjNJEeiyXpBWBWhfJQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_-CtIMDNLEeiyXpBWBWhfJQ" name="documentValidation" type="COMPLEX">
@@ -217,9 +338,33 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_doUV8jNKEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_doUV8TNKEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_doUV8zNKEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_TReH4DUAEeiV2KwRHwWs2g" name="computeTaskURL" definitionId="scripting-groovy-script" event="ON_ENTER" definitionVersion="1.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_TReH4TUAEeiV2KwRHwWs2g" definitionId="scripting-groovy-script" version="1.0.1" modelVersion="7.6.0-002">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TReH4jUAEeiV2KwRHwWs2g" key="script">
+                <expression xmi:type="expression:Expression" xmi:id="_TReH4zUAEeiV2KwRHwWs2g" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TReH5DUAEeiV2KwRHwWs2g" key="variables"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_TReH5TUAEeiV2KwRHwWs2g" key="fakeScriptExpression">
+                <expression xmi:type="expression:Expression" xmi:id="_TReH5jUAEeiV2KwRHwWs2g" name="computeTaskURL()" content="String.format(&quot;/bonita/portal/resource/taskInstance/RequestLoan/1.0.0/Write%%20loan%%20contract%%20with%%20Duration%%20and%%20Loan%%20Rate/content/?id=%d&amp;displayConfirmation=false&quot;, activityInstanceId)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_TReH5zUAEeiV2KwRHwWs2g" name="activityInstanceId" content="activityInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_TReH6DUAEeiV2KwRHwWs2g">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_TReH6TUAEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TReH6jUAEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_TReH6zUAEeiV2KwRHwWs2g" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
+                <referencedElements xmi:type="definition:Output" xmi:id="_TReH7DUAEeiV2KwRHwWs2g" name="result" type="java.lang.Object"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_TReH7TUAEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setTaskURL">
+                <inputTypes>java.lang.String</inputTypes>
+              </operator>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_1TwlozNMEeiyXpBWBWhfJQ">
             <leftOperand xmi:type="expression:Expression" xmi:id="_1TwlpDNMEeiyXpBWBWhfJQ" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4dE4AjPxEeiyXpBWBWhfJQ" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_JE9Y8zTyEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_1TwlpjNMEeiyXpBWBWhfJQ" name="loanRequestedInput.rate" content="loanRequestedInput.rate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_1TwlpzNMEeiyXpBWBWhfJQ" name="loanRequestedInput" type="COMPLEX"/>
@@ -230,13 +375,22 @@
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_1TwlqTNMEeiyXpBWBWhfJQ">
             <leftOperand xmi:type="expression:Expression" xmi:id="_1TwlqjNMEeiyXpBWBWhfJQ" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4dE4AzPxEeiyXpBWBWhfJQ" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_JE9Y9DTyEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_1TwlrDNMEeiyXpBWBWhfJQ" name="loanRequestedInput.durationInMonth" content="loanRequestedInput.durationInMonth" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_1TwlrTNMEeiyXpBWBWhfJQ" name="loanRequestedInput" type="COMPLEX"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_1TwlrjNMEeiyXpBWBWhfJQ" type="JAVA_METHOD" expression="setDurationInMonth">
               <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_gtlaoDTzEeiV2KwRHwWs2g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_gtlaoTTzEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_hJ8mgDTzEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_gtlaojTzEeiV2KwRHwWs2g" name="Waiting for customer signature" content="Waiting for customer signature"/>
+            <operator xmi:type="expression:Operator" xmi:id="_gtlaozTzEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setStatus">
+              <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_doUV9TNKEeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -247,7 +401,7 @@
           <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_d8UQBDNKEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <confirmationMessage xmi:type="expression:Expression" xmi:id="_d8UQBTNKEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_d8UQDDNKEeiyXpBWBWhfJQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_szXzozTmEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_9mGq0zUDEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_d8UQCzNKEeiyXpBWBWhfJQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_1TwloDNMEeiyXpBWBWhfJQ" name="loanRequestedInput" type="COMPLEX">
@@ -268,15 +422,48 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_HkISgTP5EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_HkISgDP5EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_HkISgjP5EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_VwE4UDUAEeiV2KwRHwWs2g" name="computeTaskURL" definitionId="scripting-groovy-script" event="ON_ENTER" definitionVersion="1.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_VwE4UTUAEeiV2KwRHwWs2g" definitionId="scripting-groovy-script" version="1.0.1" modelVersion="7.6.0-002">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_VwE4UjUAEeiV2KwRHwWs2g" key="script">
+                <expression xmi:type="expression:Expression" xmi:id="_VwE4UzUAEeiV2KwRHwWs2g" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_VwE4VDUAEeiV2KwRHwWs2g" key="variables"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_VwE4VTUAEeiV2KwRHwWs2g" key="fakeScriptExpression">
+                <expression xmi:type="expression:Expression" xmi:id="_VwE4VjUAEeiV2KwRHwWs2g" name="computeTaskURL()" content="String.format(&quot;/bonita/portal/resource/taskInstance/RequestLoan/1.0.0/Validate%%20Contract/content/?id=%d&amp;displayConfirmation=false&quot;, activityInstanceId)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_VwE4VzUAEeiV2KwRHwWs2g" name="activityInstanceId" content="activityInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_VwE4WDUAEeiV2KwRHwWs2g">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_VwE4WTUAEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VwE4WjUAEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_VwE4WzUAEeiV2KwRHwWs2g" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
+                <referencedElements xmi:type="definition:Output" xmi:id="_VwE4XDUAEeiV2KwRHwWs2g" name="result" type="java.lang.Object"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_VwE4XTUAEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setTaskURL">
+                <inputTypes>java.lang.String</inputTypes>
+              </operator>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_XvSaEjQbEeiV2KwRHwWs2g">
             <leftOperand xmi:type="expression:Expression" xmi:id="_XvSaEzQbEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_XvSaFDQbEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_JE9Y9TTyEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_XvSaFTQbEeiV2KwRHwWs2g" name="loanRequestedInput.status" content="loanRequestedInput.status" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_XvSaFjQbEeiV2KwRHwWs2g" name="loanRequestedInput" type="COMPLEX"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_XvSaFzQbEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setStatus">
               <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_GZls8DT0EeiV2KwRHwWs2g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_GZls8TT0EeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_HGoZIDT0EeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_GZls8jT0EeiV2KwRHwWs2g" name="today()" content="import java.time.LocalDate&#xA;&#xA;LocalDate.now();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate"/>
+            <operator xmi:type="expression:Operator" xmi:id="_GZls8zT0EeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setCloseDate">
+              <inputTypes>java.time.LocalDate</inputTypes>
             </operator>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_HkIShDP5EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -287,7 +474,7 @@
           <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_dG6ehDP5EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <confirmationMessage xmi:type="expression:Expression" xmi:id="_dG6ehTP5EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_dG6ejDP5EeiyXpBWBWhfJQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_szXzpDTmEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_9mGq1DUDEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_dG6eizP5EeiyXpBWBWhfJQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_XvSaEDQbEeiV2KwRHwWs2g" name="loanRequestedInput" type="COMPLEX">
@@ -325,6 +512,13 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_45RdQDQcEeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_45RdQjQcEeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_fF84ADT_EeiV2KwRHwWs2g" name="walter.bates" definitionId="single-user" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_fF84ATT_EeiV2KwRHwWs2g" definitionId="single-user" version="1.0.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fF84AjT_EeiV2KwRHwWs2g" key="userId">
+              <expression xmi:type="expression:Expression" xmi:id="_fF84AzT_EeiV2KwRHwWs2g" name="4" content="4" returnType="java.lang.Long" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_YqERADP_EeiyXpBWBWhfJQ" name="Validation Committee" actor="_w6AUGzNIEeiyXpBWBWhfJQ">
         <elements xmi:type="process:Task" xmi:id="_4WAeUDP_EeiyXpBWBWhfJQ" name="Review Customer Credit History" outgoing="_RAjakDQCEeiyXpBWBWhfJQ" incoming="_0qTgQDQNEeiyXpBWBWhfJQ" overrideActorsOfTheLane="false">
@@ -332,12 +526,36 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_3fiwYTP_EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_3fiwYDP_EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_3fiwYjP_EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_QjZYEDUAEeiV2KwRHwWs2g" name="computeTaskURL" definitionId="scripting-groovy-script" event="ON_ENTER" definitionVersion="1.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_QjZYETUAEeiV2KwRHwWs2g" definitionId="scripting-groovy-script" version="1.0.1" modelVersion="7.6.0-002">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_QjZYEjUAEeiV2KwRHwWs2g" key="script">
+                <expression xmi:type="expression:Expression" xmi:id="_QjZYEzUAEeiV2KwRHwWs2g" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_QjZYFDUAEeiV2KwRHwWs2g" key="variables"/>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_QjZYFTUAEeiV2KwRHwWs2g" key="fakeScriptExpression">
+                <expression xmi:type="expression:Expression" xmi:id="_QjZYFjUAEeiV2KwRHwWs2g" name="computeTaskURL()" content="String.format(&quot;/bonita/portal/resource/taskInstance/RequestLoan/1.0.0/Validate%%20Loan%%20application/content/?id=%d&amp;displayConfirmation=false&quot;, activityInstanceId)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_QjZYFzUAEeiV2KwRHwWs2g" name="activityInstanceId" content="activityInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_QjZYGDUAEeiV2KwRHwWs2g">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_QjZYGTUAEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_QjZYGjUAEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_QjZYGzUAEeiV2KwRHwWs2g" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
+                <referencedElements xmi:type="definition:Output" xmi:id="_QjZYHDUAEeiV2KwRHwWs2g" name="result" type="java.lang.Object"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_QjZYHTUAEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setTaskURL">
+                <inputTypes>java.lang.String</inputTypes>
+              </operator>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_69FaADQaEeiV2KwRHwWs2g">
             <leftOperand xmi:type="expression:Expression" xmi:id="_69FaATQaEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_69FaAjQaEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_JE9Y9jTyEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_69FaAzQaEeiV2KwRHwWs2g" name="committeeReview.valid" content="if(committeeReview.valid) {&#xA;&#x9;return &quot;Request Validated&quot;&#xA;}&#xA;return &quot;Request Rejected by Commitee&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_RdqrADQbEeiV2KwRHwWs2g" name="committeeReview" type="COMPLEX"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_69FaAzQaEeiV2KwRHwWs2g" name="isAcceptedByCommittee()" content="if(committeeReview.valid) {&#xA;&#x9;return &quot;Contract to be written&quot;&#xA;}&#xA;return &quot;Request Rejected by Commitee&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7MVC8DT2EeiV2KwRHwWs2g" name="committeeReview" type="COMPLEX"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_69FaBTQaEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setStatus">
               <inputTypes>java.lang.String</inputTypes>
@@ -351,7 +569,7 @@
           <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_4WBFZDP_EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <confirmationMessage xmi:type="expression:Expression" xmi:id="_4WBFZTP_EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_4WBFbDP_EeiyXpBWBWhfJQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_szXzpTTmEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_9mGq1TUDEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_4WBFazP_EeiyXpBWBWhfJQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_69Ey8DQaEeiV2KwRHwWs2g" name="committeeReview" type="COMPLEX">
@@ -365,6 +583,15 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_c3UUkjP_EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_c3UUkTP_EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_c3UUkzP_EeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_p7cTgDUCEeiV2KwRHwWs2g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_p7cTgTUCEeiV2KwRHwWs2g" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_qoveYDUCEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_p7cTgjUCEeiV2KwRHwWs2g" name="Wainting for Credit History" content="Wainting for Credit History"/>
+            <operator xmi:type="expression:Operator" xmi:id="_p7cTgzUCEeiV2KwRHwWs2g" type="JAVA_METHOD" expression="setStatus">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_c3UUlTP_EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_c3UUljP_EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_c3UUlzP_EeiyXpBWBWhfJQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -383,6 +610,13 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_NqEcYTQBEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_NqEcYzQBEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_nhQ3cDT_EeiV2KwRHwWs2g" name="walter.bates" definitionId="single-user" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_nhRegDT_EeiV2KwRHwWs2g" definitionId="single-user" version="1.0.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nhRegTT_EeiV2KwRHwWs2g" key="userId">
+              <expression xmi:type="expression:Expression" xmi:id="_nhRegjT_EeiV2KwRHwWs2g" name="4" content="4" returnType="java.lang.Long" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
       <resourceFolders xmi:type="process:ResourceFolder" xmi:id="_w65EwDNIEeiyXpBWBWhfJQ" path="_w6AT8TNIEeiyXpBWBWhfJQ/application/application"/>
       <mandatorySymbol xmi:type="expression:Expression" xmi:id="_w6AUCTNIEeiyXpBWBWhfJQ" name="" content="" returnTypeFixed="true"/>
@@ -392,8 +626,8 @@
       <pageTemplate xmi:type="process:AssociatedFile" xmi:id="_w6AUDTNIEeiyXpBWBWhfJQ" path="_w6AT8TNIEeiyXpBWBWhfJQ/html/page.html"/>
       <consultationTemplate xmi:type="process:AssociatedFile" xmi:id="_w6AUDjNIEeiyXpBWBWhfJQ" path="_w6AT8TNIEeiyXpBWBWhfJQ/html/consultation.html"/>
       <data xmi:type="process:BusinessObjectData" xmi:id="_-zUNIDNIEeiyXpBWBWhfJQ" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_4dFfEDPxEeiyXpBWBWhfJQ" name="initLoanRequested()" content="def loanVar = new com.company.model.Loan()&#xA;loanVar.customer = loanRequestedInput.customer&#xA;loanVar.amount = loanRequestedInput.amount&#xA;loanVar.type = loanRequestedInput.type&#xA;loanVar.allDocumentProvided = false&#xA;return loanVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Loan">
-          <referencedElements xmi:type="process:ContractInput" xmi:id="_4dFfETPxEeiyXpBWBWhfJQ" name="loanRequestedInput" type="COMPLEX"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_JE-AADTyEeiV2KwRHwWs2g" name="initLoanRequested()" content="import java.time.LocalDate&#xA;&#xA;def loanVar = new com.company.model.Loan()&#xA;loanVar.customer = loanRequestedInput.customer&#xA;loanVar.amount = loanRequestedInput.amount&#xA;loanVar.type = loanRequestedInput.type&#xA;loanVar.allDocumentProvided = false&#xA;loanVar.requestDate = LocalDate.now();&#xA;return loanVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Loan">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_JE-AATTyEeiV2KwRHwWs2g" name="loanRequestedInput" type="COMPLEX"/>
         </defaultValue>
       </data>
       <confirmationTemplate xmi:type="process:AssociatedFile" xmi:id="_w6AUDzNIEeiyXpBWBWhfJQ" path="_w6AT8TNIEeiyXpBWBWhfJQ/html/_w6AT8TNIEeiyXpBWBWhfJQconfirmation.html"/>
@@ -483,8 +717,8 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_NqIGwDQBEeiyXpBWBWhfJQ" target="_45Q2MDQcEeiV2KwRHwWs2g" source="_NqEcYDQBEeiyXpBWBWhfJQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_NqIGwTQBEeiyXpBWBWhfJQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_NqIGwjQBEeiyXpBWBWhfJQ" name="isRequestStatusValidated()" content="&quot;Request Validated&quot;.equals(loanRequested.status)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ymKyYDQaEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
+        <condition xmi:type="expression:Expression" xmi:id="_NqIGwjQBEeiyXpBWBWhfJQ" name="isRequestStatusValidated()" content="&quot;Contract to be written&quot;.equals(loanRequested.status)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_68kHoDUBEeiV2KwRHwWs2g" name="loanRequested" dataType="_w6AUNDNIEeiyXpBWBWhfJQ" className="com.company.model.Loan"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_rcnfIDQBEeiyXpBWBWhfJQ" target="_45Q2MDQcEeiV2KwRHwWs2g" source="_rcj0wDQBEeiyXpBWBWhfJQ" isDefault="true">
@@ -508,36 +742,43 @@
         <condition xmi:type="expression:Expression" xmi:id="_46BEIjQcEeiV2KwRHwWs2g" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_w6AUGzNIEeiyXpBWBWhfJQ" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
-      <configurations xmi:type="configuration:Configuration" xmi:id="_rBhbgDTmEeiV2KwRHwWs2g" name="Production" version="7.6.0-002" username="walter.bates" password="bpm">
-        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_rBhbgTTmEeiV2KwRHwWs2g">
-          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_rBhbgjTmEeiV2KwRHwWs2g" name="Employee actor">
-            <groups xmi:type="actormapping:Groups" xmi:id="_rBhbgzTmEeiV2KwRHwWs2g"/>
-            <memberships xmi:type="actormapping:Membership" xmi:id="_rBhbhDTmEeiV2KwRHwWs2g"/>
-            <roles xmi:type="actormapping:Roles" xmi:id="_rBhbhTTmEeiV2KwRHwWs2g">
+      <configurations xmi:type="configuration:Configuration" xmi:id="_8Dr10DUDEeiV2KwRHwWs2g" name="Production" version="7.6.0-002" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_8Dr10TUDEeiV2KwRHwWs2g">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_8Dr10jUDEeiV2KwRHwWs2g" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_8Dr10zUDEeiV2KwRHwWs2g"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_8Dr11DUDEeiV2KwRHwWs2g"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_8Dr11TUDEeiV2KwRHwWs2g">
               <role>member</role>
             </roles>
-            <users xmi:type="actormapping:Users" xmi:id="_rBhbhjTmEeiV2KwRHwWs2g"/>
+            <users xmi:type="actormapping:Users" xmi:id="_8Dr11jUDEeiV2KwRHwWs2g"/>
           </actorMapping>
         </actorMappings>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_rBhbhzTmEeiV2KwRHwWs2g" type="CONNECTOR" definitionId="scripting-groovy-script" definitionVersion="1.0.1" implementationId="scripting-groovy-script-impl" implementationVersion="1.0.2"/>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_rBhbiDTmEeiV2KwRHwWs2g" type="CONNECTOR" definitionId="scripting-groovy" definitionVersion="1.0.2" implementationId="scripting-groovy-impl" implementationVersion="1.0.12"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rBhbiTTmEeiV2KwRHwWs2g" id="ACTOR_FILTER"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rBhbijTmEeiV2KwRHwWs2g" id="CONNECTOR">
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_rBhbizTmEeiV2KwRHwWs2g" id="scripting-groovy-script-impl-1.0.2">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_rBhbjDTmEeiV2KwRHwWs2g" key="scripting-groovy-script-impl -- 1.0.2" value="bonita-connector-scripting-groovy-script-impl-1.0.2.jar" type="CONNECTOR"/>
-          </children>
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_rBhbjTTmEeiV2KwRHwWs2g" id="scripting-groovy-impl-1.0.12">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_rBhbjjTmEeiV2KwRHwWs2g" key="scripting-groovy-impl -- 1.0.12" value="bonita-connector-scripting-groovy-impl-1.0.12.jar" type="CONNECTOR"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_8Dr11zUDEeiV2KwRHwWs2g" type="CONNECTOR" definitionId="scripting-groovy-script" definitionVersion="1.0.1" implementationId="scripting-groovy-script-impl" implementationVersion="1.0.2"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_8Dr12DUDEeiV2KwRHwWs2g" type="CONNECTOR" definitionId="scripting-groovy" definitionVersion="1.0.2" implementationId="scripting-groovy-impl" implementationVersion="1.0.12"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_8Dr12TUDEeiV2KwRHwWs2g" type="ACTOR_FILTER" definitionId="single-user" definitionVersion="1.0.0" implementationId="single-user-impl" implementationVersion="1.0.0"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8Dr12jUDEeiV2KwRHwWs2g" id="ACTOR_FILTER">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_8Dr12zUDEeiV2KwRHwWs2g" id="single-user-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_8Dr13DUDEeiV2KwRHwWs2g" key="single-user-impl -- 1.0.0" value="bonita-userfilter-single-user-impl-1.0.0-SNAPSHOT.jar" type="ACTOR_FILTER"/>
           </children>
         </processDependencies>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rBhbjzTmEeiV2KwRHwWs2g" id="DATA_TYPES"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rBhbkDTmEeiV2KwRHwWs2g" id="GROOVY_SCRIPT"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rBhbkTTmEeiV2KwRHwWs2g" id="OTHER"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rBhbkjTmEeiV2KwRHwWs2g" id="DATA_TYPES"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rBhbkzTmEeiV2KwRHwWs2g" id="GROOVY_SCRIPT"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rBhblDTmEeiV2KwRHwWs2g" id="VALIDATOR"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rBhblTTmEeiV2KwRHwWs2g" id="OTHER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8Dr13TUDEeiV2KwRHwWs2g" id="CONNECTOR">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_8Dr13jUDEeiV2KwRHwWs2g" id="scripting-groovy-script-impl-1.0.2">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_8Dr13zUDEeiV2KwRHwWs2g" key="scripting-groovy-script-impl -- 1.0.2" value="bonita-connector-scripting-groovy-script-impl-1.0.2.jar" type="CONNECTOR"/>
+          </children>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_8Dr14DUDEeiV2KwRHwWs2g" id="scripting-groovy-impl-1.0.12">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_8Dr14TUDEeiV2KwRHwWs2g" key="scripting-groovy-impl -- 1.0.12" value="bonita-connector-scripting-groovy-impl-1.0.12.jar" type="CONNECTOR"/>
+          </children>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8Dr14jUDEeiV2KwRHwWs2g" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8Dr14zUDEeiV2KwRHwWs2g" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8Dr15DUDEeiV2KwRHwWs2g" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8Dr15TUDEeiV2KwRHwWs2g" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8Dr15jUDEeiV2KwRHwWs2g" id="GROOVY_SCRIPT"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8Dr15zUDEeiV2KwRHwWs2g" id="VALIDATOR"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8Dr16DUDEeiV2KwRHwWs2g" id="OTHER"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_8Dr16TUDEeiV2KwRHwWs2g" name="botActivated" value="true" typeClassname="java.lang.Boolean"/>
       </configurations>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_6qDU8DT5EeiV2KwRHwWs2g" name="botActivated" typeClassname="java.lang.Boolean"/>
       <contract xmi:type="process:Contract" xmi:id="_w6AUHDNIEeiyXpBWBWhfJQ">
         <inputs xmi:type="process:ContractInput" xmi:id="_DaUNcDNJEeiyXpBWBWhfJQ" name="loanRequestedInput" type="COMPLEX">
           <inputs xmi:type="process:ContractInput" xmi:id="_DaUNcTNJEeiyXpBWBWhfJQ" name="customer"/>
@@ -600,7 +841,7 @@
       <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_HZMx8zQaEeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
       <confirmationMessage xmi:type="expression:Expression" xmi:id="_HZMx8jQaEeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
       <formMapping xmi:type="process:FormMapping" xmi:id="_HZNY8TQaEeiV2KwRHwWs2g">
-        <targetForm xmi:type="expression:Expression" xmi:id="_nSAc0DTmEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_5pZksDUDEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <recapPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_HZNY8DQaEeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_HZNY8zQaEeiV2KwRHwWs2g">
@@ -683,7 +924,7 @@
         <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_WVKKIzQ2EeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
         <confirmationMessage xmi:type="expression:Expression" xmi:id="_WVKKJDQ2EeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
         <formMapping xmi:type="process:FormMapping" xmi:id="_WVKxNTQ2EeiV2KwRHwWs2g">
-          <targetForm xmi:type="expression:Expression" xmi:id="_lWYdoDTmEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          <targetForm xmi:type="expression:Expression" xmi:id="_5mQKEDUDEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
         </formMapping>
         <filters xmi:type="process:ActorFilter" xmi:id="_eqFNsDQ2EeiV2KwRHwWs2g" name="walter.bates" definitionId="single-user" definitionVersion="1.0.0">
           <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_eqFNsTQ2EeiV2KwRHwWs2g" definitionId="single-user" version="1.0.0">
@@ -875,16 +1116,16 @@
         <dynamicLabel xmi:type="expression:Expression" xmi:id="_WF5UMTQ4EeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
         <dynamicDescription xmi:type="expression:Expression" xmi:id="_WF5UMDQ4EeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
         <stepSummary xmi:type="expression:Expression" xmi:id="_WF5UMjQ4EeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
-        <connectors xmi:type="process:Connector" xmi:id="_-9fpcDTgEeiV2KwRHwWs2g" name="executeTask" definitionId="scripting-groovy-script" event="ON_ENTER" definitionVersion="1.0.1">
-          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_-9fpcTTgEeiV2KwRHwWs2g" definitionId="scripting-groovy-script" version="1.0.1" modelVersion="7.6.0-002">
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-9fpcjTgEeiV2KwRHwWs2g" key="script">
-              <expression xmi:type="expression:Expression" xmi:id="_-9fpczTgEeiV2KwRHwWs2g" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+        <connectors xmi:type="process:Connector" xmi:id="_lin5IDUCEeiV2KwRHwWs2g" name="executeTask" definitionId="scripting-groovy-script" event="ON_ENTER" definitionVersion="1.0.1">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_lin5ITUCEeiV2KwRHwWs2g" definitionId="scripting-groovy-script" version="1.0.1" modelVersion="7.6.0-002">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lin5IjUCEeiV2KwRHwWs2g" key="script">
+              <expression xmi:type="expression:Expression" xmi:id="_lin5IzUCEeiV2KwRHwWs2g" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
             </parameters>
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-9fpdDTgEeiV2KwRHwWs2g" key="variables"/>
-            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_-9fpdTTgEeiV2KwRHwWs2g" key="fakeScriptExpression">
-              <expression xmi:type="expression:Expression" xmi:id="_-9fpdjTgEeiV2KwRHwWs2g" name="executeTask()" content="&#xA;import org.bonitasoft.engine.bpm.flownode.ActivityInstance&#xA;import org.bonitasoft.engine.search.SearchOptions&#xA;import org.bonitasoft.engine.search.SearchOptionsBuilder&#xA;&#xA;&#xA;List&lt;ActivityInstance> tasks = apiAccessor.getProcessAPI().getActivities(processInstanceToAutomate, 0, 1)&#xA;&#xA;// Walter Bates perform the task&#xA;def taskId = tasks.get(0).id&#xA;def walterBatesId = 4L&#xA;def contractInput = [&quot;loanRequestedInput&quot; : [&quot;status&quot; : &quot;Approved!&quot;]]&#xA;apiAccessor.getProcessAPI().assignUserTaskIfNotAssigned(taskId, walterBatesId);&#xA;apiAccessor.getProcessAPI().executeUserTask(walterBatesId, taskId, contractInput)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
-                <referencedElements xmi:type="expression:Expression" xmi:id="_-9fpdzTgEeiV2KwRHwWs2g" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="com.bonitasoft.engine.api.APIAccessor"/>
-                <referencedElements xmi:type="process:Data" xmi:id="_-9fpeDTgEeiV2KwRHwWs2g" name="processInstanceToAutomate" dataType="_w6AULzNIEeiyXpBWBWhfJQ"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lin5JDUCEeiV2KwRHwWs2g" key="variables"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lin5JTUCEeiV2KwRHwWs2g" key="fakeScriptExpression">
+              <expression xmi:type="expression:Expression" xmi:id="_lin5JjUCEeiV2KwRHwWs2g" name="executeTask()" content="&#xA;import org.bonitasoft.engine.bpm.flownode.ActivityInstance&#xA;import org.bonitasoft.engine.search.SearchOptions&#xA;import org.bonitasoft.engine.search.SearchOptionsBuilder&#xA;&#xA;&#xA;List&lt;ActivityInstance> tasks = apiAccessor.getProcessAPI().getActivities(processInstanceToAutomate, 0, 1)&#xA;&#xA;// Walter Bates perform the task&#xA;def taskId = tasks.get(0).id&#xA;def walterBatesId = 4L&#xA;def contractInput = [&quot;loanRequestedInput&quot; : [&quot;status&quot; : &quot;Loan Approved&quot;]]&#xA;apiAccessor.getProcessAPI().assignUserTaskIfNotAssigned(taskId, walterBatesId);&#xA;apiAccessor.getProcessAPI().executeUserTask(walterBatesId, taskId, contractInput)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                <referencedElements xmi:type="expression:Expression" xmi:id="_lin5JzUCEeiV2KwRHwWs2g" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="com.bonitasoft.engine.api.APIAccessor"/>
+                <referencedElements xmi:type="process:Data" xmi:id="_lin5KDUCEeiV2KwRHwWs2g" name="processInstanceToAutomate" dataType="_w6AULzNIEeiyXpBWBWhfJQ"/>
               </expression>
             </parameters>
           </configuration>
@@ -959,7 +1200,7 @@
       <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_y0E3RDQ1EeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
       <confirmationMessage xmi:type="expression:Expression" xmi:id="_y0E3QzQ1EeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
       <formMapping xmi:type="process:FormMapping" xmi:id="_y0E3RjQ1EeiV2KwRHwWs2g">
-        <targetForm xmi:type="expression:Expression" xmi:id="_lWYdoTTmEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_5mQKETUDEeiV2KwRHwWs2g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <recapPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_y0E3RTQ1EeiV2KwRHwWs2g" name="" content="" returnTypeFixed="true"/>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_y0FeUDQ1EeiV2KwRHwWs2g">
@@ -1045,50 +1286,50 @@
         <condition xmi:type="expression:Expression" xmi:id="_FOHh8jQ8EeiV2KwRHwWs2g" name="" content="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_szTLIDQ2EeiV2KwRHwWs2g" name="Employee"/>
-      <configurations xmi:type="configuration:Configuration" xmi:id="_yhuekDTbEeiV2KwRHwWs2g" name="Production" version="7.6.0-002" username="walter.bates" password="bpm">
-        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_yhuekTTbEeiV2KwRHwWs2g">
-          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_yhuekjTbEeiV2KwRHwWs2g" name="Employee">
-            <groups xmi:type="actormapping:Groups" xmi:id="_yhuekzTbEeiV2KwRHwWs2g"/>
-            <memberships xmi:type="actormapping:Membership" xmi:id="_yhuelDTbEeiV2KwRHwWs2g"/>
-            <roles xmi:type="actormapping:Roles" xmi:id="_yhuelTTbEeiV2KwRHwWs2g">
+      <configurations xmi:type="configuration:Configuration" xmi:id="_wJy2sDUDEeiV2KwRHwWs2g" name="Production" version="7.6.0-002" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_wJy2sTUDEeiV2KwRHwWs2g">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_wJy2sjUDEeiV2KwRHwWs2g" name="Employee">
+            <groups xmi:type="actormapping:Groups" xmi:id="_wJy2szUDEeiV2KwRHwWs2g"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_wJy2tDUDEeiV2KwRHwWs2g"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_wJy2tTUDEeiV2KwRHwWs2g">
               <role>member</role>
             </roles>
-            <users xmi:type="actormapping:Users" xmi:id="_yhueljTbEeiV2KwRHwWs2g"/>
+            <users xmi:type="actormapping:Users" xmi:id="_wJy2tjUDEeiV2KwRHwWs2g"/>
           </actorMapping>
         </actorMappings>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_yhuelzTbEeiV2KwRHwWs2g" type="ACTOR_FILTER" definitionId="single-user" definitionVersion="1.0.0" implementationId="single-user-impl" implementationVersion="1.0.0"/>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_yhuemDTbEeiV2KwRHwWs2g" type="CONNECTOR" definitionId="scripting-groovy-script" definitionVersion="1.0.1" implementationId="scripting-groovy-script-impl" implementationVersion="1.0.2"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_yhuemTTbEeiV2KwRHwWs2g" id="ACTOR_FILTER">
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_yhuemjTbEeiV2KwRHwWs2g" id="single-user-impl-1.0.0">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_yhuemzTbEeiV2KwRHwWs2g" key="single-user-impl -- 1.0.0" value="bonita-userfilter-single-user-impl-1.0.0-SNAPSHOT.jar" type="ACTOR_FILTER"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_wJy2tzUDEeiV2KwRHwWs2g" type="ACTOR_FILTER" definitionId="single-user" definitionVersion="1.0.0" implementationId="single-user-impl" implementationVersion="1.0.0"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_wJy2uDUDEeiV2KwRHwWs2g" type="CONNECTOR" definitionId="scripting-groovy-script" definitionVersion="1.0.1" implementationId="scripting-groovy-script-impl" implementationVersion="1.0.2"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_wJy2uTUDEeiV2KwRHwWs2g" id="ACTOR_FILTER">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_wJy2ujUDEeiV2KwRHwWs2g" id="single-user-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_wJy2uzUDEeiV2KwRHwWs2g" key="single-user-impl -- 1.0.0" value="bonita-userfilter-single-user-impl-1.0.0-SNAPSHOT.jar" type="ACTOR_FILTER"/>
           </children>
         </processDependencies>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_yhuenDTbEeiV2KwRHwWs2g" id="CONNECTOR">
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_yhuenTTbEeiV2KwRHwWs2g" id="scripting-groovy-script-impl-1.0.2">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_yhuenjTbEeiV2KwRHwWs2g" key="scripting-groovy-script-impl -- 1.0.2" value="bonita-connector-scripting-groovy-script-impl-1.0.2.jar" type="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_wJy2vDUDEeiV2KwRHwWs2g" id="CONNECTOR">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_wJy2vTUDEeiV2KwRHwWs2g" id="scripting-groovy-script-impl-1.0.2">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_wJy2vjUDEeiV2KwRHwWs2g" key="scripting-groovy-script-impl -- 1.0.2" value="bonita-connector-scripting-groovy-script-impl-1.0.2.jar" type="CONNECTOR"/>
           </children>
         </processDependencies>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_yhuenzTbEeiV2KwRHwWs2g" id="DATA_TYPES"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_yhueoDTbEeiV2KwRHwWs2g" id="GROOVY_SCRIPT"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_yhueoTTbEeiV2KwRHwWs2g" id="OTHER"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_yhueojTbEeiV2KwRHwWs2g" id="DATA_TYPES"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_yhueozTbEeiV2KwRHwWs2g" id="GROOVY_SCRIPT"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_yhuepDTbEeiV2KwRHwWs2g" id="VALIDATOR"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_yhuepTTbEeiV2KwRHwWs2g" id="OTHER"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhuepjTbEeiV2KwRHwWs2g" name="completeLoanMinTime" value="300000" typeClassname="java.lang.Integer" description=""/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhuepzTbEeiV2KwRHwWs2g" name="completeLoanMaxTime" value="900000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhueqDTbEeiV2KwRHwWs2g" name="validateLoanMinTime" value="300000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhueqTTbEeiV2KwRHwWs2g" name="validateLoanMaxTime" value="9000000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhueqjTbEeiV2KwRHwWs2g" name="notifyCreditMinTime" value="8000000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhueqzTbEeiV2KwRHwWs2g" name="notifyCreditMaxTime" value="9000000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhuerDTbEeiV2KwRHwWs2g" name="reviewHistoryMinTime" value="8000000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhuerTTbEeiV2KwRHwWs2g" name="reviewHistoryMaxTime" value="9000000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhuerjTbEeiV2KwRHwWs2g" name="writeContractMinTime" value="8000000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhuerzTbEeiV2KwRHwWs2g" name="writeContractMaxTime" value="900000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhuesDTbEeiV2KwRHwWs2g" name="signContractMinTime" value="240000000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhuesTTbEeiV2KwRHwWs2g" name="signContractMaxTime" value="9000000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhuesjTbEeiV2KwRHwWs2g" name="validateContractMinTime" value="3600000" typeClassname="java.lang.Integer"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_yhueszTbEeiV2KwRHwWs2g" name="validateContractMaxTime" value="3600000" typeClassname="java.lang.Integer"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_wJy2vzUDEeiV2KwRHwWs2g" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_wJy2wDUDEeiV2KwRHwWs2g" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_wJy2wTUDEeiV2KwRHwWs2g" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_wJy2wjUDEeiV2KwRHwWs2g" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_wJy2wzUDEeiV2KwRHwWs2g" id="GROOVY_SCRIPT"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_wJy2xDUDEeiV2KwRHwWs2g" id="VALIDATOR"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_wJy2xTUDEeiV2KwRHwWs2g" id="OTHER"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy2xjUDEeiV2KwRHwWs2g" name="completeLoanMinTime" value="300000" typeClassname="java.lang.Integer" description=""/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy2xzUDEeiV2KwRHwWs2g" name="completeLoanMaxTime" value="900000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy2yDUDEeiV2KwRHwWs2g" name="validateLoanMinTime" value="30000000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy2yTUDEeiV2KwRHwWs2g" name="validateLoanMaxTime" value="60000000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy2yjUDEeiV2KwRHwWs2g" name="notifyCreditMinTime" value="8000000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy2yzUDEeiV2KwRHwWs2g" name="notifyCreditMaxTime" value="9000000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy2zDUDEeiV2KwRHwWs2g" name="reviewHistoryMinTime" value="8000000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy2zTUDEeiV2KwRHwWs2g" name="reviewHistoryMaxTime" value="9000000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy2zjUDEeiV2KwRHwWs2g" name="writeContractMinTime" value="8000000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy2zzUDEeiV2KwRHwWs2g" name="writeContractMaxTime" value="900000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy20DUDEeiV2KwRHwWs2g" name="signContractMinTime" value="86000000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy20TUDEeiV2KwRHwWs2g" name="signContractMaxTime" value="160000000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy20jUDEeiV2KwRHwWs2g" name="validateContractMinTime" value="3600000" typeClassname="java.lang.Integer"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_wJy20zUDEeiV2KwRHwWs2g" name="validateContractMaxTime" value="30000000" typeClassname="java.lang.Integer"/>
       </configurations>
       <parameters xmi:type="parameter:Parameter" xmi:id="_aqww0DTYEeiV2KwRHwWs2g" name="completeLoanMinTime" typeClassname="java.lang.Integer" description=""/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_qrNVoDTYEeiV2KwRHwWs2g" name="completeLoanMaxTime" typeClassname="java.lang.Integer"/>
