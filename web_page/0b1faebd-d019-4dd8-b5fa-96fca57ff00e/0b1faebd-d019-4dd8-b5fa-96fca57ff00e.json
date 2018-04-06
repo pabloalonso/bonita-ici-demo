@@ -1,9 +1,9 @@
 {
   "designerVersion" : "1.6.46",
-  "id" : "79218ed2-f491-4002-b4c6-03dffa29d794",
-  "name" : "loanRequestList",
+  "id" : "0b1faebd-d019-4dd8-b5fa-96fca57ff00e",
+  "name" : "loanRequestListPredictive",
   "type" : "page",
-  "lastUpdate" : 1522920628871,
+  "lastUpdate" : 1522918987611,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -34,7 +34,7 @@
         "value" : "left"
       }
     },
-    "reference" : "67f3c258-1aee-42c1-a9c9-ccf31bbbcd38",
+    "reference" : "748c580c-39e2-4225-ac7c-6ea5d9ff8e45",
     "id" : "pbTitle"
   } ], [ {
     "type" : "component",
@@ -96,7 +96,7 @@
         "value" : "loanFilter.status"
       }
     },
-    "reference" : "24166bba-d5d9-416c-bc62-e2e9746d049d",
+    "reference" : "7fd6b085-5a6e-4fe8-ba71-d5d2c189baae",
     "id" : "pbRadioButtons"
   } ], [ {
     "type" : "container",
@@ -120,7 +120,7 @@
         "value" : ""
       }
     },
-    "reference" : "697961e2-f7d6-4ab8-a1ec-1724c5fb24d6",
+    "reference" : "0a74022a-fab1-427f-86b4-7b6883337cb3",
     "id" : "pbContainer",
     "rows" : [ [ {
       "type" : "component",
@@ -141,7 +141,7 @@
         },
         "headers" : {
           "type" : "expression",
-          "value" : "loanFilter.status===\"Closed\"?[\"Id\", \"Type\", \"Requested on\", \"Name\", \"Amount\", \"Duration (months)\", \"Rate\", \"Status\", \"Closed on\"]:[\"Id\", \"Type\", \"Requested on\", \"Name\", \"Amount\", \"Duration (months)\", \"Rate\", \"Status\"]"
+          "value" : "loanFilter.status===\"Closed\"?[\"Id\", \"Type\", \"Requested on\", \"Name\", \"Amount\", \"Duration (months)\", \"Rate\", \"Status\", \"Closed on\"]:[\"Id\", \"Type\", \"Requested on\", \"Priority (based on prediction)\", \"Name\", \"Amount\", \"Duration (months)\", \"Rate\", \"Status\"]"
         },
         "type" : {
           "type" : "constant",
@@ -156,11 +156,11 @@
         },
         "content" : {
           "type" : "expression",
-          "value" : "loanRequests"
+          "value" : "loanRequestsWithPredictions"
         },
         "columnsKey" : {
-          "type" : "constant",
-          "value" : [ "persistenceId", "type", "requestDate", "customer", "amount", "durationInMonth", "rate", "status", "closeDate" ]
+          "type" : "expression",
+          "value" : "loanFilter.status===\"Closed\"? [\"persistenceId\", \"type\", \"requestDate\", \"customer\", \"amount\", \"durationInMonth\", \"rate\", \"status\", \"closeDate\"]:[\"persistenceId\", \"type\", \"requestDate\", \"prediction\", \"customer\", \"amount\", \"durationInMonth\", \"rate\", \"status\"]"
         },
         "sortColumns" : {
           "type" : "constant"
@@ -178,7 +178,7 @@
           "value" : ""
         }
       },
-      "reference" : "1d9a6a34-2938-496f-9bd5-3c909459f3bb",
+      "reference" : "09b29fc5-6020-4ed0-b912-3be08fd07b69",
       "id" : "pbDataTable"
     } ] ]
   } ] ],
@@ -220,6 +220,16 @@
     "redirectToSelectedTask" : {
       "type" : "expression",
       "value" : "if($data.selectedRequest && $data.selectedRequest.taskURL) {\n    window.location.href = $data.selectedRequest.taskURL;\n} \nreturn null",
+      "exposed" : false
+    },
+    "predictionsPerCase" : {
+      "type" : "url",
+      "value" : "../API/extension/casePrediction",
+      "exposed" : false
+    },
+    "loanRequestsWithPredictions" : {
+      "type" : "expression",
+      "value" : "if($data.loanRequests) {\n    return $data.loanRequests.map(function(elem){\n        elem.prediction = \"Normal\";\n        let casePrediction = $data.predictionsPerCase[elem.caseId];\n        if( casePrediction && casePrediction < 0.5) {\n            elem.prediction = \"Urgent!\";\n        }\n        console.log(\"Case \" + elem.caseId + \" is considered \" + elem.prediction + \" because of prediction value: \" + $data.predictionsPerCase[elem.caseId]);\n        return elem;\n    })\n}\nreturn [];",
       "exposed" : false
     }
   }
