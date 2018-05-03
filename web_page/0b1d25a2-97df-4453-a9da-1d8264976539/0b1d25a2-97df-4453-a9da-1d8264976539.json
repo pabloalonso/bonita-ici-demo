@@ -3,7 +3,7 @@
   "id" : "0b1d25a2-97df-4453-a9da-1d8264976539",
   "name" : "reviewCustomerCreditHistory",
   "type" : "form",
-  "lastUpdate" : 1522760835338,
+  "lastUpdate" : 1523352117417,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -341,7 +341,7 @@
           },
           "targetUrlOnSuccess" : {
             "type" : "interpolation",
-            "value" : "/bonita"
+            "value" : "../"
           },
           "action" : {
             "type" : "constant",
@@ -368,6 +368,21 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : ""
           }
         },
         "reference" : "e102730b-69cc-46ad-b7b1-c25d139b19c3",

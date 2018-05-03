@@ -3,7 +3,7 @@
   "id" : "8f56b1f7-5739-4889-9c27-0b3921fd4b56",
   "name" : "validateLoanRequest",
   "type" : "form",
-  "lastUpdate" : 1522760801371,
+  "lastUpdate" : 1523351902231,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -173,7 +173,7 @@
           },
           "text" : {
             "type" : "interpolation",
-            "value" : "Document Validation"
+            "value" : "Document Provided by Customer"
           },
           "alignment" : {
             "type" : "constant",
@@ -186,10 +186,75 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
           }
         },
         "reference" : "c927acbb-8a5c-4f51-ae16-345b40bea52a",
         "id" : "pbTitle"
+      } ], [ {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : "context.customerDocuments_ref"
+          }
+        },
+        "reference" : "c216f813-e9e8-478e-b342-a07e3cfcaab9",
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12,
+            "sm" : 12,
+            "md" : 5,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "type" : {
+              "type" : "constant",
+              "value" : "Process document"
+            },
+            "url" : {
+              "type" : "constant",
+              "value" : "http://google.fr"
+            },
+            "document" : {
+              "type" : "variable",
+              "value" : "$item"
+            },
+            "showPreview" : {
+              "type" : "constant",
+              "value" : false
+            }
+          },
+          "reference" : "ef2baf49-54c2-41c7-ba87-dda9d599ddd3",
+          "id" : "pbFileViewer"
+        } ] ]
       } ], [ {
         "type" : "container",
         "dimension" : {
@@ -200,7 +265,8 @@
         },
         "propertyValues" : {
           "repeatedCollection" : {
-            "type" : "variable"
+            "type" : "variable",
+            "value" : ""
           },
           "labelHidden" : {
             "type" : "constant",
@@ -212,7 +278,7 @@
           },
           "cssClasses" : {
             "type" : "constant",
-            "value" : ""
+            "value" : "well"
           },
           "widgetId" : {
             "type" : "constant"
@@ -235,6 +301,10 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
           }
         },
         "reference" : "c6dbdeb7-be63-4594-88ae-d8974dc54a76",
@@ -242,10 +312,10 @@
         "rows" : [ [ {
           "type" : "component",
           "dimension" : {
-            "md" : 12,
+            "md" : 3,
             "sm" : 12,
             "xs" : 12,
-            "lg" : 12
+            "lg" : 4
           },
           "propertyValues" : {
             "labelHidden" : {
@@ -287,17 +357,29 @@
             "value" : {
               "type" : "variable",
               "value" : "formInput.documentValidation.allDocumentProvided"
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "disabled" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : false
             }
           },
           "reference" : "4af45391-a21b-48ff-b378-65ec34f466dc",
           "id" : "pbCheckbox"
-        } ], [ {
+        }, {
           "type" : "component",
           "dimension" : {
-            "md" : 12,
+            "md" : 3,
             "sm" : 12,
             "xs" : 12,
-            "lg" : 12
+            "lg" : 4
           },
           "propertyValues" : {
             "labelHidden" : {
@@ -339,91 +421,118 @@
             "value" : {
               "type" : "variable",
               "value" : "formInput.documentValidation.councellorValidation"
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "disabled" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : false
             }
           },
           "reference" : "844ef33f-d247-49bb-9334-626bf7f43e43",
           "id" : "pbCheckbox"
-        } ] ]
-      } ], [ {
-        "type" : "component",
-        "dimension" : {
-          "md" : 12,
-          "sm" : 12,
-          "xs" : 12,
-          "lg" : 12
-        },
-        "propertyValues" : {
-          "removeItem" : {
-            "type" : "variable"
-          },
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "widgetId" : {
-            "type" : "constant",
-            "value" : "pbButton"
-          },
-          "buttonStyle" : {
-            "type" : "constant",
-            "value" : "primary"
-          },
-          "isDisplayed" : {
-            "type" : "constant",
-            "value" : true
-          },
-          "label" : {
-            "type" : "interpolation",
-            "value" : "Submit"
-          },
-          "dataToSend" : {
-            "type" : "expression",
-            "value" : "formOutput"
-          },
-          "labelHidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "readonly" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "collectionPosition" : {
-            "type" : "constant"
-          },
-          "targetUrlOnSuccess" : {
-            "type" : "interpolation",
-            "value" : "/bonita"
-          },
-          "action" : {
-            "type" : "constant",
-            "value" : "Submit task"
-          },
-          "collectionToModify" : {
-            "type" : "variable"
-          },
-          "valueToAdd" : {
-            "type" : "expression"
-          },
-          "disabled" : {
-            "type" : "expression",
-            "value" : "$form.$invalid"
-          },
-          "alignment" : {
-            "type" : "constant",
-            "value" : "center"
-          },
-          "class" : {
-            "type" : "constant",
-            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
-          },
+        } ], [ {
+          "type" : "component",
           "dimension" : {
-            "type" : "constant",
-            "value" : 12
-          }
-        },
-        "reference" : "addb1f24-9cd9-4320-ba26-cb60862c04a3",
-        "id" : "pbButton"
+            "md" : 12,
+            "sm" : 12,
+            "xs" : 12,
+            "lg" : 12
+          },
+          "propertyValues" : {
+            "removeItem" : {
+              "type" : "variable"
+            },
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant",
+              "value" : "pbButton"
+            },
+            "buttonStyle" : {
+              "type" : "constant",
+              "value" : "primary"
+            },
+            "isDisplayed" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Validate"
+            },
+            "dataToSend" : {
+              "type" : "expression",
+              "value" : "formOutput"
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "readonly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "collectionPosition" : {
+              "type" : "constant"
+            },
+            "targetUrlOnSuccess" : {
+              "type" : "interpolation",
+              "value" : "../"
+            },
+            "action" : {
+              "type" : "constant",
+              "value" : "Submit task"
+            },
+            "collectionToModify" : {
+              "type" : "variable"
+            },
+            "valueToAdd" : {
+              "type" : "expression"
+            },
+            "disabled" : {
+              "type" : "expression",
+              "value" : "$form.$invalid"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "center"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "url" : {
+              "type" : "interpolation"
+            },
+            "dataFromSuccess" : {
+              "type" : "variable",
+              "value" : ""
+            },
+            "dataFromError" : {
+              "type" : "variable",
+              "value" : ""
+            }
+          },
+          "reference" : "addb1f24-9cd9-4320-ba26-cb60862c04a3",
+          "id" : "pbButton"
+        } ] ]
       } ] ]
     }
   } ] ],

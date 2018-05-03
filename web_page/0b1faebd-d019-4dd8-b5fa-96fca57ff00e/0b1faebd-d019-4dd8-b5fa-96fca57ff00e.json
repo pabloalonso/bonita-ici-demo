@@ -3,7 +3,7 @@
   "id" : "0b1faebd-d019-4dd8-b5fa-96fca57ff00e",
   "name" : "loanRequestListPredictive",
   "type" : "page",
-  "lastUpdate" : 1522918987611,
+  "lastUpdate" : 1523293254225,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -229,7 +229,7 @@
     },
     "loanRequestsWithPredictions" : {
       "type" : "expression",
-      "value" : "if($data.loanRequests) {\n    return $data.loanRequests.map(function(elem){\n        elem.prediction = \"Normal\";\n        let casePrediction = $data.predictionsPerCase[elem.caseId];\n        if( casePrediction && casePrediction < 0.5) {\n            elem.prediction = \"Urgent!\";\n        }\n        console.log(\"Case \" + elem.caseId + \" is considered \" + elem.prediction + \" because of prediction value: \" + $data.predictionsPerCase[elem.caseId]);\n        return elem;\n    })\n}\nreturn [];",
+      "value" : "if($data.loanRequests) {\n    let result = $data.loanRequests.map(function(elem){\n        elem.prediction = \"Normal\";\n        let casePrediction = $data.predictionsPerCase[elem.caseId];\n        if( casePrediction && casePrediction < 0.5) {\n            elem.prediction = \"Urgent!\";\n        }\n        console.log(\"Case \" + elem.caseId + \" is considered \" + elem.prediction + \" because of prediction value: \" + $data.predictionsPerCase[elem.caseId]);\n        return elem;\n    })\n    result.sort((a,b) => {\n        if(a.prediction < b.prediction) {\n            return 1;\n        }\n        if(a.prediction == b.prediction) {\n            return 0;\n        }\n        return -1;\n        \n    });\n    return result;\n}\nreturn [];",
       "exposed" : false
     }
   }

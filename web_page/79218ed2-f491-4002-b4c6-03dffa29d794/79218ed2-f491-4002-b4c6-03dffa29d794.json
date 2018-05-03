@@ -3,7 +3,7 @@
   "id" : "79218ed2-f491-4002-b4c6-03dffa29d794",
   "name" : "loanRequestList",
   "type" : "page",
-  "lastUpdate" : 1522920628871,
+  "lastUpdate" : 1523022241260,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -199,7 +199,7 @@
   "data" : {
     "loanRequests" : {
       "type" : "url",
-      "value" : "../API/bdm/businessData/com.company.model.Loan?q={{queryName}}&p=0&c=100",
+      "value" : "../API/bdm/businessData/com.company.model.Loan?q={{queryName}}&p=0&c=10000",
       "exposed" : false
     },
     "loanFilter" : {

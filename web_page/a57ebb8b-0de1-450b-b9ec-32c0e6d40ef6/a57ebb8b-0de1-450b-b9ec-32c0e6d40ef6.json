@@ -3,7 +3,7 @@
   "id" : "a57ebb8b-0de1-450b-b9ec-32c0e6d40ef6",
   "name" : "writeLoanContract",
   "type" : "form",
-  "lastUpdate" : 1522760863128,
+  "lastUpdate" : 1523352147472,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -431,7 +431,7 @@
           },
           "targetUrlOnSuccess" : {
             "type" : "interpolation",
-            "value" : "/bonita"
+            "value" : "../"
           },
           "action" : {
             "type" : "constant",
@@ -458,6 +458,21 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : ""
           }
         },
         "reference" : "2a53ff86-2f56-4db6-9941-bc73a6fa5186",

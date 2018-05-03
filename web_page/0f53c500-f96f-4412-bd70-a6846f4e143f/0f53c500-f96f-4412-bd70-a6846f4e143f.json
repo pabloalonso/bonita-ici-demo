@@ -3,7 +3,7 @@
   "id" : "0f53c500-f96f-4412-bd70-a6846f4e143f",
   "name" : "validateLoan",
   "type" : "form",
-  "lastUpdate" : 1522760900431,
+  "lastUpdate" : 1523352211400,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -360,7 +360,7 @@
           },
           "targetUrlOnSuccess" : {
             "type" : "interpolation",
-            "value" : "/bonita"
+            "value" : "../"
           },
           "action" : {
             "type" : "constant",
@@ -387,6 +387,21 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : ""
           }
         },
         "reference" : "b8762387-f2e3-43f1-b816-4b569184b366",

@@ -3,7 +3,7 @@
   "id" : "e210aca4-5365-4ca8-9b9d-7d195e2e110f",
   "name" : "completeLoanRequest",
   "type" : "form",
-  "lastUpdate" : 1522760785647,
+  "lastUpdate" : 1523350761017,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -521,7 +521,7 @@
           },
           "targetUrlOnSuccess" : {
             "type" : "interpolation",
-            "value" : "/bonita"
+            "value" : "../"
           },
           "action" : {
             "type" : "constant",
@@ -548,6 +548,21 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : ""
           }
         },
         "reference" : "b32f619b-c7b2-423a-9549-fe512aa9cf2f",

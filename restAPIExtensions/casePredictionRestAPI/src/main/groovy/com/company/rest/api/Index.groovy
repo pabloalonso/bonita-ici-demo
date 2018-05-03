@@ -36,7 +36,7 @@ class Index implements RestApiController {
         Properties props = loadProperties("configuration.properties", context.resourceProvider)
         URL iciApplicationUrl = new URL(props["predictiveURL"])
 
-		def allCases = new RESTClient(url:iciApplicationUrl).get("/case/1/RequestLoan");
+		def allCases = new RESTClient(url:iciApplicationUrl).get("/api/case/1/RequestLoan");
 		def result = [:]
 		allCases.content.each { aCase ->
 			// extract caseId and associated prediction
