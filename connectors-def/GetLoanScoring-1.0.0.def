@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>GetLoanScoring</id>
+  <version>1.0.0</version>
+  <icon>print-dollar-sign-large.png</icon>
+  <category icon="print-dollar-sign-large.png" id="Banking"/>
+  <input mandatory="true" name="customerId" type="java.lang.String"/>
+  <output name="score" type="java.lang.Float"/>
+  <page id="customerInfo">
+    <widget xsi:type="definition:Text" id="customer" inputName="customerId"/>
+  </page>
+</definition:ConnectorDefinition>

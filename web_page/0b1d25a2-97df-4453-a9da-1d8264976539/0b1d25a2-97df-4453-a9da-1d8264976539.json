@@ -1,9 +1,9 @@
 {
-  "designerVersion" : "1.6.46",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.6.46",
   "id" : "0b1d25a2-97df-4453-a9da-1d8264976539",
   "name" : "reviewCustomerCreditHistory",
-  "type" : "form",
-  "lastUpdate" : 1523352117417,
+  "lastUpdate" : 1529075113019,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -114,6 +114,10 @@
         "dimension" : {
           "type" : "constant",
           "value" : 12
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
         }
       },
       "reference" : "8e71ce5b-c0b6-461f-8ae3-63205edf2169",
@@ -430,5 +434,7 @@
       "value" : "id",
       "exposed" : false
     }
-  }
+  },
+  "uuid" : "0b1d25a2-97df-4453-a9da-1d8264976539",
+  "type" : "form"
 }

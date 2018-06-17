@@ -1,9 +1,9 @@
 {
-  "designerVersion" : "1.6.46",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.6.46",
   "id" : "e6105c3a-6f64-4fb2-a3d0-b9e3537e7c0f",
   "name" : "loanRequestsMonitoring",
-  "type" : "page",
-  "lastUpdate" : 1522762645379,
+  "lastUpdate" : 1529075113404,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -98,5 +98,7 @@
     "external" : false
   } ],
   "inactiveAssets" : [ ],
-  "data" : { }
+  "data" : { },
+  "uuid" : "e6105c3a-6f64-4fb2-a3d0-b9e3537e7c0f",
+  "type" : "page"
 }

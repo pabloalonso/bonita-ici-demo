@@ -1,0 +1,43 @@
+{
+  "designerVersion" : "1.8.0",
+  "id" : "breadcrumb",
+  "name" : "breadcrumb",
+  "lastUpdate" : 1529248002806,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "allowHTML" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "<div data-fixedsticky=\"\" ng-hide=\"breadcrumbHide\" breadcrumb=\"breadcrumb\" class=\"\">\n    <nav class=\"c-breadcrumb-container\">\n        <ul class=\"c-breadcrumb\" ng-class=\"{ 'c-breadcrumb--wide': breadcrumbWide }\">\n            <li class=\"c-breadcrumb__item visible-xs\">\n                <a href=\"javascript://\" class=\"c-step is-current\" title=\"Votre demande\">\n                    <div class=\"c-step__text c-step__text--number\">1<span class=\"visible-xs-inline-block\">&nbsp;/&nbsp;6</span></div>\n                    <div class=\"c-step__bullet\"></div>\n                    <div class=\"c-step__text c-step__text--title\" ng-bind-html=\"breadcrumb.currentStep.label | translate \">Votre demande</div>\n                </a>\n            </li>\n\n            <!----><li class=\"c-breadcrumb__item\" ng-repeat=\"(key, step) in breadcrumb.steps\">\n                <a href=\"javascript://\" class=\"c-step c-step--first is-active\" ng-class=\"{\n                    'c-step--first': $first,\n                    'c-step--last': $last,\n                    'is-active': step.active,\n                    'is-done': step.done,\n                    'is-inactive': step.inactive,\n                    'is-disabled': step.disabled\n                   }\" title=\"Votre demande\" ng-click=\"step.disabled || (step.done || step.activeIfCurrent) &amp;&amp; go(step.link)\" style=\"\">\n                    <div class=\"c-step__text c-step__text--number\">1<span class=\"visible-xs-inline-block\">&nbsp;/ 6</span></div>\n                    <div class=\"c-step__bullet\"></div>\n                    <div class=\"c-step__text c-step__text--title\" translate=\"Votre demande\">Your Request</div>\n                </a>\n            </li><!----><!----><!----><li class=\"c-breadcrumb__item\" ng-repeat=\"(key, step) in breadcrumb.steps\">\n                <a href=\"javascript://\" class=\"c-step is-inactive is-disabled\" ng-class=\"{\n                    'c-step--first': $first,\n                    'c-step--last': $last,\n                    'is-active': step.active,\n                    'is-done': step.done,\n                    'is-inactive': step.inactive,\n                    'is-disabled': step.disabled\n                   }\" title=\"Notre proposition\" ng-click=\"step.disabled || (step.done || step.activeIfCurrent) &amp;&amp; go(step.link)\" style=\"\">\n                    <div class=\"c-step__text c-step__text--number\">2<span class=\"visible-xs-inline-block\">&nbsp;/ 6</span></div>\n                    <div class=\"c-step__bullet\"></div>\n                    <div class=\"c-step__text c-step__text--title\" translate=\"Notre proposition\">Our Offer</div>\n                </a>\n            </li><!----><li class=\"c-breadcrumb__item\" ng-repeat=\"(key, step) in breadcrumb.steps\">\n                <a href=\"javascript://\" class=\"c-step is-inactive is-disabled\" ng-class=\"{\n                    'c-step--first': $first,\n                    'c-step--last': $last,\n                    'is-active': step.active,\n                    'is-done': step.done,\n                    'is-inactive': step.inactive,\n                    'is-disabled': step.disabled\n                   }\" title=\"Récapitulatif\" ng-click=\"step.disabled || (step.done || step.activeIfCurrent) &amp;&amp; go(step.link)\" style=\"\">\n                    <div class=\"c-step__text c-step__text--number\">3<span class=\"visible-xs-inline-block\">&nbsp;/ 6</span></div>\n                    <div class=\"c-step__bullet\"></div>\n                    <div class=\"c-step__text c-step__text--title\" translate=\"Récapitulatif\">Contract Signature</div>\n                </a>\n            </li><!----><li class=\"c-breadcrumb__item\" ng-repeat=\"(key, step) in breadcrumb.steps\">\n                <a href=\"javascript://\" class=\"c-step c-step--last is-inactive is-disabled\" ng-class=\"{\n                    'c-step--first': $first,\n                    'c-step--last': $last,\n                    'is-active': step.active,\n                    'is-done': step.done,\n                    'is-inactive': step.inactive,\n                    'is-disabled': step.disabled\n                   }\" title=\"Votre dossier\" ng-click=\"step.disabled || (step.done || step.activeIfCurrent) &amp;&amp; go(step.link)\" style=\"\">\n                    <div class=\"c-step__text c-step__text--number\">4<span class=\"visible-xs-inline-block\">&nbsp;/ 6</span></div>\n                    <div class=\"c-step__bullet\"></div>\n                    <div class=\"c-step__text c-step__text--title\" translate=\"Votre dossier\">Funds transfered</div>\n                </a>\n            </li><!---->\n        </ul>\n    </nav>\n</div>"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      }
+    },
+    "reference" : "28c98e85-f3fd-4791-b728-803c24389394",
+    "id" : "pbText"
+  } ] ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "data" : { },
+  "type" : "fragment"
+}

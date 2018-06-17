@@ -1,9 +1,9 @@
 {
-  "designerVersion" : "1.6.46",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.6.46",
   "id" : "a57ebb8b-0de1-450b-b9ec-32c0e6d40ef6",
   "name" : "writeLoanContract",
-  "type" : "form",
-  "lastUpdate" : 1523352147472,
+  "lastUpdate" : 1529075113284,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -114,6 +114,10 @@
         "dimension" : {
           "type" : "constant",
           "value" : 12
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
         }
       },
       "reference" : "50564903-1b80-45ab-a0fd-815548862394",
@@ -520,5 +524,7 @@
       "value" : "id",
       "exposed" : false
     }
-  }
+  },
+  "uuid" : "a57ebb8b-0de1-450b-b9ec-32c0e6d40ef6",
+  "type" : "form"
 }

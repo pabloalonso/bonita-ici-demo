@@ -1,10 +1,9 @@
 {
-  "designerVersion" : "1.5.10",
-  "previousDesignerVersion" : "1.4.18",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.5.10",
   "id" : "d239b776-1965-44e1-a1e0-0e9d82cf51be",
   "name" : "CaseOverview",
-  "type" : "page",
-  "lastUpdate" : 1522324535690,
+  "lastUpdate" : 1529075113315,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -84,6 +83,10 @@
         "alignment" : {
           "type" : "constant",
           "value" : "left"
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
         }
       },
       "reference" : "cce42e61-e0e4-40d8-9d8a-cb24289e8510",
@@ -135,6 +138,10 @@
           "alignment" : {
             "type" : "constant",
             "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "10eda89d-987c-488b-b912-6a3c52bdf22e",
@@ -287,6 +294,10 @@
         "alignment" : {
           "type" : "constant",
           "value" : "left"
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
         }
       },
       "reference" : "5927b671-79e4-44ca-9603-85c79a8de2ef",
@@ -338,6 +349,10 @@
           "alignment" : {
             "type" : "constant",
             "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "3174f0c2-132c-4107-902e-922182bf517d",
@@ -454,6 +469,10 @@
         "alignment" : {
           "type" : "constant",
           "value" : "left"
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
         }
       },
       "reference" : "885c9cb6-39fd-4e2b-b859-2d5b62913aeb",
@@ -587,6 +606,10 @@
         "alignment" : {
           "type" : "constant",
           "value" : "left"
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
         }
       },
       "reference" : "283001a8-cd4c-46b9-95c8-dc12aaea1c3d",
@@ -689,5 +712,7 @@
       "value" : "return $data.openedContext || $data.archivedContext;",
       "exposed" : false
     }
-  }
+  },
+  "uuid" : "d239b776-1965-44e1-a1e0-0e9d82cf51be",
+  "type" : "page"
 }

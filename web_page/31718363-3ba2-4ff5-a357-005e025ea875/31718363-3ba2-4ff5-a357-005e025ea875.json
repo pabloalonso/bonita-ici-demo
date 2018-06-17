@@ -1,9 +1,9 @@
 {
-  "designerVersion" : "1.6.46",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.6.46",
   "id" : "31718363-3ba2-4ff5-a357-005e025ea875",
   "name" : "generateLoanRequests",
-  "type" : "form",
-  "lastUpdate" : 1523006280180,
+  "lastUpdate" : 1529075113164,
   "rows" : [ [ {
     "type" : "formContainer",
     "dimension" : {
@@ -225,5 +225,7 @@
       "value" : "return {\n\t'numberOfRequestToCreateInput': $data.formInput.numberOfRequestToCreateInput\n};",
       "exposed" : false
     }
-  }
+  },
+  "uuid" : "31718363-3ba2-4ff5-a357-005e025ea875",
+  "type" : "form"
 }

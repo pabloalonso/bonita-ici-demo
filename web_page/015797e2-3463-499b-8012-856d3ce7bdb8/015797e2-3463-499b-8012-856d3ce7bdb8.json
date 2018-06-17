@@ -1,9 +1,9 @@
 {
-  "designerVersion" : "1.6.46",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.6.46",
   "id" : "015797e2-3463-499b-8012-856d3ce7bdb8",
   "name" : "signLoanContract",
-  "type" : "form",
-  "lastUpdate" : 1523352186752,
+  "lastUpdate" : 1529075112966,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -114,6 +114,10 @@
         "dimension" : {
           "type" : "constant",
           "value" : 12
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
         }
       },
       "reference" : "c6949a94-532f-4389-a8d2-3b3e1ee37cc6",
@@ -449,5 +453,7 @@
       "value" : "id",
       "exposed" : false
     }
-  }
+  },
+  "uuid" : "015797e2-3463-499b-8012-856d3ce7bdb8",
+  "type" : "form"
 }

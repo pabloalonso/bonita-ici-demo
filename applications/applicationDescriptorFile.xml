@@ -4,6 +4,7 @@
         <displayName>Loan Management</displayName>
         <description>Manage the loan requests from customers.</description>
         <applicationPages>
+            <applicationPage customPage="custompage_cdn" token="cdn"/>
             <applicationPage customPage="custompage_loanRequestList" token="requests"/>
         </applicationPages>
         <applicationMenus>

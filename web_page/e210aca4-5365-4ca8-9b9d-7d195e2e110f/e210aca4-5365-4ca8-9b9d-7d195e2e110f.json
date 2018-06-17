@@ -1,130 +1,93 @@
 {
-  "designerVersion" : "1.6.46",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.6.46",
   "id" : "e210aca4-5365-4ca8-9b9d-7d195e2e110f",
   "name" : "completeLoanRequest",
-  "type" : "form",
-  "lastUpdate" : 1523350761017,
+  "lastUpdate" : 1529252436482,
   "rows" : [ [ {
+    "type" : "fragment",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      }
+    },
+    "reference" : "ab8ab640-01df-4c8c-b186-1c35dceaf1ec",
+    "id" : "header",
+    "binding" : { }
+  } ], [ {
+    "type" : "fragment",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      }
+    },
+    "reference" : "98029141-808e-4b0c-ae05-753ab5a0c792",
+    "id" : "breadcrumbImg",
+    "binding" : { }
+  } ], [ {
     "type" : "container",
     "dimension" : {
-      "xs" : 12
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 2,
+      "lg" : 4
     },
-    "propertyValues" : { },
-    "reference" : "63107318-8afa-4723-8dad-072bf983eac9",
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "617d0f75-5d52-44d0-bcbf-8f2eca86a58c",
     "id" : "pbContainer",
-    "rows" : [ [ {
-      "type" : "component",
-      "dimension" : {
-        "md" : 12,
-        "sm" : 12,
-        "xs" : 12,
-        "lg" : 12
-      },
-      "propertyValues" : {
-        "labelHidden" : {
-          "type" : "constant",
-          "value" : false
-        },
-        "readonly" : {
-          "type" : "constant",
-          "value" : false
-        },
-        "level" : {
-          "type" : "constant",
-          "value" : "Level 1"
-        },
-        "cssClasses" : {
-          "type" : "constant",
-          "value" : ""
-        },
-        "widgetId" : {
-          "type" : "constant",
-          "value" : "pbTitle"
-        },
-        "isDisplayed" : {
-          "type" : "constant",
-          "value" : true
-        },
-        "label" : {
-          "type" : "interpolation"
-        },
-        "text" : {
-          "type" : "interpolation",
-          "value" : "{{ task.displayName }}"
-        },
-        "alignment" : {
-          "type" : "constant",
-          "value" : "center"
-        },
-        "class" : {
-          "type" : "constant",
-          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
-        },
-        "dimension" : {
-          "type" : "constant",
-          "value" : 12
-        }
-      },
-      "reference" : "03c981a6-68b2-4b9a-836c-221ab282f607",
-      "id" : "pbTitle"
-    } ], [ {
-      "type" : "component",
-      "dimension" : {
-        "md" : 12,
-        "sm" : 12,
-        "xs" : 12,
-        "lg" : 12
-      },
-      "propertyValues" : {
-        "labelHidden" : {
-          "type" : "constant",
-          "value" : false
-        },
-        "readonly" : {
-          "type" : "constant",
-          "value" : false
-        },
-        "cssClasses" : {
-          "type" : "constant",
-          "value" : ""
-        },
-        "widgetId" : {
-          "type" : "constant",
-          "value" : "pbText"
-        },
-        "isDisplayed" : {
-          "type" : "constant",
-          "value" : true
-        },
-        "label" : {
-          "type" : "interpolation"
-        },
-        "text" : {
-          "type" : "interpolation",
-          "value" : "{{ task.displayDescription }}"
-        },
-        "alignment" : {
-          "type" : "constant",
-          "value" : "left"
-        },
-        "class" : {
-          "type" : "constant",
-          "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TextWidget"
-        },
-        "dimension" : {
-          "type" : "constant",
-          "value" : 12
-        }
-      },
-      "reference" : "6d987735-49e2-4fd9-8fe2-19a1f67440ec",
-      "id" : "pbText"
-    } ] ]
-  } ], [ {
+    "rows" : [ [ ] ]
+  }, {
     "type" : "formContainer",
     "dimension" : {
-      "xs" : 12
+      "xs" : 12,
+      "md" : 8,
+      "lg" : 4
     },
-    "propertyValues" : { },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      }
+    },
     "reference" : "3a18d30d-9c7e-4764-9625-1da413adf6fc",
     "id" : "pbFormContainer",
     "container" : {
@@ -251,7 +214,7 @@
           "propertyValues" : {
             "cssClasses" : {
               "type" : "constant",
-              "value" : ""
+              "value" : "c-form__legend c-input"
             },
             "widgetId" : {
               "type" : "constant",
@@ -262,8 +225,7 @@
               "value" : true
             },
             "labelWidth" : {
-              "type" : "constant",
-              "value" : 0
+              "type" : "constant"
             },
             "label" : {
               "type" : "interpolation",
@@ -307,6 +269,14 @@
             "value" : {
               "type" : "variable",
               "value" : "$item"
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "errorContent" : {
+              "type" : "variable",
+              "value" : ""
             }
           },
           "reference" : "12b59c3c-bef0-4687-a6c8-a16e5db57b3b",
@@ -451,7 +421,8 @@
             "value" : "formInput.customerDocumentsDocumentInput"
           },
           "valueToAdd" : {
-            "type" : "expression"
+            "type" : "expression",
+            "value" : ""
           },
           "disabled" : {
             "type" : "constant",
@@ -468,6 +439,19 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable"
+          },
+          "dataFromError" : {
+            "type" : "variable"
           }
         },
         "reference" : "59b4366a-812a-4a39-88b4-c5ed4a6703cd",
@@ -486,7 +470,7 @@
           },
           "cssClasses" : {
             "type" : "constant",
-            "value" : ""
+            "value" : "c-button"
           },
           "widgetId" : {
             "type" : "constant",
@@ -569,6 +553,31 @@
         "id" : "pbButton"
       } ] ]
     }
+  }, {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 2,
+      "lg" : 4
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "36ff357f-3fc2-472e-9c5b-f846e6026096",
+    "id" : "pbContainer",
+    "rows" : [ [ ] ]
   } ] ],
   "assets" : [ {
     "id" : "296b32d5-53de-4a6d-9ad6-a9f00cbf4f2a",
@@ -582,6 +591,12 @@
     "type" : "css",
     "order" : 0,
     "external" : false
+  }, {
+    "id" : "0373ffa4-193e-4495-88ee-6dd552d5e310",
+    "name" : "/bonita/portal/resource/app/loan/cdn/content/assets/style/bank.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : true
   } ],
   "inactiveAssets" : [ ],
   "data" : {
@@ -610,5 +625,7 @@
       "value" : "id",
       "exposed" : false
     }
-  }
+  },
+  "uuid" : "e210aca4-5365-4ca8-9b9d-7d195e2e110f",
+  "type" : "form"
 }

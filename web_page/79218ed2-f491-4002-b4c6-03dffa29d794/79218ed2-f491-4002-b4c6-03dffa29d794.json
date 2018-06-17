@@ -1,9 +1,9 @@
 {
-  "designerVersion" : "1.6.46",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.6.46",
   "id" : "79218ed2-f491-4002-b4c6-03dffa29d794",
   "name" : "loanRequestList",
-  "type" : "page",
-  "lastUpdate" : 1523022241260,
+  "lastUpdate" : 1529075113224,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -222,5 +222,7 @@
       "value" : "if($data.selectedRequest && $data.selectedRequest.taskURL) {\n    window.location.href = $data.selectedRequest.taskURL;\n} \nreturn null",
       "exposed" : false
     }
-  }
+  },
+  "uuid" : "79218ed2-f491-4002-b4c6-03dffa29d794",
+  "type" : "page"
 }

@@ -1,0 +1,104 @@
+{
+  "designerVersion" : "1.8.0",
+  "id" : "header",
+  "name" : "header",
+  "lastUpdate" : 1529251711598,
+  "rows" : [ [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : "c-page-header"
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "cdaf7d4f-711a-4885-9924-b92b4a70c2b6",
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 11,
+        "sm" : 11,
+        "md" : 11,
+        "lg" : 11
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "<h1 class=\"text-primary\">ACME</h1>\n<h3>Bank</h3>"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        }
+      },
+      "reference" : "ff1c5cb9-17b0-4c97-8a94-9595017ef1a2",
+      "id" : "pbText"
+    }, {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 1,
+        "sm" : 1,
+        "md" : 1,
+        "lg" : 1
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "srcType" : {
+          "type" : "constant",
+          "value" : "URL"
+        },
+        "url" : {
+          "type" : "constant",
+          "value" : "/bonita/portal/resource/app/loan/cdn/content/assets/img/bank-logo.jpg"
+        },
+        "assetName" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "alt" : {
+          "type" : "interpolation",
+          "value" : "logo"
+        }
+      },
+      "reference" : "e884c6d9-9fd7-45c3-befe-71d9268f637e",
+      "id" : "pbImage"
+    } ] ]
+  } ] ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "data" : { },
+  "type" : "fragment"
+}

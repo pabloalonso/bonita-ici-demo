@@ -1,9 +1,9 @@
 {
-  "designerVersion" : "1.6.46",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.6.46",
   "id" : "584a01db-0c24-4408-8966-ad77c2d9dcda",
   "name" : "updateLoanCaseId",
-  "type" : "form",
-  "lastUpdate" : 1522920288696,
+  "lastUpdate" : 1529075113195,
   "rows" : [ [ {
     "type" : "formContainer",
     "dimension" : {
@@ -270,5 +270,7 @@
       "value" : "return {\n\t'caseIdInput': $data.formInput.caseIdInput,\n\t'loanRequestIdInput': $data.formInput.loanRequestIdInput\n};",
       "exposed" : false
     }
-  }
+  },
+  "uuid" : "584a01db-0c24-4408-8966-ad77c2d9dcda",
+  "type" : "form"
 }

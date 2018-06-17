@@ -1,9 +1,9 @@
 {
-  "designerVersion" : "1.6.46",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.6.46",
   "id" : "f51a1576-f027-4849-ba99-df6d059910ef",
   "name" : "deleteALoanRequest",
-  "type" : "form",
-  "lastUpdate" : 1522825957001,
+  "lastUpdate" : 1529075113432,
   "rows" : [ [ {
     "type" : "formContainer",
     "dimension" : {
@@ -199,5 +199,7 @@
       "value" : "return {\n\t'loanRequestIdInput': $data.formInput.loanRequestIdInput\n};",
       "exposed" : false
     }
-  }
+  },
+  "uuid" : "f51a1576-f027-4849-ba99-df6d059910ef",
+  "type" : "form"
 }

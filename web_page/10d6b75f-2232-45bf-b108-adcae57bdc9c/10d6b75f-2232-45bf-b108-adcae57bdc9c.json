@@ -1,9 +1,9 @@
 {
-  "designerVersion" : "1.6.46",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.6.46",
   "id" : "10d6b75f-2232-45bf-b108-adcae57bdc9c",
   "name" : "loanRequestBot",
-  "type" : "form",
-  "lastUpdate" : 1522762179642,
+  "lastUpdate" : 1529075113130,
   "rows" : [ [ {
     "type" : "formContainer",
     "dimension" : {
@@ -270,5 +270,7 @@
       "value" : "return {\n\t'processInstanceIdInput': $data.formInput.processInstanceIdInput,\n\t'amountInput': $data.formInput.amountInput\n};",
       "exposed" : false
     }
-  }
+  },
+  "uuid" : "10d6b75f-2232-45bf-b108-adcae57bdc9c",
+  "type" : "form"
 }

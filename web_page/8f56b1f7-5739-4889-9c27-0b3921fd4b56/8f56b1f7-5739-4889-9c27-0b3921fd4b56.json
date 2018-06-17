@@ -1,9 +1,9 @@
 {
-  "designerVersion" : "1.6.46",
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.6.46",
   "id" : "8f56b1f7-5739-4889-9c27-0b3921fd4b56",
   "name" : "validateLoanRequest",
-  "type" : "form",
-  "lastUpdate" : 1523351902231,
+  "lastUpdate" : 1529075113253,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -114,6 +114,10 @@
         "dimension" : {
           "type" : "constant",
           "value" : 12
+        },
+        "allowHTML" : {
+          "type" : "constant",
+          "value" : true
         }
       },
       "reference" : "643f8382-8ec7-4eb9-95f7-338e9462e3c8",
@@ -576,5 +580,7 @@
       "value" : "id",
       "exposed" : false
     }
-  }
+  },
+  "uuid" : "8f56b1f7-5739-4889-9c27-0b3921fd4b56",
+  "type" : "form"
 }

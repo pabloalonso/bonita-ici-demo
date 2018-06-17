@@ -1,0 +1,48 @@
+{
+  "designerVersion" : "1.8.0",
+  "id" : "cdn",
+  "name" : "cdn",
+  "lastUpdate" : 1529251840356,
+  "rows" : [ [ ] ],
+  "assets" : [ {
+    "id" : "78fb23d5-07d5-4cfc-9624-889e0b1101dd",
+    "name" : "localization.json",
+    "type" : "json",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "5543999a-52b4-4370-be5c-dcb6f641b024",
+    "name" : "House.PNG",
+    "type" : "img",
+    "order" : 2,
+    "external" : false
+  }, {
+    "id" : "06e5189c-2979-4927-9698-dfe67743c625",
+    "name" : "step1-progress.PNG",
+    "type" : "img",
+    "order" : 4,
+    "external" : false
+  }, {
+    "id" : "bd44b43d-6fce-407e-9647-b6a83d9ea70c",
+    "name" : "bank-logo.jpg",
+    "type" : "img",
+    "order" : 1,
+    "external" : false
+  }, {
+    "id" : "00fec994-9dc2-4f64-9577-91e89e95563b",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "8f4429be-9bca-4bc7-b708-4876f5454cfe",
+    "name" : "bank.css",
+    "type" : "css",
+    "order" : 3,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : { },
+  "uuid" : "cf12f94f-d857-411b-8d5d-9733aceb5625",
+  "type" : "page"
+}
