@@ -2,7 +2,7 @@
   "designerVersion" : "1.8.0",
   "id" : "notifyCreditHistory",
   "name" : "notifyCreditHistory",
-  "lastUpdate" : 1529330151839,
+  "lastUpdate" : 1529342982335,
   "rows" : [ [ {
     "type" : "formContainer",
     "dimension" : {
@@ -324,7 +324,7 @@
               },
               "value" : {
                 "type" : "variable",
-                "value" : ""
+                "value" : "formInput.aPieceOfData.totalDepositsCredits"
               },
               "type" : {
                 "type" : "constant",
@@ -397,7 +397,7 @@
               },
               "value" : {
                 "type" : "variable",
-                "value" : ""
+                "value" : "formInput.aPieceOfData.totalWithdrawalsDebits"
               },
               "type" : {
                 "type" : "constant",
@@ -470,7 +470,7 @@
               },
               "value" : {
                 "type" : "variable",
-                "value" : ""
+                "value" : "formInput.aPieceOfData.totalChecksPaid"
               },
               "type" : {
                 "type" : "constant",
@@ -543,7 +543,7 @@
               },
               "value" : {
                 "type" : "variable",
-                "value" : ""
+                "value" : "formInput.aPieceOfData.totalEndingBalance"
               },
               "type" : {
                 "type" : "constant",
@@ -636,7 +636,7 @@
               },
               "targetUrlOnSuccess" : {
                 "type" : "interpolation",
-                "value" : "/bonita"
+                "value" : "/bonita/apps/loan/requests/"
               },
               "action" : {
                 "type" : "constant",
@@ -735,7 +735,7 @@
   "data" : {
     "formInput" : {
       "type" : "json",
-      "value" : "{\r\n  \"aPieceOfData\" : {\r\n    \"caseIdToNotify\" : 0\r\n  }\r\n}",
+      "value" : "{\r\n  \"aPieceOfData\" : {\r\n    \"caseIdToNotify\" : \"\"\r\n  }\r\n}",
       "exposed" : false
     },
     "formOutput" : {

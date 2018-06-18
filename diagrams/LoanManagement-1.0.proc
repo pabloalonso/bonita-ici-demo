@@ -25,7 +25,7 @@
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_mzS8ZnJDEei9Z4IY4QeFuA">
               <leftOperand xmi:type="expression:Expression" xmi:id="_mzS8Z3JDEei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_mzS8aHJDEei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSoHMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
               </leftOperand>
               <rightOperand xmi:type="expression:Expression" xmi:id="_mzS8aXJDEei9Z4IY4QeFuA" name="result" content="result" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
                 <referencedElements xmi:type="definition:Output" xmi:id="_mzS8anJDEei9Z4IY4QeFuA" name="result" type="java.lang.Object"/>
@@ -46,7 +46,7 @@
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_RLk-DnH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-D3H_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-EHH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSoXMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-EXH_Eei9Z4IY4QeFuA" name="Validation Required" content="Validation Required"/>
             <operator xmi:type="expression:Operator" xmi:id="_RLk-EnH_Eei9Z4IY4QeFuA" type="JAVA_METHOD" expression="setStatus">
@@ -90,7 +90,7 @@
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_S4eFWXJGEei9Z4IY4QeFuA">
               <leftOperand xmi:type="expression:Expression" xmi:id="_S4eFWnJGEei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_S4eFW3JGEei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSonMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
               </leftOperand>
               <rightOperand xmi:type="expression:Expression" xmi:id="_S4eFXHJGEei9Z4IY4QeFuA" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
                 <referencedElements xmi:type="definition:Output" xmi:id="_S4eFXXJGEei9Z4IY4QeFuA" name="result" type="java.lang.Object"/>
@@ -102,7 +102,7 @@
           </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_RLk-M3H_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-NHH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-NXH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSo3MdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-NnH_Eei9Z4IY4QeFuA" name="loanRequestedInput.signature" content="loanRequestedInput.signature" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_RLk-N3H_Eei9Z4IY4QeFuA" name="loanRequestedInput" type="COMPLEX"/>
@@ -113,7 +113,7 @@
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_RLk-OXH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-OnH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-O3H_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSpHMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-PHH_Eei9Z4IY4QeFuA" name="Validate Signed Contract" content="Validate Signed Contract"/>
             <operator xmi:type="expression:Operator" xmi:id="_RLk-PXH_Eei9Z4IY4QeFuA" type="JAVA_METHOD" expression="setStatus">
@@ -159,7 +159,7 @@
           <stepSummary xmi:type="expression:Expression" xmi:id="_RLk-W3H_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_RLk-XHH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-XXH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-XnH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSpXMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-X3H_Eei9Z4IY4QeFuA" name="today()" content="import java.time.LocalDate&#xA;&#xA;LocalDate.now();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate"/>
             <operator xmi:type="expression:Operator" xmi:id="_RLk-YHH_Eei9Z4IY4QeFuA" type="JAVA_METHOD" expression="setCloseDate">
@@ -177,24 +177,6 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_RLk-aHH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_RLk-aXH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_RLk-anH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_RLk-a3H_Eei9Z4IY4QeFuA" documentation="Get customer score based on basic information. This is not an in-depth credit history checking." name="getCustomerScore" definitionId="GetLoanScoring" event="ON_FINISH" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_RLk-bHH_Eei9Z4IY4QeFuA" definitionId="GetLoanScoring" version="1.0.0" modelVersion="7.6.0-002">
-              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_RLk-bXH_Eei9Z4IY4QeFuA" key="customerId">
-                <expression xmi:type="expression:Expression" xmi:id="_RLk-bnH_Eei9Z4IY4QeFuA" name="loanRequested - Loan#getCustomer" content="getCustomer" type="TYPE_JAVA_METHOD_CALL" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-b3H_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
-                </expression>
-              </parameters>
-            </configuration>
-            <outputs xmi:type="expression:Operation" xmi:id="_RLk-cHH_Eei9Z4IY4QeFuA">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-cXH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-cnH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
-              </leftOperand>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-c3H_Eei9Z4IY4QeFuA" name="score()" content="true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
-              <operator xmi:type="expression:Operator" xmi:id="_RLk-dHH_Eei9Z4IY4QeFuA" type="JAVA_METHOD" expression="setLoanScoringFavorable">
-                <inputTypes>java.lang.Boolean</inputTypes>
-              </operator>
-            </outputs>
-          </connectors>
           <connectors xmi:type="process:Connector" xmi:id="_RLk-dXH_Eei9Z4IY4QeFuA" name="startBot" definitionId="scripting-groovy" event="ON_FINISH" definitionVersion="1.0.2">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_RLk-dnH_Eei9Z4IY4QeFuA" definitionId="scripting-groovy" version="1.0.2" modelVersion="7.6.0-002">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_RLk-d3H_Eei9Z4IY4QeFuA" key="script">
@@ -207,9 +189,27 @@
               </parameters>
             </configuration>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_RLk-a3H_Eei9Z4IY4QeFuA" documentation="Get customer score based on basic information. This is not an in-depth credit history checking." name="getCustomerScore" definitionId="GetLoanScoring" event="ON_ENTER" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_RLk-bHH_Eei9Z4IY4QeFuA" definitionId="GetLoanScoring" version="1.0.0" modelVersion="7.6.0-002">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_RLk-bXH_Eei9Z4IY4QeFuA" key="customerId">
+                <expression xmi:type="expression:Expression" xmi:id="_RLk-bnH_Eei9Z4IY4QeFuA" name="loanRequested - Loan#getCustomer" content="getCustomer" type="TYPE_JAVA_METHOD_CALL" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-b3H_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_RLk-cHH_Eei9Z4IY4QeFuA">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-cXH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSpnMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-c3H_Eei9Z4IY4QeFuA" name="score()" content="true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
+              <operator xmi:type="expression:Operator" xmi:id="_RLk-dHH_Eei9Z4IY4QeFuA" type="JAVA_METHOD" expression="setLoanScoringFavorable">
+                <inputTypes>java.lang.Boolean</inputTypes>
+              </operator>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_RLk-fXH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-fnH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-f3H_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSp3MdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-gHH_Eei9Z4IY4QeFuA" name="Completing..." content="Completing..."/>
             <operator xmi:type="expression:Operator" xmi:id="_RLk-gXH_Eei9Z4IY4QeFuA" type="JAVA_METHOD" expression="setStatus">
@@ -229,7 +229,7 @@
           <stepSummary xmi:type="expression:Expression" xmi:id="_RLk-i3H_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_RLk-jHH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-jXH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-jnH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSqHMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-j3H_Eei9Z4IY4QeFuA" name="today()" content="import java.time.LocalDate&#xA;&#xA;LocalDate.now();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate"/>
             <operator xmi:type="expression:Operator" xmi:id="_RLk-kHH_Eei9Z4IY4QeFuA" type="JAVA_METHOD" expression="setCloseDate">
@@ -277,7 +277,7 @@
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_uBf9mXJFEei9Z4IY4QeFuA">
               <leftOperand xmi:type="expression:Expression" xmi:id="_uBf9mnJFEei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_uBf9m3JFEei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSqXMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
               </leftOperand>
               <rightOperand xmi:type="expression:Expression" xmi:id="_uBf9nHJFEei9Z4IY4QeFuA" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
                 <referencedElements xmi:type="definition:Output" xmi:id="_uBf9nXJFEei9Z4IY4QeFuA" name="result" type="java.lang.Object"/>
@@ -289,7 +289,7 @@
           </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_RLk-s3H_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-tHH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-tXH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSqnMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-tnH_Eei9Z4IY4QeFuA" name="documentValidation.allDocumentProvided" content="documentValidation.allDocumentProvided" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_RLk-t3H_Eei9Z4IY4QeFuA" name="documentValidation" type="COMPLEX"/>
@@ -300,7 +300,7 @@
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_RLk-uXH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-unH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-u3H_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSq3MdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-vHH_Eei9Z4IY4QeFuA" name="isAcceptedByCouncellor()" content="if(documentValidation.councellorValidation) {&#xA;&#x9;return &quot;Accepted By Councellor&quot;&#xA;}&#xA;return &quot;Refused By Councellor&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_RLk-vXH_Eei9Z4IY4QeFuA" name="documentValidation" type="COMPLEX"/>
@@ -352,7 +352,7 @@
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_MWxS6XJGEei9Z4IY4QeFuA">
               <leftOperand xmi:type="expression:Expression" xmi:id="_MWxS6nJGEei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_MWxS63JGEei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSrHMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
               </leftOperand>
               <rightOperand xmi:type="expression:Expression" xmi:id="_MWxS7HJGEei9Z4IY4QeFuA" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
                 <referencedElements xmi:type="definition:Output" xmi:id="_MWxS7XJGEei9Z4IY4QeFuA" name="result" type="java.lang.Object"/>
@@ -364,7 +364,7 @@
           </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_RLk-4nH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-43H_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-5HH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSrXMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-5XH_Eei9Z4IY4QeFuA" name="loanRequestedInput.rate" content="loanRequestedInput.rate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_RLk-5nH_Eei9Z4IY4QeFuA" name="loanRequestedInput" type="COMPLEX"/>
@@ -375,7 +375,7 @@
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_RLk-6HH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-6XH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-6nH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSrnMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-63H_Eei9Z4IY4QeFuA" name="loanRequestedInput.durationInMonth" content="loanRequestedInput.durationInMonth" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_RLk-7HH_Eei9Z4IY4QeFuA" name="loanRequestedInput" type="COMPLEX"/>
@@ -386,7 +386,7 @@
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_RLk-7nH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk-73H_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk-8HH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSr3MdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk-8XH_Eei9Z4IY4QeFuA" name="Waiting for customer signature" content="Waiting for customer signature"/>
             <operator xmi:type="expression:Operator" xmi:id="_RLk-8nH_Eei9Z4IY4QeFuA" type="JAVA_METHOD" expression="setStatus">
@@ -437,7 +437,7 @@
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_k0zvGXJGEei9Z4IY4QeFuA">
               <leftOperand xmi:type="expression:Expression" xmi:id="_k0zvGnJGEei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_k0zvG3JGEei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSsHMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
               </leftOperand>
               <rightOperand xmi:type="expression:Expression" xmi:id="_k0zvHHJGEei9Z4IY4QeFuA" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
                 <referencedElements xmi:type="definition:Output" xmi:id="_k0zvHXJGEei9Z4IY4QeFuA" name="result" type="java.lang.Object"/>
@@ -449,7 +449,7 @@
           </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_RLk_GXH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk_GnH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk_G3H_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzPSsXMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk_HHH_Eei9Z4IY4QeFuA" name="loanRequestedInput.status" content="loanRequestedInput.status" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_RLk_HXH_Eei9Z4IY4QeFuA" name="loanRequestedInput" type="COMPLEX"/>
@@ -460,7 +460,7 @@
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_RLk_H3H_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk_IHH_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk_IXH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzP5sHMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk_InH_Eei9Z4IY4QeFuA" name="today()" content="import java.time.LocalDate&#xA;&#xA;LocalDate.now();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate"/>
             <operator xmi:type="expression:Operator" xmi:id="_RLk_I3H_Eei9Z4IY4QeFuA" type="JAVA_METHOD" expression="setCloseDate">
@@ -542,7 +542,7 @@
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_G8rBuXJGEei9Z4IY4QeFuA">
               <leftOperand xmi:type="expression:Expression" xmi:id="_G8rBunJGEei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_G8rBu3JGEei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzP5sXMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
               </leftOperand>
               <rightOperand xmi:type="expression:Expression" xmi:id="_G8rBvHJGEei9Z4IY4QeFuA" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
                 <referencedElements xmi:type="definition:Output" xmi:id="_G8rBvXJGEei9Z4IY4QeFuA" name="result" type="java.lang.Object"/>
@@ -554,7 +554,7 @@
           </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_RLk_YnH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk_Y3H_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk_ZHH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzP5snMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk_ZXH_Eei9Z4IY4QeFuA" name="isAcceptedByCommittee()" content="if(committeeReview.valid) {&#xA;&#x9;return &quot;Contract to be written&quot;&#xA;}&#xA;return &quot;Request Rejected by Commitee&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_RLk_ZnH_Eei9Z4IY4QeFuA" name="committeeReview" type="COMPLEX"/>
@@ -597,7 +597,7 @@
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_hp2O93JGEei9Z4IY4QeFuA">
               <leftOperand xmi:type="expression:Expression" xmi:id="_hp2O-HJGEei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_hp2O-XJGEei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzP5s3MdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
               </leftOperand>
               <rightOperand xmi:type="expression:Expression" xmi:id="_hp2O-nJGEei9Z4IY4QeFuA" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
                 <referencedElements xmi:type="definition:Output" xmi:id="_hp2O-3JGEei9Z4IY4QeFuA" name="result" type="java.lang.Object"/>
@@ -609,7 +609,7 @@
           </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_RLk_enH_Eei9Z4IY4QeFuA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_RLk_e3H_Eei9Z4IY4QeFuA" name="loanRequested" content="loanRequested" type="TYPE_VARIABLE" returnType="com.company.model.Loan">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_RLk_fHH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzP5tHMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_RLk_fXH_Eei9Z4IY4QeFuA" name="Waiting for Credit History" content="Waiting for Credit History"/>
             <operator xmi:type="expression:Operator" xmi:id="_RLk_fnH_Eei9Z4IY4QeFuA" type="JAVA_METHOD" expression="setStatus">
@@ -622,11 +622,19 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_RLk_gnH_Eei9Z4IY4QeFuA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_RLk_g3H_Eei9Z4IY4QeFuA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:IntermediateCatchMessageEvent" xmi:id="_RLk_hHH_Eei9Z4IY4QeFuA" name="Credit History Received" outgoing="_RLk_6HH_Eei9Z4IY4QeFuA" incoming="_RLk_2HH_Eei9Z4IY4QeFuA" event="creditHistory" incomingMessag="_RLlm33H_Eei9Z4IY4QeFuA">
+        <elements xmi:type="process:IntermediateCatchMessageEvent" xmi:id="_RLk_hHH_Eei9Z4IY4QeFuA" name="Credit History Received" outgoing="_RLk_6HH_Eei9Z4IY4QeFuA" incoming="_RLk_2HH_Eei9Z4IY4QeFuA" event="creditHistory" incomingMessag="_zVuyEHMbEeiaCON5fHzqCA">
           <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_RLk_hXH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_RLk_hnH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_RLk_h3H_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_RLk_iHH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
+          <correlation xmi:type="expression:TableExpression" xmi:id="_f-9KoHMbEeiaCON5fHzqCA">
+            <expressions xmi:type="expression:ListExpression" xmi:id="_gs4AkHMbEeiaCON5fHzqCA">
+              <expressions xmi:type="expression:Expression" xmi:id="_gs4AkXMbEeiaCON5fHzqCA" name="requestID" content="requestID"/>
+              <expressions xmi:type="expression:Expression" xmi:id="_gs4AknMbEeiaCON5fHzqCA" name="loanRequested - Loan#getPersistenceId" content="getPersistenceId" type="TYPE_JAVA_METHOD_CALL" returnType="java.lang.Long">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VzP5tXMdEeiaCON5fHzqCA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+              </expressions>
+            </expressions>
+          </correlation>
         </elements>
         <elements xmi:type="process:XORGateway" xmi:id="_RLk_iXH_Eei9Z4IY4QeFuA" name="Credit History Cleared" outgoing="_RLk_23H_Eei9Z4IY4QeFuA _RLk_4nH_Eei9Z4IY4QeFuA" incoming="_RLk_5XH_Eei9Z4IY4QeFuA" exclusiveOutgoingTransition="true">
           <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_RLk_inH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
@@ -646,9 +654,9 @@
       <mandatoryLabel xmi:type="expression:Expression" xmi:id="_RLk_k3H_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
       <errorTemplate xmi:type="process:AssociatedFile" xmi:id="_RLk_lHH_Eei9Z4IY4QeFuA" path="_n7h9ETNIEeiyXpBWBWhfJQ/html/error.html"/>
       <data xmi:type="process:BusinessObjectData" xmi:id="_RLk_mHH_Eei9Z4IY4QeFuA" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_RLk_mXH_Eei9Z4IY4QeFuA" name="initLoanRequested()" content="import java.time.LocalDate&#xA;&#xA;def loanVar = new com.company.model.Loan()&#xA;loanVar.customer = loanRequestedInput.customer&#xA;loanVar.amount = loanRequestedInput.amount&#xA;loanVar.type = loanRequestedInput.type&#xA;loanVar.allDocumentProvided = false&#xA;loanVar.requestDate = LocalDate.now();&#xA;loanVar.caseId = String.valueOf(rootProcessInstanceId)&#xA;return loanVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Loan">
-          <referencedElements xmi:type="process:ContractInput" xmi:id="_RLk_mnH_Eei9Z4IY4QeFuA" name="loanRequestedInput" type="COMPLEX"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_RLk_m3H_Eei9Z4IY4QeFuA" name="rootProcessInstanceId" content="rootProcessInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_VzP5tnMdEeiaCON5fHzqCA" name="initLoanRequested()" content="import java.time.LocalDate&#xA;&#xA;def loanVar = new com.company.model.Loan()&#xA;loanVar.customer = loanRequestedInput.customer&#xA;loanVar.amount = loanRequestedInput.amount&#xA;loanVar.type = loanRequestedInput.type&#xA;loanVar.allDocumentProvided = false&#xA;loanVar.requestDate = LocalDate.now();&#xA;loanVar.caseId = String.valueOf(rootProcessInstanceId)&#xA;loanVar.status = &quot;Blocked: technical failure&quot;&#xA;return loanVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Loan">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_VzP5t3MdEeiaCON5fHzqCA" name="loanRequestedInput" type="COMPLEX"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_VzQgwHMdEeiaCON5fHzqCA" name="rootProcessInstanceId" content="rootProcessInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
         </defaultValue>
       </data>
       <data xmi:type="process:Data" xmi:id="_P98VQHJDEei9Z4IY4QeFuA" name="currentProcessVersion" dataType="_RLlm23H_Eei9Z4IY4QeFuA">
@@ -852,22 +860,41 @@
         <dynamicDescription xmi:type="expression:Expression" xmi:id="_RLlAJ3H_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
         <stepSummary xmi:type="expression:Expression" xmi:id="_RLlAKHH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
       </elements>
-      <elements xmi:type="process:EndMessageEvent" xmi:id="_RLlAKXH_Eei9Z4IY4QeFuA" name="Send Credit History" incoming="_RLlAPnH_Eei9Z4IY4QeFuA" outgoingMessages="_RLlm33H_Eei9Z4IY4QeFuA">
+      <elements xmi:type="process:EndMessageEvent" xmi:id="_RLlAKXH_Eei9Z4IY4QeFuA" name="Send Credit History" incoming="_RLlAPnH_Eei9Z4IY4QeFuA" outgoingMessages="_zVuyEHMbEeiaCON5fHzqCA">
         <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_RLlAKnH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
         <dynamicLabel xmi:type="expression:Expression" xmi:id="_RLlAK3H_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
         <dynamicDescription xmi:type="expression:Expression" xmi:id="_RLlALHH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
         <stepSummary xmi:type="expression:Expression" xmi:id="_RLlALXH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
         <events xmi:type="process:Message" xmi:id="_RLlALnH_Eei9Z4IY4QeFuA" name="creditHistory">
-          <correlation xmi:type="process:Correlation" xmi:id="_RLlAL3H_Eei9Z4IY4QeFuA">
-            <correlationAssociation xmi:type="expression:TableExpression" xmi:id="_RLlAMHH_Eei9Z4IY4QeFuA"/>
+          <correlation xmi:type="process:Correlation" xmi:id="_zVDcoHMbEeiaCON5fHzqCA" correlationType="KEYS">
+            <correlationAssociation xmi:type="expression:TableExpression" xmi:id="_zVDcoXMbEeiaCON5fHzqCA">
+              <expressions xmi:type="expression:ListExpression" xmi:id="_zVDconMbEeiaCON5fHzqCA">
+                <expressions xmi:type="expression:Expression" xmi:id="_zVDco3MbEeiaCON5fHzqCA" name="requestID" content="requestID"/>
+                <expressions xmi:type="expression:Expression" xmi:id="_zVDcpHMbEeiaCON5fHzqCA" name="requestID" content="requestID" type="TYPE_VARIABLE">
+                  <referencedElements xmi:type="process:Data" xmi:id="_8XQc8HMbEeiaCON5fHzqCA" name="requestID" dataType="_RLlm23H_Eei9Z4IY4QeFuA"/>
+                </expressions>
+              </expressions>
+            </correlationAssociation>
           </correlation>
-          <targetProcessExpression xmi:type="expression:Expression" xmi:id="_RLlAMXH_Eei9Z4IY4QeFuA" name="RequestLoan" content="RequestLoan"/>
-          <targetElementExpression xmi:type="expression:Expression" xmi:id="_RLlAMnH_Eei9Z4IY4QeFuA" name="Credit History Received" content="Credit History Received" returnTypeFixed="true"/>
-          <messageContent xmi:type="expression:TableExpression" xmi:id="_RLlAM3H_Eei9Z4IY4QeFuA"/>
+          <targetProcessExpression xmi:type="expression:Expression" xmi:id="_zVC1kHMbEeiaCON5fHzqCA" name="RequestLoan" content="RequestLoan"/>
+          <targetElementExpression xmi:type="expression:Expression" xmi:id="_zVCOgHMbEeiaCON5fHzqCA" name="Credit History Received" content="Credit History Received" returnTypeFixed="true"/>
+          <messageContent xmi:type="expression:TableExpression" xmi:id="_zVDcpnMbEeiaCON5fHzqCA">
+            <expressions xmi:type="expression:ListExpression" xmi:id="_zVDcp3MbEeiaCON5fHzqCA">
+              <expressions xmi:type="expression:Expression" xmi:id="_zVDcqHMbEeiaCON5fHzqCA" content="" returnTypeFixed="true"/>
+              <expressions xmi:type="expression:Expression" xmi:id="_zVDcqXMbEeiaCON5fHzqCA"/>
+            </expressions>
+          </messageContent>
         </events>
       </elements>
       <mandatorySymbol xmi:type="expression:Expression" xmi:id="_RLlANHH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
       <mandatoryLabel xmi:type="expression:Expression" xmi:id="_RLlANXH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
+      <data xmi:type="process:Data" xmi:id="_ySuc8HMbEeiaCON5fHzqCA" name="requestID" dataType="_RLlm23H_Eei9Z4IY4QeFuA">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_8XREAHMbEeiaCON5fHzqCA" name="getRequestIDFromContract()" content="aPieceOfData.caseIdToNotify" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_8XREAXMbEeiaCON5fHzqCA" name="aPieceOfData" type="COMPLEX">
+            <mapping xmi:type="process:ContractInputMapping" xmi:id="_8XREAnMbEeiaCON5fHzqCA"/>
+          </referencedElements>
+        </defaultValue>
+      </data>
       <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_RLlANnH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
       <confirmationMessage xmi:type="expression:Expression" xmi:id="_RLlAN3H_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
       <formMapping xmi:type="process:FormMapping" xmi:id="_RLlAOHH_Eei9Z4IY4QeFuA">
@@ -1839,7 +1866,7 @@
     <datatypes xmi:type="process:JavaType" xmi:id="_RLlm3HH_Eei9Z4IY4QeFuA" name="Java_object"/>
     <datatypes xmi:type="process:XMLType" xmi:id="_RLlm3XH_Eei9Z4IY4QeFuA" name="XML"/>
     <datatypes xmi:type="process:BusinessObjectType" xmi:id="_RLlm3nH_Eei9Z4IY4QeFuA" name="Business_Object"/>
-    <messageConnections xmi:type="process:MessageFlow" xmi:id="_RLlm33H_Eei9Z4IY4QeFuA" name="creditHistory" target="_RLk_hHH_Eei9Z4IY4QeFuA" source="_RLlAKXH_Eei9Z4IY4QeFuA"/>
+    <messageConnections xmi:type="process:MessageFlow" xmi:id="_zVuyEHMbEeiaCON5fHzqCA" name="creditHistory" target="_RLk_hHH_Eei9Z4IY4QeFuA" source="_RLlAKXH_Eei9Z4IY4QeFuA"/>
   </process:MainProcess>
   <notation:Diagram xmi:id="_RLlm4HH_Eei9Z4IY4QeFuA" type="Process" element="_RLk98HH_Eei9Z4IY4QeFuA" name="MyDiagram" measurementUnit="Pixel">
     <children xmi:type="notation:Node" xmi:id="_RLlm4XH_Eei9Z4IY4QeFuA" type="2007" element="_RLk98XH_Eei9Z4IY4QeFuA">
@@ -2611,12 +2638,12 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RLmMQHH_Eei9Z4IY4QeFuA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RLmMQXH_Eei9Z4IY4QeFuA" id="(0.33,0.24)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_RLmMQnH_Eei9Z4IY4QeFuA" type="4002" element="_RLlm33H_Eei9Z4IY4QeFuA" source="_RLlnVXH_Eei9Z4IY4QeFuA" target="_RLlnPHH_Eei9Z4IY4QeFuA" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_RLmMQ3H_Eei9Z4IY4QeFuA" type="6003">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_RLmMRHH_Eei9Z4IY4QeFuA" y="-10"/>
+    <edges xmi:type="notation:Connector" xmi:id="_zV2G0HMbEeiaCON5fHzqCA" type="4002" element="_zVuyEHMbEeiaCON5fHzqCA" source="_RLlnVXH_Eei9Z4IY4QeFuA" target="_RLlnPHH_Eei9Z4IY4QeFuA" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_zV3U8HMbEeiaCON5fHzqCA" type="6003">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zV3U8XMbEeiaCON5fHzqCA" y="-10"/>
       </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_RLmMRXH_Eei9Z4IY4QeFuA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RLmMRnH_Eei9Z4IY4QeFuA" points="[-5, -15, 0, 231]$[0, -233, 5, 13]"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_zV2G0XMbEeiaCON5fHzqCA" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zV2G0nMbEeiaCON5fHzqCA" points="[-5, -15, 0, 231]$[0, -233, 5, 13]"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
