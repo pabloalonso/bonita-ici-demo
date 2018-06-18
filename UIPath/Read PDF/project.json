@@ -1,0 +1,14 @@
+{
+  "name": "Read PDF",
+  "description": "Read Credit History PDF",
+  "main": "Main.xaml",
+  "dependencies": {},
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "18.2",
+  "projectVersion": "1.0.6738.34471",
+  "packOptions": {},
+  "runtimeOptions": {}
+}

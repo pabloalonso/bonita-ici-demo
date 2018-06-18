@@ -1,0 +1,99 @@
+{
+  "designerVersion" : "1.8.0",
+  "id" : "createLoanRequestButton",
+  "name" : "createLoanRequestButton",
+  "lastUpdate" : 1529325738246,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : "c-button"
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "disabled" : {
+        "type" : "expression",
+        "value" : "!requestLoanProcess.url"
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : "+"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "right"
+      },
+      "buttonStyle" : {
+        "type" : "constant",
+        "value" : "default"
+      },
+      "action" : {
+        "type" : "constant",
+        "value" : "Add to collection"
+      },
+      "url" : {
+        "type" : "interpolation"
+      },
+      "dataToSend" : {
+        "type" : "constant"
+      },
+      "dataFromSuccess" : {
+        "type" : "variable",
+        "value" : ""
+      },
+      "dataFromError" : {
+        "type" : "variable",
+        "value" : ""
+      },
+      "targetUrlOnSuccess" : {
+        "type" : "interpolation"
+      },
+      "collectionToModify" : {
+        "type" : "variable",
+        "value" : "requestLoanProcess.onClick"
+      },
+      "collectionPosition" : {
+        "type" : "constant",
+        "value" : "Last"
+      },
+      "valueToAdd" : {
+        "type" : "constant",
+        "value" : "true"
+      },
+      "removeItem" : {
+        "type" : "variable"
+      }
+    },
+    "reference" : "d1b4cf64-5473-4d3a-a1a1-2a6ccd31cf8e",
+    "id" : "pbButton"
+  } ] ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "redirectToLoanRequestCreationForm" : {
+      "type" : "expression",
+      "value" : "if($data.requestLoanProcess.url && $data.requestLoanProcess.onClick[0]) {\n    window.location.href = $data.requestLoanProcess.url;\n} \nreturn null",
+      "exposed" : false
+    },
+    "processToStart" : {
+      "type" : "url",
+      "value" : "../API/bpm/process?p=0&c=1&f=name=requestLoan&f=activationState=ENABLED&o=deploymentDate+DESC",
+      "exposed" : false
+    },
+    "requestLoanProcess" : {
+      "type" : "expression",
+      "value" : "return {\n    \"url\": $data.processToStart[0]?\"/bonita/portal/form/process/requestLoan/\" + $data.processToStart[0].version:null,\n    \"onClick\":[]\n}",
+      "exposed" : false
+    }
+  },
+  "type" : "fragment"
+}

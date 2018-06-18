@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.6.46",
   "id" : "0b1faebd-d019-4dd8-b5fa-96fca57ff00e",
   "name" : "loanRequestListPredictive",
-  "lastUpdate" : 1529075113058,
+  "lastUpdate" : 1529326636599,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -15,7 +15,7 @@
     "propertyValues" : {
       "cssClasses" : {
         "type" : "constant",
-        "value" : ""
+        "value" : "c-form__title"
       },
       "hidden" : {
         "type" : "constant",
@@ -37,12 +37,12 @@
     "reference" : "748c580c-39e2-4225-ac7c-6ea5d9ff8e45",
     "id" : "pbTitle"
   } ], [ {
-    "type" : "component",
+    "type" : "container",
     "dimension" : {
-      "xs" : 12,
-      "sm" : 12,
-      "md" : 12,
-      "lg" : 12
+      "xs" : 8,
+      "sm" : 10,
+      "md" : 10,
+      "lg" : 10
     },
     "propertyValues" : {
       "cssClasses" : {
@@ -53,51 +53,97 @@
         "type" : "constant",
         "value" : false
       },
-      "disabled" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "required" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "labelHidden" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "label" : {
-        "type" : "interpolation",
-        "value" : "State"
-      },
-      "labelPosition" : {
-        "type" : "constant",
-        "value" : "left"
-      },
-      "labelWidth" : {
-        "type" : "constant",
-        "value" : 1
-      },
-      "inline" : {
-        "type" : "constant",
-        "value" : true
-      },
-      "availableValues" : {
-        "type" : "constant",
-        "value" : [ "Pending", "Closed" ]
-      },
-      "displayedKey" : {
-        "type" : "constant"
-      },
-      "returnedKey" : {
-        "type" : "constant"
-      },
-      "selectedValue" : {
+      "repeatedCollection" : {
         "type" : "variable",
-        "value" : "loanFilter.status"
+        "value" : ""
       }
     },
-    "reference" : "7fd6b085-5a6e-4fe8-ba71-d5d2c189baae",
-    "id" : "pbRadioButtons"
+    "reference" : "a396de5b-33f4-4a91-9857-cd8ff3e2488d",
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 10,
+        "sm" : 7,
+        "md" : 5,
+        "lg" : 5
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : "c-form__control"
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "disabled" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "required" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "labelHidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "label" : {
+          "type" : "interpolation",
+          "value" : "State"
+        },
+        "labelPosition" : {
+          "type" : "constant",
+          "value" : "left"
+        },
+        "labelWidth" : {
+          "type" : "constant",
+          "value" : 2
+        },
+        "placeholder" : {
+          "type" : "interpolation",
+          "value" : "Select an option"
+        },
+        "availableValues" : {
+          "type" : "constant",
+          "value" : [ "Pending", "Closed" ]
+        },
+        "displayedKey" : {
+          "type" : "constant"
+        },
+        "returnedKey" : {
+          "type" : "constant"
+        },
+        "value" : {
+          "type" : "variable",
+          "value" : "loanFilter.status"
+        }
+      },
+      "reference" : "8aac2a6d-185a-49dc-8df2-a766ea847dee",
+      "id" : "pbSelect"
+    } ] ]
+  }, {
+    "type" : "fragment",
+    "dimension" : {
+      "xs" : 1,
+      "sm" : 1,
+      "md" : 1,
+      "lg" : 1
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      }
+    },
+    "reference" : "57d3764d-63a6-4776-846e-c8f452287598",
+    "id" : "createLoanRequestButton",
+    "binding" : { }
   } ], [ {
     "type" : "container",
     "dimension" : {
@@ -183,6 +229,12 @@
     } ] ]
   } ] ],
   "assets" : [ {
+    "id" : "f552ddbb-02a2-4c9b-a624-680c7560109c",
+    "name" : "/bonita/portal/resource/app/loan/cdn/content/assets/css/bank.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : true
+  }, {
     "id" : "1bb3fedf-6609-4968-b6c1-543a91a93973",
     "name" : "style.css",
     "type" : "css",

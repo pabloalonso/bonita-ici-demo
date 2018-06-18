@@ -870,8 +870,8 @@
       <mandatoryLabel xmi:type="expression:Expression" xmi:id="_RLlANXH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
       <entryRedirectionURL xmi:type="expression:Expression" xmi:id="_RLlANnH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
       <confirmationMessage xmi:type="expression:Expression" xmi:id="_RLlAN3H_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
-      <formMapping xmi:type="process:FormMapping" xmi:id="_RLlAOHH_Eei9Z4IY4QeFuA" type="NONE">
-        <targetForm xmi:type="expression:Expression" xmi:id="_RLlAOXH_Eei9Z4IY4QeFuA" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_RLlAOHH_Eei9Z4IY4QeFuA">
+        <targetForm xmi:type="expression:Expression" xmi:id="_2wgdYHL7EeibnYQjD1UQrg" name="notifyCreditHistory" content="4a162188-83ff-4db5-af31-5cc013e3fb64" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <recapPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_RLlAOnH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_RLlAO3H_Eei9Z4IY4QeFuA">
@@ -904,7 +904,14 @@
         <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_RLlAUHH_Eei9Z4IY4QeFuA" id="VALIDATOR"/>
         <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_RLlAUXH_Eei9Z4IY4QeFuA" id="OTHER"/>
       </configurations>
-      <contract xmi:type="process:Contract" xmi:id="_RLlAUnH_Eei9Z4IY4QeFuA"/>
+      <contract xmi:type="process:Contract" xmi:id="_RLlAUnH_Eei9Z4IY4QeFuA">
+        <inputs xmi:type="process:ContractInput" xmi:id="_tl6WEHL7EeibnYQjD1UQrg" name="aPieceOfData" type="COMPLEX">
+          <mapping xmi:type="process:ContractInputMapping" xmi:id="_tl6WEXL7EeibnYQjD1UQrg"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_vrb4IHL7EeibnYQjD1UQrg" name="caseIdToNotify" type="LONG">
+            <mapping xmi:type="process:ContractInputMapping" xmi:id="_vrb4IXL7EeibnYQjD1UQrg"/>
+          </inputs>
+        </inputs>
+      </contract>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_RLlAU3H_Eei9Z4IY4QeFuA">
         <name xmi:type="expression:Expression" xmi:id="_RLlAVHH_Eei9Z4IY4QeFuA" content="" returnTypeFixed="true"/>
         <value xmi:type="expression:Expression" xmi:id="_RLlAVXH_Eei9Z4IY4QeFuA" content="" returnTypeFixed="true"/>

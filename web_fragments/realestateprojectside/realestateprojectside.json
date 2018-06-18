@@ -1,0 +1,128 @@
+{
+  "designerVersion" : "1.8.0",
+  "id" : "realestateprojectside",
+  "name" : "realestateprojectside",
+  "lastUpdate" : 1529329489793,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12,
+      "sm" : 12,
+      "md" : 12,
+      "lg" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "allowHTML" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "<div class=\"c-form__aside\">\n    <div class=\"c-form__title\">\n        Real Estate Project\n    </div>\n</div>"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "center"
+      }
+    },
+    "reference" : "12d52b53-45a1-4ad4-832f-1f97b71d2f99",
+    "id" : "pbText"
+  } ], [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 5,
+      "sm" : 4,
+      "md" : 4,
+      "lg" : 4
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "0ef967f8-1692-4716-bbde-bde9dadf8673",
+    "id" : "pbContainer",
+    "rows" : [ [ ] ]
+  }, {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 2,
+      "sm" : 4,
+      "md" : 4,
+      "lg" : 4
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "srcType" : {
+        "type" : "constant",
+        "value" : "URL"
+      },
+      "url" : {
+        "type" : "constant",
+        "value" : "/bonita/portal/resource/app/loan/cdn/content/assets/img/House.PNG"
+      },
+      "assetName" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "alt" : {
+        "type" : "interpolation"
+      }
+    },
+    "reference" : "9e324856-9dd0-45d7-87eb-7dc13f3dac12",
+    "id" : "pbImage"
+  }, {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 5,
+      "sm" : 4,
+      "md" : 4,
+      "lg" : 4
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "repeatedCollection" : {
+        "type" : "variable",
+        "value" : ""
+      }
+    },
+    "reference" : "811edc2d-cd31-49d4-bf54-a2db5bb83107",
+    "id" : "pbContainer",
+    "rows" : [ [ ] ]
+  } ] ],
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "data" : { },
+  "type" : "fragment"
+}

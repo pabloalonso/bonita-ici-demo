@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.6.46",
   "id" : "e210aca4-5365-4ca8-9b9d-7d195e2e110f",
   "name" : "completeLoanRequest",
-  "lastUpdate" : 1529252436482,
+  "lastUpdate" : 1529327261456,
   "rows" : [ [ {
     "type" : "fragment",
     "dimension" : {
@@ -593,7 +593,7 @@
     "external" : false
   }, {
     "id" : "0373ffa4-193e-4495-88ee-6dd552d5e310",
-    "name" : "/bonita/portal/resource/app/loan/cdn/content/assets/style/bank.css",
+    "name" : "/bonita/portal/resource/app/loan/cdn/content/assets/css/bank.css",
     "type" : "css",
     "order" : 1,
     "external" : true

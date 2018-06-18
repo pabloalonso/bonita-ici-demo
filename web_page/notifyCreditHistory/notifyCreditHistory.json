@@ -1,0 +1,749 @@
+{
+  "designerVersion" : "1.8.0",
+  "id" : "notifyCreditHistory",
+  "name" : "notifyCreditHistory",
+  "lastUpdate" : 1529330151839,
+  "rows" : [ [ {
+    "type" : "formContainer",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      }
+    },
+    "reference" : "e93de85f-8c49-4629-a2c3-916ec1ced75c",
+    "id" : "pbFormContainer",
+    "container" : {
+      "type" : "container",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : { },
+      "reference" : "97a88e44-9795-4363-b74a-c875f3962e23",
+      "id" : "pbContainer",
+      "rows" : [ [ {
+        "type" : "fragment",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "10d20398-8953-46af-9c3f-feebb2efce74",
+        "id" : "header",
+        "binding" : { }
+      } ], [ {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 1,
+          "lg" : 1
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "d1754a83-6f12-4dbb-9be7-530d29874dae",
+        "id" : "pbContainer",
+        "rows" : [ [ ] ]
+      }, {
+        "type" : "container",
+        "dimension" : {
+          "md" : 9,
+          "sm" : 12,
+          "xs" : 12,
+          "lg" : 9
+        },
+        "propertyValues" : {
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "c-form__step"
+          },
+          "widgetId" : {
+            "type" : "constant"
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.WidgetContainer"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "3a79aeaa-85d1-4078-8b35-a9b34fca8703",
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "fragment",
+          "dimension" : {
+            "xs" : 12,
+            "sm" : 12,
+            "md" : 4,
+            "lg" : 6
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            }
+          },
+          "reference" : "84158e35-70cc-42cf-9379-b4ad9fe787ab",
+          "id" : "realestateprojectside",
+          "binding" : { }
+        }, {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12,
+            "sm" : 12,
+            "md" : 8,
+            "lg" : 6
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "repeatedCollection" : {
+              "type" : "variable",
+              "value" : ""
+            }
+          },
+          "reference" : "dd054a75-c40d-4ab1-b199-6d7d6e96cd1c",
+          "id" : "pbContainer",
+          "rows" : [ [ {
+            "type" : "component",
+            "dimension" : {
+              "md" : 12,
+              "sm" : 12,
+              "xs" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : "c-input"
+              },
+              "widgetId" : {
+                "type" : "constant",
+                "value" : "pbInput"
+              },
+              "isDisplayed" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 1
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Loan Request ID"
+              },
+              "type" : {
+                "type" : "constant",
+                "value" : "number"
+              },
+              "required" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "readonly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "placeholder" : {
+                "type" : "constant"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "left"
+              },
+              "class" : {
+                "type" : "constant",
+                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+              },
+              "dimension" : {
+                "type" : "constant",
+                "value" : 12
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : "formInput.aPieceOfData.caseIdToNotify"
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "minLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "maxLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "readOnly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "min" : {
+                "type" : "constant"
+              },
+              "max" : {
+                "type" : "constant"
+              },
+              "step" : {
+                "type" : "constant",
+                "value" : 1
+              }
+            },
+            "reference" : "f2ceba5e-76ce-4bcb-a2c3-abe73a54f771",
+            "id" : "pbInput"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12,
+              "sm" : 12,
+              "md" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : "c-input"
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "required" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "minLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "maxLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "readOnly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Total Deposits & Other Credits"
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 4
+              },
+              "placeholder" : {
+                "type" : "interpolation"
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "type" : {
+                "type" : "constant",
+                "value" : "text"
+              },
+              "min" : {
+                "type" : "constant"
+              },
+              "max" : {
+                "type" : "constant"
+              },
+              "step" : {
+                "type" : "constant",
+                "value" : 1
+              }
+            },
+            "reference" : "c8bba4d6-42b1-430a-ba0d-e3ea752a624e",
+            "id" : "pbInput"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12,
+              "sm" : 12,
+              "md" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : "c-input"
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "required" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "minLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "maxLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "readOnly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Total ATM Withdrawals & Debits"
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 4
+              },
+              "placeholder" : {
+                "type" : "interpolation"
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "type" : {
+                "type" : "constant",
+                "value" : "text"
+              },
+              "min" : {
+                "type" : "constant"
+              },
+              "max" : {
+                "type" : "constant"
+              },
+              "step" : {
+                "type" : "constant",
+                "value" : 1
+              }
+            },
+            "reference" : "a933cbbe-e3af-434c-b42a-3ad535ec350e",
+            "id" : "pbInput"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12,
+              "sm" : 12,
+              "md" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : "c-input"
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "required" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "minLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "maxLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "readOnly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Total Checks Paid"
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 4
+              },
+              "placeholder" : {
+                "type" : "interpolation"
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "type" : {
+                "type" : "constant",
+                "value" : "text"
+              },
+              "min" : {
+                "type" : "constant"
+              },
+              "max" : {
+                "type" : "constant"
+              },
+              "step" : {
+                "type" : "constant",
+                "value" : 1
+              }
+            },
+            "reference" : "888b446e-a48f-4a17-a915-9ecea24442b6",
+            "id" : "pbInput"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12,
+              "sm" : 12,
+              "md" : 12,
+              "lg" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : "c-input"
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "required" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "minLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "maxLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "readOnly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Ending Balance $"
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 4
+              },
+              "placeholder" : {
+                "type" : "interpolation"
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "type" : {
+                "type" : "constant",
+                "value" : "text"
+              },
+              "min" : {
+                "type" : "constant"
+              },
+              "max" : {
+                "type" : "constant"
+              },
+              "step" : {
+                "type" : "constant",
+                "value" : 1
+              }
+            },
+            "reference" : "8c5e6619-4e59-451a-9a22-aad93cacc4ff",
+            "id" : "pbInput"
+          } ], [ {
+            "type" : "container",
+            "dimension" : {
+              "xs" : 12,
+              "sm" : 12,
+              "md" : 8,
+              "lg" : 8
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "repeatedCollection" : {
+                "type" : "variable",
+                "value" : ""
+              }
+            },
+            "reference" : "11236d30-158d-4f57-beeb-cfcb16979d38",
+            "id" : "pbContainer",
+            "rows" : [ [ ] ]
+          }, {
+            "type" : "component",
+            "dimension" : {
+              "md" : 4,
+              "sm" : 12,
+              "xs" : 12,
+              "lg" : 4
+            },
+            "propertyValues" : {
+              "removeItem" : {
+                "type" : "variable"
+              },
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : "c-button"
+              },
+              "widgetId" : {
+                "type" : "constant",
+                "value" : "pbButton"
+              },
+              "buttonStyle" : {
+                "type" : "constant",
+                "value" : "primary"
+              },
+              "isDisplayed" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Submit"
+              },
+              "dataToSend" : {
+                "type" : "expression",
+                "value" : "formOutput"
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "readonly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "collectionPosition" : {
+                "type" : "constant"
+              },
+              "targetUrlOnSuccess" : {
+                "type" : "interpolation",
+                "value" : "/bonita"
+              },
+              "action" : {
+                "type" : "constant",
+                "value" : "Start process"
+              },
+              "collectionToModify" : {
+                "type" : "variable"
+              },
+              "valueToAdd" : {
+                "type" : "expression"
+              },
+              "disabled" : {
+                "type" : "expression",
+                "value" : "$form.$invalid"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "center"
+              },
+              "class" : {
+                "type" : "constant",
+                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+              },
+              "dimension" : {
+                "type" : "constant",
+                "value" : 12
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "url" : {
+                "type" : "interpolation"
+              },
+              "dataFromSuccess" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "dataFromError" : {
+                "type" : "variable",
+                "value" : ""
+              }
+            },
+            "reference" : "a011d0c3-8ab4-4085-8ac0-9a1c83f1e585",
+            "id" : "pbButton"
+          } ] ]
+        } ] ]
+      }, {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 2,
+          "lg" : 2
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "a2c6ab69-7c58-4a0b-9676-5e5d1af5a22a",
+        "id" : "pbContainer",
+        "rows" : [ [ ] ]
+      } ] ]
+    }
+  } ] ],
+  "assets" : [ {
+    "id" : "42a79d47-87f6-41cd-bbff-4f79b3e6c8b1",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "e6095aca-e013-4291-97f8-f763b8610899",
+    "name" : "/bonita/portal/resource/app/loan/cdn/content/assets/css/bank.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : true
+  }, {
+    "id" : "72fafb12-ded1-4387-ba3d-f0e12b0c4d78",
+    "name" : "localization.json",
+    "type" : "json",
+    "order" : 0,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "formInput" : {
+      "type" : "json",
+      "value" : "{\r\n  \"aPieceOfData\" : {\r\n    \"caseIdToNotify\" : 0\r\n  }\r\n}",
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : "return {\n\t'aPieceOfData': $data.formInput.aPieceOfData\n};",
+      "exposed" : false
+    }
+  },
+  "uuid" : "4a162188-83ff-4db5-af31-5cc013e3fb64",
+  "type" : "form"
+}
