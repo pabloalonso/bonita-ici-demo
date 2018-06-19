@@ -4427,7 +4427,7 @@ table th[class*="col-"] {
   .c-button:hover .btn, .c-button:focus .btn, .c-button:active .btn{
     background-color: #fb0189;
     color: #ffffff; }
-  .c-button.c-button--small {
+  .c-button.c-button--small .btn {
     font-size: 12px;
     font-size: 1.2rem;
     line-height: 16px;
@@ -4519,7 +4519,7 @@ table th[class*="col-"] {
   .c-button--small .c-button__icon {
     left: 16px; }
 
-.c-button--error button, .c-button--danger button {
+.c-button--error .btn, .c-button--danger .btn {
   background-color: #d9534f;
   color: #ffffff; }
   .c-button--error.c-button--link, .c-button--danger.c-button--link {
@@ -4528,14 +4528,14 @@ table th[class*="col-"] {
     .c-button--error.c-button--link:hover, .c-button--error.c-button--link:focus, .c-button--error.c-button--link:active, .c-button--danger.c-button--link:hover, .c-button--danger.c-button--link:focus, .c-button--danger.c-button--link:active {
       background-color: transparent;
       color: #e27c79; }
-  .c-button--error:hover, .c-button--error:focus, .c-button--error:active, .c-button--danger:hover, .c-button--danger:focus, .c-button--danger:active {
+  .c-button--error:hover  .btn, .c-button--error:focus .btn, .c-button--error:active .btn, .c-button--danger:hover .btn, .c-button--danger:focus .btn, .c-button--danger:active .btn {
     background-color: #e27c79; }
     .c-button--error:hover .c-button__icon, .c-button--error:focus .c-button__icon, .c-button--error:active .c-button__icon, .c-button--danger:hover .c-button__icon, .c-button--danger:focus .c-button__icon, .c-button--danger:active .c-button__icon {
       color: #e27c79; }
   .c-button--error .c-button__icon, .c-button--danger .c-button__icon {
     color: #d9534f; }
 
-.c-button--warning {
+.c-button--warning .btn {
   background-color: #f0ad4e;
   color: #ffffff; }
   .c-button--warning.c-button--link {
@@ -4544,7 +4544,7 @@ table th[class*="col-"] {
     .c-button--warning.c-button--link:hover, .c-button--warning.c-button--link:focus, .c-button--warning.c-button--link:active {
       background-color: transparent;
       color: #f4c37d; }
-  .c-button--warning:hover, .c-button--warning:focus, .c-button--warning:active {
+  .c-button--warning:hover .btn, .c-button--warning:focus .btn, .c-button--warning:active .btn{
     background-color: #f4c37d; }
     .c-button--warning:hover .c-button__icon, .c-button--warning:focus .c-button__icon, .c-button--warning:active .c-button__icon {
       color: #f4c37d; }
@@ -4567,7 +4567,7 @@ table th[class*="col-"] {
   .c-button--success .c-button__icon {
     color: #5cb85c; }
 
-.c-button--info {
+.c-button--info .btn{
   background-color: #5bc0de;
   color: #ffffff; }
   .c-button--info.c-button--link {
@@ -4576,7 +4576,7 @@ table th[class*="col-"] {
     .c-button--info.c-button--link:hover, .c-button--info.c-button--link:focus, .c-button--info.c-button--link:active {
       background-color: transparent;
       color: #85d0e7; }
-  .c-button--info:hover, .c-button--info:focus, .c-button--info:active {
+  .c-button--info:hover .btn, .c-button--info:focus .btn, .c-button--info:active .btn {
     background-color: #85d0e7; }
     .c-button--info:hover .c-button__icon, .c-button--info:focus .c-button__icon, .c-button--info:active .c-button__icon {
       color: #85d0e7; }
@@ -9323,3 +9323,9 @@ header .user__username {
 
 .container .container {
   max-width: 100%; }
+
+.file-upload .btn {
+  background-color: #d20073; }
+
+  .file-upload:focus .btn, .file-upload:active .btn, .file-upload:hover .btn {
+    background-color: #fb0189; }

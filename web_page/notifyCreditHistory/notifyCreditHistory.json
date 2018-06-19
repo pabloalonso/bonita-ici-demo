@@ -2,7 +2,7 @@
   "designerVersion" : "1.8.0",
   "id" : "notifyCreditHistory",
   "name" : "notifyCreditHistory",
-  "lastUpdate" : 1529342982335,
+  "lastUpdate" : 1529421687306,
   "rows" : [ [ {
     "type" : "formContainer",
     "dimension" : {
@@ -239,7 +239,7 @@
               },
               "value" : {
                 "type" : "variable",
-                "value" : "formInput.aPieceOfData.caseIdToNotify"
+                "value" : "formInput.aPieceOfData.requestId"
               },
               "hidden" : {
                 "type" : "constant",
@@ -309,7 +309,7 @@
               },
               "label" : {
                 "type" : "interpolation",
-                "value" : "Total Deposits & Other Credits"
+                "value" : "Equifax / Beacon"
               },
               "labelPosition" : {
                 "type" : "constant",
@@ -324,7 +324,7 @@
               },
               "value" : {
                 "type" : "variable",
-                "value" : "formInput.aPieceOfData.totalDepositsCredits"
+                "value" : "formInput.aPieceOfData.equifaxBeacon"
               },
               "type" : {
                 "type" : "constant",
@@ -382,7 +382,7 @@
               },
               "label" : {
                 "type" : "interpolation",
-                "value" : "Total ATM Withdrawals & Debits"
+                "value" : "Transunion Fico"
               },
               "labelPosition" : {
                 "type" : "constant",
@@ -397,7 +397,7 @@
               },
               "value" : {
                 "type" : "variable",
-                "value" : "formInput.aPieceOfData.totalWithdrawalsDebits"
+                "value" : "formInput.aPieceOfData.transunionFico"
               },
               "type" : {
                 "type" : "constant",
@@ -455,7 +455,7 @@
               },
               "label" : {
                 "type" : "interpolation",
-                "value" : "Total Checks Paid"
+                "value" : "Experian Fair"
               },
               "labelPosition" : {
                 "type" : "constant",
@@ -470,7 +470,7 @@
               },
               "value" : {
                 "type" : "variable",
-                "value" : "formInput.aPieceOfData.totalChecksPaid"
+                "value" : "formInput.aPieceOfData.experianFair"
               },
               "type" : {
                 "type" : "constant",
@@ -488,79 +488,6 @@
               }
             },
             "reference" : "888b446e-a48f-4a17-a915-9ecea24442b6",
-            "id" : "pbInput"
-          } ], [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 12,
-              "sm" : 12,
-              "md" : 12,
-              "lg" : 12
-            },
-            "propertyValues" : {
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : "c-input"
-              },
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "required" : {
-                "type" : "constant",
-                "value" : true
-              },
-              "minLength" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "maxLength" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "readOnly" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "labelHidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "label" : {
-                "type" : "interpolation",
-                "value" : "Ending Balance $"
-              },
-              "labelPosition" : {
-                "type" : "constant",
-                "value" : "top"
-              },
-              "labelWidth" : {
-                "type" : "constant",
-                "value" : 4
-              },
-              "placeholder" : {
-                "type" : "interpolation"
-              },
-              "value" : {
-                "type" : "variable",
-                "value" : "formInput.aPieceOfData.totalEndingBalance"
-              },
-              "type" : {
-                "type" : "constant",
-                "value" : "text"
-              },
-              "min" : {
-                "type" : "constant"
-              },
-              "max" : {
-                "type" : "constant"
-              },
-              "step" : {
-                "type" : "constant",
-                "value" : 1
-              }
-            },
-            "reference" : "8c5e6619-4e59-451a-9a22-aad93cacc4ff",
             "id" : "pbInput"
           } ], [ {
             "type" : "container",

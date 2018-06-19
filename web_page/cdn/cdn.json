@@ -2,7 +2,7 @@
   "designerVersion" : "1.8.0",
   "id" : "cdn",
   "name" : "cdn",
-  "lastUpdate" : 1529251840356,
+  "lastUpdate" : 1529406227871,
   "rows" : [ [ ] ],
   "assets" : [ {
     "id" : "78fb23d5-07d5-4cfc-9624-889e0b1101dd",
@@ -27,12 +27,6 @@
     "name" : "bank-logo.jpg",
     "type" : "img",
     "order" : 1,
-    "external" : false
-  }, {
-    "id" : "00fec994-9dc2-4f64-9577-91e89e95563b",
-    "name" : "style.css",
-    "type" : "css",
-    "order" : 0,
     "external" : false
   }, {
     "id" : "8f4429be-9bca-4bc7-b708-4876f5454cfe",

@@ -2,13 +2,16 @@
   "name": "Read PDF",
   "description": "Read Credit History PDF",
   "main": "Main.xaml",
-  "dependencies": {},
+  "dependencies": {
+    "UiPath.Core.Activities": "18.2.6732.32230",
+    "UiPath.PDF.Activities": "1.1.6732.21973"
+  },
   "excludedData": [
     "Private:*",
     "*password*"
   ],
   "toolVersion": "18.2",
-  "projectVersion": "1.0.6738.34471",
+  "projectVersion": "1.0.6744.29226",
   "packOptions": {},
   "runtimeOptions": {}
 }
