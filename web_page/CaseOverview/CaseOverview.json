@@ -1,9 +1,9 @@
 {
   "designerVersion" : "1.7.25",
   "previousDesignerVersion" : "1.5.10",
-  "id" : "d239b776-1965-44e1-a1e0-0e9d82cf51be",
+  "id" : "CaseOverview",
   "name" : "CaseOverview",
-  "lastUpdate" : 1529075113315,
+  "lastUpdate" : 1529490197259,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -22,7 +22,8 @@
         "value" : "!caseOverview.found"
       },
       "repeatedCollection" : {
-        "type" : "variable"
+        "type" : "variable",
+        "value" : ""
       }
     },
     "reference" : "cc686b55-e512-4554-9372-8b509a5e5b5e",
@@ -46,7 +47,7 @@
         },
         "text" : {
           "type" : "interpolation",
-          "value" : "Case id : {{caseOverview.id}} - Process : {{caseOverview.processName}}"
+          "value" : "{{\"Case id\" | translate}} : {{caseOverview.id}} - {{\"Process\" | translate}} : {{caseOverview.processName}}"
         },
         "level" : {
           "type" : "constant",
@@ -78,7 +79,7 @@
         },
         "text" : {
           "type" : "interpolation",
-          "value" : "<h2><span class=\"glyphicon glyphicon-folder-open\" aria-hidden=\"true\"></span>&nbsp; Business Data</h2>"
+          "value" : "<h2><span class=\"glyphicon glyphicon-folder-open\" aria-hidden=\"true\"></span>&nbsp; {{\"Business Data\" | translate}}</h2>"
         },
         "alignment" : {
           "type" : "constant",
@@ -133,7 +134,7 @@
           },
           "text" : {
             "type" : "interpolation",
-            "value" : "<div class=\"alert alert-info\"><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> No business data available</div>"
+            "value" : "<div class=\"alert alert-info\"><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> {{\"No business data available\" | translate }}</div>"
           },
           "alignment" : {
             "type" : "constant",
@@ -289,7 +290,7 @@
         },
         "text" : {
           "type" : "interpolation",
-          "value" : "<h2><span class=\"glyphicon glyphicon-paperclip\" aria-hidden=\"true\"></span>&nbsp;Documents</h2>"
+          "value" : "<h2><span class=\"glyphicon glyphicon-paperclip\" aria-hidden=\"true\"></span>&nbsp; {{\"Documents\" | translate}}</h2>"
         },
         "alignment" : {
           "type" : "constant",
@@ -344,7 +345,7 @@
           },
           "text" : {
             "type" : "interpolation",
-            "value" : "<div class=\"alert alert-info\"><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> No documents available </span>"
+            "value" : "<div class=\"alert alert-info\" translate><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i>{{\"No documents available\" | translate}}</div>"
           },
           "alignment" : {
             "type" : "constant",
@@ -440,6 +441,9 @@
           "buttonStyle" : {
             "type" : "constant",
             "value" : "link"
+          },
+          "urlParams" : {
+            "type" : "constant"
           }
         },
         "reference" : "6e6e1a49-df0e-4161-8aed-4fe967e6bc97",
@@ -464,7 +468,7 @@
         },
         "text" : {
           "type" : "interpolation",
-          "value" : "<h2><span class=\"glyphicon glyphicon-object-align-right\" aria-hidden=\"true\"></span>&nbsp;Timeline</h2>"
+          "value" : "<h2><span class=\"glyphicon glyphicon-object-align-right\" aria-hidden=\"true\"></span>&nbsp; {{\"Timeline\" | translate }}</h2>"
         },
         "alignment" : {
           "type" : "constant",
@@ -499,12 +503,12 @@
           "value" : "timelineEvents"
         },
         "noEventsTitle" : {
-          "type" : "constant",
-          "value" : "No Events yet."
+          "type" : "expression",
+          "value" : "\"No Events yet.\" | translate"
         },
         "noEventsContent" : {
-          "type" : "constant",
-          "value" : "Nothing noticeable happened yet... But it surely will come!"
+          "type" : "expression",
+          "value" : "\"Nothing noticeable happened yet... But it surely will come!\" | translate"
         },
         "eventsTitleExpression" : {
           "type" : "constant",
@@ -532,7 +536,7 @@
         },
         "originTitleExpression" : {
           "type" : "constant",
-          "value" : "origin.title"
+          "value" : "origin.title | translate"
         },
         "originContentExpression" : {
           "type" : "constant",
@@ -601,7 +605,7 @@
         },
         "text" : {
           "type" : "interpolation",
-          "value" : "<div class=\"alert alert-danger\"><i class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></i> No case found with id <b>{{caseOverview.id}}</b></div>"
+          "value" : "<div class=\"alert alert-danger\" translate><i class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></i> {{\"No case found with id:\" | translate }}  <b>{{caseOverview.id}}</b></div>"
         },
         "alignment" : {
           "type" : "constant",
@@ -623,13 +627,13 @@
     "order" : 0,
     "external" : false
   }, {
-    "id" : "b884cb69-5c05-4432-9fda-6c21a0553803",
+    "id" : "59eb4ac7-4612-4071-8a2c-5928ce33cac6",
     "name" : "ui-bootstrap-tpls-0.13.0.min.js",
     "type" : "js",
     "order" : 2,
     "external" : false
   }, {
-    "id" : "be0d3582-cc02-441d-b98c-4e7cb8b7ff56",
+    "id" : "5c01a8a7-018a-4297-a4db-f4b5fd46dd81",
     "name" : "style.css",
     "type" : "css",
     "order" : 1,
@@ -684,17 +688,17 @@
     },
     "timelineEvents" : {
       "type" : "expression",
-      "value" : "function executedBy(task){\n    return \"completed\" === task.state ? \"Executed by \" + task.executedBy.firstname + \" \" + task.executedBy.lastname : null;\n}\n\nfunction assignedTo(task){\n    return task.assigned_id ? \"Assigned to \" +  task.assigned_id.firstname + \" \" +  task.assigned_id.lastname : null;\n}\n\nfunction iconFor(task){\n    switch(task.state) {\n        case \"completed\": return \"check\";\n        case \"failed\": return \"remove-circle\";\n        case \"cancelled\": return \"ban-circle\";\n        case \"aborted\": return \"ban-circle\";\n        default: return \"unchecked\";\n    }\n}\n\nfunction styleFor(task){\n    switch(task.state) {\n        case \"completed\": return \"success\";\n        case \"failed\": return \"danger\";\n        case \"cancelled\": return \"warning\";\n        case \"aborted\": return \"warning\";\n        default: return \"primary\";\n    }\n}\n\nfunction toEvent(task){\n    return {\n      \"title\" : task.displayName,\n      \"lastUpdateDate\" : new Date(task.last_update_date).getTime(),\n      \"executedBy\" :  executedBy(task),\n      \"assignedTo\" : assignedTo(task),\n      \"description\" : task.displayDescription,\n      \"icon\" : iconFor(task),\n      \"style\" : styleFor(task)\n    };\n}\n\nvar archived = $data.archivedTasks.map(toEvent);\nvar opened = $data.openedTasks.map(toEvent);\n\nreturn [].concat(opened,archived);",
+      "value" : "function executedBy(task){\n    var email = task.executedBy.userName + \"@acme-bank.com\";\n    return \"completed\" === task.state ? \"Executed by <a href='mailto:\" +email + \"'>\" + task.executedBy.firstname + \" \" + task.executedBy.lastname +\"</a>\" : null;\n}\n\nfunction assignedTo(task){\n    var email = task.assigned_id.userName + \"@acme-bank.com\";\n    return task.assigned_id ? \"Assigned to <a href='mailto:\" +email + \"'>\" +  task.assigned_id.firstname + \" \" +  task.assigned_id.lastname +\"</a>\" : null;\n}\n\nfunction iconFor(task){\n    switch(task.state) {\n        case \"completed\": return \"check\";\n        case \"failed\": return \"remove-circle\";\n        case \"cancelled\": return \"ban-circle\";\n        case \"aborted\": return \"ban-circle\";\n        default: return \"unchecked\";\n    }\n}\n\nfunction styleFor(task){\n    switch(task.state) {\n        case \"completed\": return \"success\";\n        case \"failed\": return \"danger\";\n        case \"cancelled\": return \"warning\";\n        case \"aborted\": return \"warning\";\n        default: return \"primary\";\n    }\n}\n\nfunction toEvent(task){\n    return {\n      \"title\" : task.displayName,\n      \"lastUpdateDate\" : task.last_update_date,\n      \"executedBy\" :  executedBy(task),\n      \"assignedTo\" : assignedTo(task),\n      \"description\" : task.displayDescription,\n      \"icon\" : iconFor(task),\n      \"style\" : styleFor(task)\n    };\n}\n\nvar archived = $data.archivedTasks.map(toEvent);\nvar opened = $data.openedTasks.map(toEvent);\n\nreturn [].concat(opened,archived);",
       "exposed" : false
     },
     "timelineOrigin" : {
       "type" : "expression",
-      "value" : "return {\n \"title\": \"Case started\",\n \"startTime\": new Date($data.case.start).getTime(),\n \"description\":$data.case.processDefinitionId.displayDescription,\n \"initiator\": \"Started by \" + $data.case.started_by.firstname + \" \" + $data.case.started_by.lastname\n};",
+      "value" : "return {\n \"title\": \"Case started\",\n \"startTime\": $data.case.start,\n \"description\":$data.case.processDefinitionId.displayDescription,\n \"initiator\": $data.case.started_by.firstname + \" \" + $data.case.started_by.lastname\n};",
       "exposed" : false
     },
     "openedTasks" : {
       "type" : "url",
-      "value" : "../API/bpm/task?p=0&c=999&d=executedBy&d=assigned_id&f=caseId%3D{{caseOverview.sourceObjectId}}&o=last_update_date DESC",
+      "value" : "../API/bpm/task?p=0&c=999&d=executedBy&d=assigned_id&f=caseId%3D{{caseOverview.sourceObjectId}}&f=type%3DUSER_TASK&o=last_update_date DESC",
       "exposed" : false
     },
     "archivedContext" : {

@@ -1,5 +1,17 @@
 {
   "fr-FR": {
+    "No case found with id:": "Cas non trouvé:",
+    "No documents available": "Aucun document n'a été attaché à ce cas.",
+    "Timeline": "Chronologie",
+    "Documents" : "Documents",
+    "Business Data": "Données métier",
+    "No business data available": "Aucune donnée disponible",
+    "Case id": "Id du cas",
+    "Process": "Processus",
+    "No Events yet.":"Pas d'activité",
+    "Nothing noticeable happened yet... But it surely will come!": "Aucune tâche réalisée ni disponible pour le moment.",
+    "Case started": "Cas démarré",
+    "Started by": "Démarré par",
     "Title": "Titre",
     "Default label": "Libellé par défaut",
     "Default name": "Nom par défaut",
@@ -56,9 +68,17 @@
     "Date": "Date",
     "MM/dd/yyyy": "dd/MM/yyyy",
     "Today": "Aujourd'hui",
-    "Enter a date (mm/dd/yyyy)":"Entrer une date (jj/mm/aaaa)",
+    "Now": "Maintenant",
+    "Enter a date (mm/dd/yyyy)": "Entrer une date (jj/mm/aaaa)",
+    "Date and time": "Date et heure",
+    "h:mm:ss a": "HH:mm:ss",
+    "Enter a time (h:mm:ss a)": "Entrer une heure (hh:mm:ss)",
     "$locale": {
       "DATETIME_FORMATS": {
+        "AMPMS": [
+          "AM",
+          "PM"
+        ],
         "DAY": [
           "dimanche",
           "lundi",
@@ -105,11 +125,31 @@
           "oct.",
           "nov.",
           "d\u00e9c."
-        ]
+        ],
+        "fullDate": "EEEE d MMMM y",
+        "longDate": "d MMMM y",
+        "medium": "d MMM y HH:mm:ss",
+        "mediumDate": "d MMM y",
+        "mediumTime": "HH:mm:ss",
+        "short": "dd/MM/y HH:mm",
+        "shortDate": "dd/MM/y",
+        "shortTime": "HH:mm"
       }
     }
   },
   "es-ES": {
+    "No case found with id:": "No se ha encontrado el caso:",
+    "No documents available": "Este caso no contiene ningún documento adjunto.",
+    "Timeline": "Cronología",
+    "Documents" : "Documentos",
+    "Business Data": "Datos de negocio",
+    "No business data available": "No hay ningún dato de negocio disponible",
+    "Case id": "Id del caso",
+    "Process": "Proceso",
+    "No Events yet.": "Ningúna actividad.",
+    "Nothing noticeable happened yet... But it surely will come!": "Ninguna tarea ejecutada o disponible de momento.",
+    "Case started": "Caso iniciado",
+    "Started by": "iniciado por",
     "Title": "Título",
     "Default label": "Etiqueta por defecto",
     "Default name": "Nombre por defecto",
@@ -164,12 +204,20 @@
     "Display characters Count": "",
     "The requested content cannot be loaded.<br />Please try again later.": "El contenido solicitado no puede mostrarse.",
     "Today": "Hoy",
+    "Now": "Ahora",
     "Date": "Fecha",
     "MM/dd/yyyy": "dd/MM/yyyy",
-    "Enter a date (mm/dd/yyyy)":"Introducir una fecha (dd/mm/aaaa)",
+    "Enter a date (mm/dd/yyyy)": "Introducir una fecha (dd/mm/aaaa)",
+    "Date and time": "Fecha y hora",
+    "h:mm:ss a": "H:mm:ss",
+    "Enter a time (h:mm:ss a)": "Introducir una hora (h:mm:ss)",
     "$locale": {
       "DATETIME_FORMATS": {
-       "DAY": [
+        "AMPMS": [
+          "a. m.",
+          "p. m."
+        ],
+        "DAY": [
           "domingo",
           "lunes",
           "martes",
@@ -215,7 +263,15 @@
           "oct.",
           "nov.",
           "dic."
-        ]
+        ],
+        "fullDate": "EEEE, d 'de' MMMM 'de' y",
+        "longDate": "d 'de' MMMM 'de' y",
+        "medium": "d 'de' MMM 'de' y H:mm:ss",
+        "mediumDate": "d 'de' MMM 'de' y",
+        "mediumTime": "H:mm:ss",
+        "short": "d/M/yy H:mm",
+        "shortDate": "d/M/yy",
+        "shortTime": "H:mm"
       }
     }
   }
