@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
-    <application token="loan" version="1.0.0" profile="User" homePage="requests" state="ACTIVATED" layout="custompage_defaultlayout" theme="custompage_bootstrapdefaulttheme">
+    <application token="loan" version="1.0.0" profile="User" homePage="requests" state="ACTIVATED" layout="custompage_defaultlayout" theme="custompage_acmetheme">
         <displayName>Loan Management</displayName>
         <description>Manage the loan requests from customers.</description>
         <applicationPages>
@@ -10,6 +10,35 @@
         <applicationMenus>
             <applicationMenu applicationPage="requests">
                 <displayName>Loan Requests</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+    <application token="acme-bank" version="1.0" profile="User" homePage="loans" state="ACTIVATED" layout="custompage_defaultlayout" theme="custompage_acmetheme">
+        <displayName>ACME Bank</displayName>
+        <description>Front-end for customers</description>
+        <applicationPages>
+            <applicationPage customPage="custompage_handWritten" token="loans"/>
+            <applicationPage customPage="custompage_handWritten" token="accounts"/>
+            <applicationPage customPage="custompage_handWritten" token="docs"/>
+            <applicationPage customPage="custompage_handWritten" token="more"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="loans">
+                <displayName>Loans</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="accounts">
+                <displayName>Accounts</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="docs">
+                <displayName>Documents</displayName>
+            </applicationMenu>
+            <applicationMenu>
+                <displayName>More</displayName>
+                <applicationMenus>
+                    <applicationMenu applicationPage="more">
+                        <displayName>a menu</displayName>
+                    </applicationMenu>
+                </applicationMenus>
             </applicationMenu>
         </applicationMenus>
     </application>
