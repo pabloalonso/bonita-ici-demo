@@ -2,7 +2,7 @@
   "designerVersion" : "1.8.0",
   "id" : "notifyCreditHistory",
   "name" : "notifyCreditHistory",
-  "lastUpdate" : 1529421687306,
+  "lastUpdate" : 1529597065864,
   "rows" : [ [ {
     "type" : "formContainer",
     "dimension" : {

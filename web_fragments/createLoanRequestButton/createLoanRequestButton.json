@@ -2,7 +2,7 @@
   "designerVersion" : "1.8.0",
   "id" : "createLoanRequestButton",
   "name" : "createLoanRequestButton",
-  "lastUpdate" : 1529325738246,
+  "lastUpdate" : 1529598663746,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -86,12 +86,12 @@
     },
     "processToStart" : {
       "type" : "url",
-      "value" : "../API/bpm/process?p=0&c=1&f=name=requestLoan&f=activationState=ENABLED&o=deploymentDate+DESC",
+      "value" : "../API/bpm/process?p=0&c=1&f=name=RequestLoan&f=activationState=ENABLED&o=deploymentDate+DESC",
       "exposed" : false
     },
     "requestLoanProcess" : {
       "type" : "expression",
-      "value" : "return {\n    \"url\": $data.processToStart[0]?\"/bonita/portal/form/process/requestLoan/\" + $data.processToStart[0].version:null,\n    \"onClick\":[]\n}",
+      "value" : "return {\n    \"url\": $data.processToStart[0]?\"/bonita/portal/form/process/RequestLoan/\" + $data.processToStart[0].version:null,\n    \"onClick\":[]\n}",
       "exposed" : false
     }
   },

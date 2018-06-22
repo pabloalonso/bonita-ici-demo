@@ -180,7 +180,7 @@
           <connectors xmi:type="process:Connector" xmi:id="_RLk-dXH_Eei9Z4IY4QeFuA" name="startBot" definitionId="scripting-groovy" event="ON_FINISH" definitionVersion="1.0.2">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_RLk-dnH_Eei9Z4IY4QeFuA" definitionId="scripting-groovy" version="1.0.2" modelVersion="7.6.0-002">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_RLk-d3H_Eei9Z4IY4QeFuA" key="script">
-                <expression xmi:type="expression:Expression" xmi:id="_RLk-eHH_Eei9Z4IY4QeFuA" name="startBotForCurrentInstance()" content="import org.bonitasoft.engine.bpm.process.ProcessDeploymentInfo&#xA;import org.bonitasoft.engine.search.SearchOptions&#xA;import org.bonitasoft.engine.search.SearchOptionsBuilder&#xA;import org.bonitasoft.engine.search.SearchResult&#xA;&#xA;if(botActivated) {&#xA;&#x9;&#xA;&#x9;def SearchOptions searchOptions = new SearchOptionsBuilder(0, 20).filter(&quot;name&quot;, &quot;LoanRequestBot&quot;).done();&#xA;&#x9;&#xA;&#x9;def SearchResult&lt;ProcessDeploymentInfo> searchResult = apiAccessor.getProcessAPI().searchProcessDeploymentInfos(searchOptions)&#xA;&#x9;def processDefinitionId = searchResult.result.get(0).processId&#xA;&#x9;def instantiationInputs = new HashMap();&#xA;&#x9;instantiationInputs.put(&quot;processInstanceIdInput&quot;, processInstanceId)&#xA;&#x9;instantiationInputs.put(&quot;amountInput&quot;, loanRequested.amount)&#xA;&#x9;&#xA;&#x9;apiAccessor.getProcessAPI().startProcessWithInputs(processDefinitionId, instantiationInputs)&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                <expression xmi:type="expression:Expression" xmi:id="_RLk-eHH_Eei9Z4IY4QeFuA" name="startBotForCurrentInstance()" content="import org.bonitasoft.engine.bpm.process.ProcessDeploymentInfo&#xA;import org.bonitasoft.engine.bpm.process.ProcessDeploymentInfoSearchDescriptor&#xA;import org.bonitasoft.engine.search.SearchOptions&#xA;import org.bonitasoft.engine.search.SearchOptionsBuilder&#xA;import org.bonitasoft.engine.search.SearchResult&#xA;&#xA;if(botActivated) {&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;def searchBuilder = new SearchOptionsBuilder(0, 1);&#xA;&#x9;searchBuilder.filter(ProcessDeploymentInfoSearchDescriptor.NAME, &quot;LoanRequestBot&quot;);&#xA;&#x9;searchBuilder.filter(ProcessDeploymentInfoSearchDescriptor.ACTIVATION_STATE, &quot;ENABLED&quot;);&#xA;&#x9;SearchResult searchResult = apiAccessor.getProcessAPI().searchProcessDeploymentInfos(searchBuilder.done());&#xA;&#x9;def processDefinitionId = searchResult.result.get(0).processId&#xA;&#x9;&#xA;&#x9;def instantiationInputs = new HashMap();&#xA;&#x9;instantiationInputs.put(&quot;processInstanceIdInput&quot;, processInstanceId)&#xA;&#x9;instantiationInputs.put(&quot;amountInput&quot;, loanRequested.amount)&#xA;&#x9;&#xA;&#x9;apiAccessor.getProcessAPI().startProcessWithInputs(processDefinitionId, instantiationInputs)&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
                   <referencedElements xmi:type="expression:Expression" xmi:id="_RLk-eXH_Eei9Z4IY4QeFuA" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
                   <referencedElements xmi:type="expression:Expression" xmi:id="_RLk-enH_Eei9Z4IY4QeFuA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="com.bonitasoft.engine.api.APIAccessor"/>
                   <referencedElements xmi:type="parameter:Parameter" xmi:id="_RLk-e3H_Eei9Z4IY4QeFuA" name="botActivated" typeClassname="java.lang.Boolean"/>
@@ -965,7 +965,7 @@
         <value xmi:type="expression:Expression" xmi:id="_RLlAInH_Eei9Z4IY4QeFuA" content="" returnTypeFixed="true"/>
       </searchIndexes>
     </elements>
-    <elements xmi:type="process:Pool" xmi:id="_RLlAI3H_Eei9Z4IY4QeFuA" name="Notify Credit History Available">
+    <elements xmi:type="process:Pool" xmi:id="_RLlAI3H_Eei9Z4IY4QeFuA" name="Notify Credit History Available" version="1.3.1">
       <elements xmi:type="process:StartEvent" xmi:id="_RLlAJHH_Eei9Z4IY4QeFuA" name="Credit History Available" outgoing="_RLlAPnH_Eei9Z4IY4QeFuA">
         <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_RLlAJXH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
         <dynamicLabel xmi:type="expression:Expression" xmi:id="_RLlAJnH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
@@ -1102,7 +1102,7 @@
         <value xmi:type="expression:Expression" xmi:id="_RLlAYXH_Eei9Z4IY4QeFuA" content="" returnTypeFixed="true"/>
       </searchIndexes>
     </elements>
-    <elements xmi:type="process:Pool" xmi:id="_RLlAYnH_Eei9Z4IY4QeFuA" name="LoanRequestBot" version="1.2" displayName="Loan Request Bot">
+    <elements xmi:type="process:Pool" xmi:id="_RLlAYnH_Eei9Z4IY4QeFuA" name="LoanRequestBot" version="1.3.1" displayName="Loan Request Bot">
       <elements xmi:type="process:StartEvent" xmi:id="_RLlAY3H_Eei9Z4IY4QeFuA" name="Start1" outgoing="_RLllHHH_Eei9Z4IY4QeFuA _RLllInH_Eei9Z4IY4QeFuA">
         <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_RLlAZHH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
         <dynamicLabel xmi:type="expression:Expression" xmi:id="_RLlAZXH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
@@ -1228,8 +1228,8 @@
         <cardinalityExpression xmi:type="expression:Expression" xmi:id="_RLlAxHH_Eei9Z4IY4QeFuA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
         <iteratorExpression xmi:type="expression:Expression" xmi:id="_RLlAxXH_Eei9Z4IY4QeFuA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
         <completionCondition xmi:type="expression:Expression" xmi:id="_RLlAxnH_Eei9Z4IY4QeFuA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-        <calledActivityName xmi:type="expression:Expression" xmi:id="_RLlAx3H_Eei9Z4IY4QeFuA" name="Notify Credit History Available" content="Notify Credit History Available" returnTypeFixed="true"/>
-        <calledActivityVersion xmi:type="expression:Expression" xmi:id="_RLlAyHH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
+        <calledActivityName xmi:type="expression:Expression" xmi:id="_eWXKEHVpEeikyIaH2_QRZg" name="Notify Credit History Available" content="Notify Credit History Available" returnTypeFixed="true"/>
+        <calledActivityVersion xmi:type="expression:Expression" xmi:id="_eWXxIHVpEeikyIaH2_QRZg" name="1.3.1" content="1.3.1" returnTypeFixed="true"/>
       </elements>
       <elements xmi:type="process:IntermediateCatchTimerEvent" xmi:id="_RLlAyXH_Eei9Z4IY4QeFuA" name="reviewCreditHistoryThinkTime" outgoing="_RLllLnH_Eei9Z4IY4QeFuA" incoming="_RLllK3H_Eei9Z4IY4QeFuA">
         <viewPageFlowRedirectionURL xmi:type="expression:Expression" xmi:id="_RLlAynH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
