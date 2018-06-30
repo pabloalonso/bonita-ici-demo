@@ -1,0 +1,62 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5.2": {
+      "UiPath.PDF.Activities/1.1.6732.21973": {
+        "type": "package",
+        "compile": {
+          "lib/net40-Client/_._": {}
+        },
+        "runtime": {
+          "lib/net40-Client/UiPath.PDF.Activities.Design.dll": {},
+          "lib/net40-Client/UiPath.PDF.Activities.dll": {},
+          "lib/net40-Client/UiPath.PDF.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UiPath.PDF.Activities/1.1.6732.21973": {
+      "sha512": "MkHEz60EU/3XDkr7QcCzdaPNM1rDvtx5ImOPq+Bv98wdUaAi18VEn6Vh0rFiBYiziMNMtugCsvCd6U836fPKjA==",
+      "type": "package",
+      "path": "uipath.pdf.activities/1.1.6732.21973",
+      "files": [
+        "lib/net40-Client/UiPath.PDF.Activities.Design.dll",
+        "lib/net40-Client/UiPath.PDF.Activities.dll",
+        "lib/net40-Client/UiPath.PDF.dll",
+        "lib/net40-Client/x86/pdfium.dll",
+        "uipath.pdf.activities.1.1.6732.21973.nupkg.sha512",
+        "uipath.pdf.activities.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [],
+    ".NETFramework,Version=v4.5.2": [
+      "UiPath.PDF.Activities >= 1.1.6732.21973"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\pierr\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "restore": {
+      "projectUniqueName": "Read PDF",
+      "projectName": "Read PDF",
+      "projectPath": "D:\\Pierrick\\Documents\\US\\Adoption\\webinars\\RPA\\demo\\bonita-ici-demo\\UIPath\\Read PDF",
+      "packagesPath": "C:\\Users\\pierr\\.nuget\\packages\\",
+      "outputPath": "D:\\Pierrick\\Documents\\US\\Adoption\\webinars\\RPA\\demo\\bonita-ici-demo\\UIPath\\Read PDF"
+    },
+    "frameworks": {
+      "net452": {
+        "dependencies": {
+          "UiPath.PDF.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.1.6732.21973, )"
+          }
+        }
+      }
+    }
+  }
+}
