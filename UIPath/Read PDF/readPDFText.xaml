@@ -238,7 +238,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="readPDFText_1" sap:VirtualizedContainerService.HintSize="514,2399" />
+      <sap2010:ViewStateData Id="readPDFText_1" sap:VirtualizedContainerService.HintSize="514,2239" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

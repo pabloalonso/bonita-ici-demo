@@ -144,7 +144,7 @@ public class Second extends JPanel {
 		});
 		
 		duration.setName("duration");
-		TitledBorder durationTitledBorder = new TitledBorder("Duration");
+		TitledBorder durationTitledBorder = new TitledBorder("Duration (months)");
 		durationTitledBorder.setTitleColor(Japp.FOREGROUND_COLOR);
 		duration.setBorder(BorderFactory.createTitledBorder(durationTitledBorder));
 		duration.setCaretColor(Japp.FOREGROUND_COLOR);
