@@ -489,6 +489,15 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_RLk_M3H_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_RLk_NHH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_RLk_NXH_Eei9Z4IY4QeFuA" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_2zx4sH4QEei1d4Upl3J2Dw" name="enterInfoInLegacySystem" definitionId="cmd" event="ON_ENTER" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_2zx4sX4QEei1d4Upl3J2Dw" definitionId="cmd" version="1.0.0" modelVersion="7.6.0-002">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_2zx4sn4QEei1d4Upl3J2Dw" key="command">
+                <expression xmi:type="expression:Expression" xmi:id="_2zx4s34QEei1d4Upl3J2Dw" name="command()" content="import java.time.LocalDate&#xD;&#xA;import java.time.format.DateTimeFormatter&#xD;&#xA;&#xD;&#xA;String[] customerNames = loanRequested.customer.split(&quot; &quot;);&#xD;&#xA;&#xD;&#xA;DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;MMddyyyy&quot;);&#xD;&#xA;&#xD;&#xA;return &quot;\&quot;C:\\Users\\pierr\\AppData\\Local\\UiPath\\app-18.2.3\\UiRobot.exe\&quot; -file \&quot;D:\\Pierrick\\Documents\\US\\Adoption\\webinars\\RPA\\demo\\bonita-ici-demo\\UIPath\\Read PDF\\LegacyBankLoanApplication.xaml\&quot; -input \&quot;{'firstname': '&quot; + customerNames[0] + &quot;', 'lastname': '&quot; + customerNames[1] + &quot;', 'dob': '&quot; + loanRequested.requestDate.format(formatter) + &quot;', 'amount': '&quot; + loanRequested.amount + &quot;', 'duration': '&quot; + loanRequested.durationInMonth + &quot;'}\&quot;&quot;;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2zx4tH4QEei1d4Upl3J2Dw" name="loanRequested" dataType="_RLlm3nH_Eei9Z4IY4QeFuA" className="com.company.model.Loan"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="_RLk_NnH_Eei9Z4IY4QeFuA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_RLk_N3H_Eei9Z4IY4QeFuA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_RLk_OHH_Eei9Z4IY4QeFuA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -892,6 +901,7 @@
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_CGycSXPEEeiw3J4-SJPrKA" type="ACTOR_FILTER" definitionId="single-user" definitionVersion="1.0.0" implementationId="single-user-impl" implementationVersion="1.0.0"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_CGycSnPEEeiw3J4-SJPrKA" type="CONNECTOR" definitionId="GetLoanScoring" definitionVersion="1.0.0" implementationId="GetLoanScoring-impl" implementationVersion="1.0.0"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_CGycS3PEEeiw3J4-SJPrKA" type="CONNECTOR" definitionId="email" definitionVersion="1.0.0" implementationId="email-impl" implementationVersion="1.0.15"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_pPwE0HwUEeilLpu4un3kSw" type="CONNECTOR" definitionId="cmd" definitionVersion="1.0.0" implementationId="cmd-impl" implementationVersion="1.0.0"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_CGycTHPEEeiw3J4-SJPrKA" id="ACTOR_FILTER">
           <children xmi:type="configuration:FragmentContainer" xmi:id="_CGycTXPEEeiw3J4-SJPrKA" id="single-user-impl-1.0.0">
             <fragments xmi:type="configuration:Fragment" xmi:id="_CGycTnPEEeiw3J4-SJPrKA" key="single-user-impl -- 1.0.0" value="bonita-userfilter-single-user-impl-1.0.0-SNAPSHOT.jar" type="ACTOR_FILTER"/>
@@ -910,6 +920,10 @@
           <children xmi:type="configuration:FragmentContainer" xmi:id="_CGycVnPEEeiw3J4-SJPrKA" id="email-impl-1.0.15">
             <fragments xmi:type="configuration:Fragment" xmi:id="_CGycV3PEEeiw3J4-SJPrKA" key="email-impl -- 1.0.15" value="bonita-connector-email-impl-1.0.15.jar" type="CONNECTOR"/>
             <fragments xmi:type="configuration:Fragment" xmi:id="_CGycWHPEEeiw3J4-SJPrKA" key="email-impl -- 1.0.15" value="mail-1.4.5.jar" type="CONNECTOR"/>
+          </children>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_pQXv4HwUEeilLpu4un3kSw" id="cmd-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_pQazMHwUEeilLpu4un3kSw" key="cmd-impl -- 1.0.0" value="processbuilder-0.0.1-SNAPSHOT.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_pQbaQHwUEeilLpu4un3kSw" key="cmd-impl -- 1.0.0" value="cmd-impl-1.0.0.jar" type="CONNECTOR"/>
           </children>
         </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_CGycWXPEEeiw3J4-SJPrKA" id="DATA_TYPES"/>

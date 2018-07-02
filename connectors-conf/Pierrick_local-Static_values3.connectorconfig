@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectorconfiguration:ConnectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" definitionId="cmd" version="1.0.0" name="Pierrick_local-Static_values3" modelVersion="7.6.0-002">
+  <parameters key="command">
+    <expression xsi:type="expression:Expression" name="command()" content="return &quot;\&quot;C:\\Users\\pierr\\AppData\\Local\\UiPath\\app-18.2.3\\UiRobot.exe\&quot; -file \&quot;D:\\Pierrick\\Documents\\US\\Adoption\\webinars\\RPA\\demo\\bonita-ici-demo\\UIPath\\Read PDF\\LegacyBankLoanApplication.xaml\&quot; -input \&quot;{'firstname': 'Pierrick2', 'lastname': 'Voulet2', 'dob': '01281990', 'amount': '100001', 'duration': '61'}\&quot;&quot;;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+  </parameters>
+</connectorconfiguration:ConnectorConfiguration>
