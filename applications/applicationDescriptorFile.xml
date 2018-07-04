@@ -20,7 +20,6 @@
             <applicationPage customPage="custompage_handWritten" token="loans"/>
             <applicationPage customPage="custompage_handWritten" token="accounts"/>
             <applicationPage customPage="custompage_handWritten" token="docs"/>
-            <applicationPage customPage="custompage_handWritten" token="more"/>
         </applicationPages>
         <applicationMenus>
             <applicationMenu applicationPage="loans">
@@ -31,14 +30,6 @@
             </applicationMenu>
             <applicationMenu applicationPage="docs">
                 <displayName>Documents</displayName>
-            </applicationMenu>
-            <applicationMenu>
-                <displayName>More</displayName>
-                <applicationMenus>
-                    <applicationMenu applicationPage="more">
-                        <displayName>a menu</displayName>
-                    </applicationMenu>
-                </applicationMenus>
             </applicationMenu>
         </applicationMenus>
     </application>
