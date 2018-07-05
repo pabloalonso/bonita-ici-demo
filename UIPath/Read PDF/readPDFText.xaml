@@ -146,7 +146,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[&quot;-cp D:\Pierrick\Documents\US\Adoption\webinars\RPA\demo\bonita-ici-demo\UIPath\executecredithistorytask\target\executecredithistorytask-0.0.1-SNAPSHOT.jar com.bonitasoft.rpa.Main &quot; +taskId + &quot; &quot; +equifaxBeacon + &quot; &quot; +transunionFico + &quot; &quot; +experianFair]" DisplayName="Execute task with contract info" FileName="C:\Program Files\Java\jdk1.8.0_171\bin\java.exe" sap2010:WorkflowViewState.IdRef="StartProcess_2" />
+    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[&quot;-cp D:\Pierrick\Documents\US\Adoption\webinars\RPA\demo\bonita-ici-demo\UIPath\executecredithistorytask\target\executecredithistorytask-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.bonitasoft.rpa.Main &quot; +taskId + &quot; &quot; +equifaxBeacon + &quot; &quot; +transunionFico + &quot; &quot; +experianFair]" DisplayName="Execute task with contract info" FileName="C:\Program Files\Java\jdk1.8.0_171\bin\java.exe" sap2010:WorkflowViewState.IdRef="StartProcess_2" />
     <ui:CommentOut DisplayName="Comment out" sap2010:WorkflowViewState.IdRef="CommentOut_6">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -216,7 +216,7 @@
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0895d4f85a098bb2e4785207c3c258c9" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' omit:title='Sample credit report - Adobe Acrobat Reader DC' /&gt;" WaitForReady="INTERACTIVE" />
       </ui:CloseApplication.Target>
     </ui:CloseApplication>
-    <sads:DebugSymbol.Symbol>d2REOlxQaWVycmlja1xEb2N1bWVudHNcVVNcQWRvcHRpb25cd2ViaW5hcnNcUlBBXGRlbW9cYm9uaXRhLWljaS1kZW1vXFVJUGF0aFxSZWFkIFBERlxyZWFkUERGVGV4dC54YW1sFQGVAgGZAgEGAe8BAfMBAQUBuQIBvQIBBAHXAgHcAgEDAV4BzgEBAkcD3AEOAgEBSTRJPwIBAksFS/IBAgESTAV0DQIBEHUFexUCAQ98BYkBFQIBDooBBZQBFQIBDZUBBZUBgQQCAQaWAQXVARUCAQXWAQXaARsCAQNLPEtLAgEUS3pLvgECARNMV0xhAgERlQE8lQHkAgIBCJUBnAOVAc0DAgEH2AGYAdgBjQICAQQ=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d2REOlxQaWVycmlja1xEb2N1bWVudHNcVVNcQWRvcHRpb25cd2ViaW5hcnNcUlBBXGRlbW9cYm9uaXRhLWljaS1kZW1vXFVJUGF0aFxSZWFkIFBERlxyZWFkUERGVGV4dC54YW1sFQGVAgGZAgEGAe8BAfMBAQUBuQIBvQIBBAHXAgHcAgEDAV4BzgEBAkcD3AEOAgEBSTRJPwIBAksFS/IBAgESTAV0DQIBEHUFexUCAQ98BYkBFQIBDooBBZQBFQIBDZUBBZUBlwQCAQaWAQXVARUCAQXWAQXaARsCAQNLPEtLAgEUS3pLvgECARNMV0xhAgERlQE8lQH6AgIBCJUBsgOVAeMDAgEH2AGYAdgBjQICAQQ=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -326,7 +326,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="readPDFText_1" sap:VirtualizedContainerService.HintSize="552,3726" />
+      <sap2010:ViewStateData Id="readPDFText_1" sap:VirtualizedContainerService.HintSize="552,3406" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

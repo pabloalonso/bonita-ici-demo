@@ -22,7 +22,7 @@ import org.bonitasoft.engine.session.SessionNotFoundException;
 import org.bonitasoft.engine.util.APITypeManager;
 
 public class Main {
-	static public void Main(String[] args) throws BonitaHomeNotSetException, ServerAPIException, UnknownAPITypeException, UnknownUserException, LoginException, UserTaskNotFoundException, FlowNodeExecutionException, NumberFormatException, ContractViolationException, SessionNotFoundException, LogoutException {
+	public static void main(String[] args) throws BonitaHomeNotSetException, ServerAPIException, UnknownAPITypeException, UnknownUserException, LoginException, UserTaskNotFoundException, FlowNodeExecutionException, NumberFormatException, ContractViolationException, SessionNotFoundException, LogoutException {
 		Map<String, String> settings = new HashMap<String, String>();
 		settings.put("server.url", "http://localhost:8080");
 		settings.put("application.name", "bonita");
