@@ -2,7 +2,7 @@
   "designerVersion" : "1.8.0",
   "id" : "notifyCreditHistory",
   "name" : "notifyCreditHistory",
-  "lastUpdate" : 1530833963002,
+  "lastUpdate" : 1530843787510,
   "rows" : [ [ {
     "type" : "formContainer",
     "dimension" : {
@@ -721,7 +721,7 @@
     },
     "body" : {
       "type" : "expression",
-      "value" : "return {\n    \"command\": \"\\\"C:\\\\Users\\\\pierr\\\\AppData\\\\Local\\\\UiPath\\\\app-18.2.3\\\\UiRobot.exe\\\" -file \\\"D:\\\\Pierrick\\\\Documents\\\\US\\\\Adoption\\\\webinars\\\\RPA\\\\demo\\\\bonita-ici-demo\\\\UIPath\\\\Read PDF\\\\readPDFText.xaml\\\"  -input \\\"{'pdfLocation':'\" + $data.pdfLocation + \"', 'taskId': '\" + $data.taskId + \"', 'equifaxBeacon': '756', 'transunionFico': '774', 'experianFair': '771'}\\\"\"\n};\n",
+      "value" : "return {\n    \"command\": \"\\\"C:/Users/pierr/AppData/Local/UiPath/app-18.2.3/UiRobot.exe\\\" -file \\\"D:\\\\Pierrick\\\\Documents\\\\US\\\\Adoption\\\\webinars\\\\RPA\\\\demo\\\\bonita-ici-demo\\\\UIPath\\\\Read PDF\\\\readPDFText.xaml\\\"  -input \\\"{'pdfLocation':'\" + $data.pdfLocation + \"', 'taskId': '\" + $data.taskId + \"'}\\\"\"\n};\n",
       "exposed" : false
     },
     "context" : {
@@ -746,7 +746,7 @@
     },
     "pdfLocation" : {
       "type" : "constant",
-      "value" : "D:/Pierrick/Desktop/credit-history.pdf",
+      "value" : "credit-history.pdf",
       "exposed" : false
     }
   },
