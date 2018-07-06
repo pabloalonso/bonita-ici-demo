@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="readPDFText" this:readPDFText.pdfLocation="D:\Pierrick\Documents\studios\BonitaStudioSubscription-7.7.0\rpa\bonita-ici-demo\attachments\credit-history.pdf" this:readPDFText.equifaxBeacon="750" this:readPDFText.transunionFico="750" this:readPDFText.experianFair="750" this:readPDFText.taskId="1"
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="readPDFText" this:readPDFText.pdfLocation="credit-history.pdf" this:readPDFText.equifaxBeacon="756" this:readPDFText.transunionFico="774" this:readPDFText.experianFair="771" this:readPDFText.taskId="1"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
@@ -72,7 +72,7 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="10,521.19" Name="totalEndingBalance" />
     </Sequence.Variables>
-    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[pdfLocation]" DisplayName="Open 'Acrobat Program'" FileName="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[&quot;D:\Pierrick\Desktop\&quot; + pdfLocation]" DisplayName="Open 'Acrobat Program'" FileName="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
     <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap2010:WorkflowViewState.IdRef="Delay_1">
       <TextExpression.Namespaces>
         <sco:Collection x:TypeArguments="x:String">
@@ -216,7 +216,7 @@
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0895d4f85a098bb2e4785207c3c258c9" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' omit:title='Sample credit report - Adobe Acrobat Reader DC' /&gt;" WaitForReady="INTERACTIVE" />
       </ui:CloseApplication.Target>
     </ui:CloseApplication>
-    <sads:DebugSymbol.Symbol>d2REOlxQaWVycmlja1xEb2N1bWVudHNcVVNcQWRvcHRpb25cd2ViaW5hcnNcUlBBXGRlbW9cYm9uaXRhLWljaS1kZW1vXFVJUGF0aFxSZWFkIFBERlxyZWFkUERGVGV4dC54YW1sFQGVAgGZAgEGAe8BAfMBAQUBuQIBvQIBBAHXAgHZAgEDAV4BzgEBAkcD3AEOAgEBSTRJPwIBAksFS/IBAgESTAV0DQIBEHUFexUCAQ98BYkBFQIBDooBBZQBFQIBDZUBBZUBlwQCAQaWAQXVARUCAQXWAQXaARsCAQNLPEtLAgEUS3pLvgECARNMV0xhAgERlQE8lQH6AgIBCJUBsgOVAeMDAgEH2AGYAdgBjQICAQQ=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d2REOlxQaWVycmlja1xEb2N1bWVudHNcVVNcQWRvcHRpb25cd2ViaW5hcnNcUlBBXGRlbW9cYm9uaXRhLWljaS1kZW1vXFVJUGF0aFxSZWFkIFBERlxyZWFkUERGVGV4dC54YW1sFQG4AQG8AQEGAZIBAZYBAQUB3AEB4AEBBAH6AQH8AQEDAV4BcQECRwPcAQ4CAQFJNEk/AgECSwVLlQICARJMBXQNAgEQdQV7FQIBD3wFiQEVAgEOigEFlAEVAgENlQEFlQGXBAIBBpYBBdUBFQIBBdYBBdoBGwIBA0s8S24CARRLnQFL4QECARNMV0xhAgERlQE8lQH6AgIBCJUBsgOVAeMDAgEH2AGYAdgBjQICAQQ=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
