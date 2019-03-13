@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_RLk98HH_Eei9Z4IY4QeFuA" name="LoanManagement" author="nicolas" bonitaVersion="7.7.0" bonitaModelVersion="7.6.0-002" configId="ACED000574001E4C6F616E4D616E6167656D656E74372E362E302D303032372E372E307370">
+  <process:MainProcess xmi:id="_RLk98HH_Eei9Z4IY4QeFuA" name="LoanManagement" author="nicolas" bonitaVersion="7.7.1" bonitaModelVersion="7.6.0-002" configId="ACED000574001E4C6F616E4D616E6167656D656E74372E362E302D303032372E372E317370">
     <elements xmi:type="process:Pool" xmi:id="_RLk98XH_Eei9Z4IY4QeFuA" name="RequestLoan" welcomePageInternal="false" basedOnLookAndFeel="Default Application" version="1.3.1" displayName="Request a Loan">
       <elements xmi:type="process:Lane" xmi:id="_RLk98nH_Eei9Z4IY4QeFuA" name="Customer" actor="_RLk_7nH_Eei9Z4IY4QeFuA">
         <elements xmi:type="process:StartEvent" xmi:id="_RLk983H_Eei9Z4IY4QeFuA" name="Request a Loan" outgoing="_RLk_snH_Eei9Z4IY4QeFuA">
@@ -941,58 +941,58 @@
         <condition xmi:type="expression:Expression" xmi:id="_A9SksYCVEeiGGK_yHAMQeg" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_RLk_7nH_Eei9Z4IY4QeFuA" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
-      <configurations xmi:type="configuration:Configuration" xmi:id="_THcdcICUEeiGGK_yHAMQeg" name="Production" version="7.6.0-002" username="walter.bates" password="bpm">
-        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_THcdcYCUEeiGGK_yHAMQeg">
-          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_THcdcoCUEeiGGK_yHAMQeg" name="Employee actor">
-            <groups xmi:type="actormapping:Groups" xmi:id="_THcdc4CUEeiGGK_yHAMQeg"/>
-            <memberships xmi:type="actormapping:Membership" xmi:id="_THcddICUEeiGGK_yHAMQeg"/>
-            <roles xmi:type="actormapping:Roles" xmi:id="_THcddYCUEeiGGK_yHAMQeg">
+      <configurations xmi:type="configuration:Configuration" xmi:id="_QlJKEIXJEeirTuuA-yUhOg" name="Production" version="7.6.0-002" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_QlJKEYXJEeirTuuA-yUhOg">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_QlJKEoXJEeirTuuA-yUhOg" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_QlJKE4XJEeirTuuA-yUhOg"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_QlJKFIXJEeirTuuA-yUhOg"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_QlJKFYXJEeirTuuA-yUhOg">
               <role>member</role>
             </roles>
-            <users xmi:type="actormapping:Users" xmi:id="_THcddoCUEeiGGK_yHAMQeg"/>
+            <users xmi:type="actormapping:Users" xmi:id="_QlJKFoXJEeirTuuA-yUhOg"/>
           </actorMapping>
         </actorMappings>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_THcdd4CUEeiGGK_yHAMQeg" type="CONNECTOR" definitionId="scripting-groovy-script" definitionVersion="1.0.1" implementationId="scripting-groovy-script-impl" implementationVersion="1.0.2"/>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_THcdeICUEeiGGK_yHAMQeg" type="CONNECTOR" definitionId="scripting-groovy" definitionVersion="1.0.2" implementationId="scripting-groovy-impl" implementationVersion="1.0.12"/>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_THcdeYCUEeiGGK_yHAMQeg" type="ACTOR_FILTER" definitionId="single-user" definitionVersion="1.0.0" implementationId="single-user-impl" implementationVersion="1.0.0"/>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_THcdeoCUEeiGGK_yHAMQeg" type="CONNECTOR" definitionId="GetLoanScoring" definitionVersion="1.0.0" implementationId="GetLoanScoringV2-impl" implementationVersion="2.0.0"/>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_THcde4CUEeiGGK_yHAMQeg" type="CONNECTOR" definitionId="email" definitionVersion="1.0.0" implementationId="email-impl" implementationVersion="1.0.15"/>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_THcdfICUEeiGGK_yHAMQeg" type="CONNECTOR" definitionId="cmd" definitionVersion="1.0.0" implementationId="cmd-impl" implementationVersion="1.0.0"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_THcdfYCUEeiGGK_yHAMQeg" id="ACTOR_FILTER">
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_THcdfoCUEeiGGK_yHAMQeg" id="single-user-impl-1.0.0">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_THcdf4CUEeiGGK_yHAMQeg" key="single-user-impl -- 1.0.0" value="bonita-userfilter-single-user-impl-1.0.0-SNAPSHOT.jar" type="ACTOR_FILTER"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_QlJKF4XJEeirTuuA-yUhOg" type="CONNECTOR" definitionId="scripting-groovy-script" definitionVersion="1.0.1" implementationId="scripting-groovy-script-impl" implementationVersion="1.0.2"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_QlJKGIXJEeirTuuA-yUhOg" type="CONNECTOR" definitionId="scripting-groovy" definitionVersion="1.0.2" implementationId="scripting-groovy-impl" implementationVersion="1.0.12"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_QlJKGYXJEeirTuuA-yUhOg" type="ACTOR_FILTER" definitionId="single-user" definitionVersion="1.0.0" implementationId="single-user-impl" implementationVersion="1.0.0"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_QlJKGoXJEeirTuuA-yUhOg" type="CONNECTOR" definitionId="GetLoanScoring" definitionVersion="1.0.0" implementationId="GetLoanScoringV2-impl" implementationVersion="2.0.0"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_QlJKG4XJEeirTuuA-yUhOg" type="CONNECTOR" definitionId="email" definitionVersion="1.0.0" implementationId="email-impl" implementationVersion="1.0.15"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_QlJKHIXJEeirTuuA-yUhOg" type="CONNECTOR" definitionId="cmd" definitionVersion="1.0.0" implementationId="cmd-impl" implementationVersion="1.0.0"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_QlJKHYXJEeirTuuA-yUhOg" id="ACTOR_FILTER">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_QlJKHoXJEeirTuuA-yUhOg" id="single-user-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_QlJKH4XJEeirTuuA-yUhOg" key="single-user-impl -- 1.0.0" value="bonita-userfilter-single-user-impl-1.0.0-SNAPSHOT.jar" type="ACTOR_FILTER"/>
           </children>
         </processDependencies>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_THcdgICUEeiGGK_yHAMQeg" id="CONNECTOR">
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_THcdgYCUEeiGGK_yHAMQeg" id="scripting-groovy-script-impl-1.0.2">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_THcdgoCUEeiGGK_yHAMQeg" key="scripting-groovy-script-impl -- 1.0.2" value="bonita-connector-scripting-groovy-script-impl-1.0.2.jar" type="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_QlJKIIXJEeirTuuA-yUhOg" id="CONNECTOR">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_QlJKIYXJEeirTuuA-yUhOg" id="scripting-groovy-script-impl-1.0.2">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_QlJKIoXJEeirTuuA-yUhOg" key="scripting-groovy-script-impl -- 1.0.2" value="bonita-connector-scripting-groovy-script-impl-1.0.2.jar" type="CONNECTOR"/>
           </children>
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_THcdg4CUEeiGGK_yHAMQeg" id="scripting-groovy-impl-1.0.12">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_THcdhICUEeiGGK_yHAMQeg" key="scripting-groovy-impl -- 1.0.12" value="bonita-connector-scripting-groovy-impl-1.0.12.jar" type="CONNECTOR"/>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_QlJKI4XJEeirTuuA-yUhOg" id="scripting-groovy-impl-1.0.12">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_QlJKJIXJEeirTuuA-yUhOg" key="scripting-groovy-impl -- 1.0.12" value="bonita-connector-scripting-groovy-impl-1.0.12.jar" type="CONNECTOR"/>
           </children>
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_THcdh4CUEeiGGK_yHAMQeg" id="email-impl-1.0.15">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_THcdiICUEeiGGK_yHAMQeg" key="email-impl -- 1.0.15" value="bonita-connector-email-impl-1.0.15.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_THcdiYCUEeiGGK_yHAMQeg" key="email-impl -- 1.0.15" value="mail-1.4.5.jar" type="CONNECTOR"/>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_QlJKJYXJEeirTuuA-yUhOg" id="email-impl-1.0.15">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_QlJKJoXJEeirTuuA-yUhOg" key="email-impl -- 1.0.15" value="bonita-connector-email-impl-1.0.15.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_QlJKJ4XJEeirTuuA-yUhOg" key="email-impl -- 1.0.15" value="mail-1.4.5.jar" type="CONNECTOR"/>
           </children>
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_THcdioCUEeiGGK_yHAMQeg" id="cmd-impl-1.0.0">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_THcdi4CUEeiGGK_yHAMQeg" key="cmd-impl -- 1.0.0" value="processbuilder-0.0.1-SNAPSHOT.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_THcdjICUEeiGGK_yHAMQeg" key="cmd-impl -- 1.0.0" value="cmd-impl-1.0.0.jar" type="CONNECTOR"/>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_QlJKKIXJEeirTuuA-yUhOg" id="cmd-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_QlJKKYXJEeirTuuA-yUhOg" key="cmd-impl -- 1.0.0" value="processbuilder-0.0.1-SNAPSHOT.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_QlJKKoXJEeirTuuA-yUhOg" key="cmd-impl -- 1.0.0" value="cmd-impl-1.0.0.jar" type="CONNECTOR"/>
           </children>
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_THcdjYCUEeiGGK_yHAMQeg" id="GetLoanScoringV2-impl-2.0.0">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_THcdjoCUEeiGGK_yHAMQeg" key="GetLoanScoringV2-impl -- 2.0.0" value="GetLoanScoringV2-impl-2.0.0.jar" type="CONNECTOR"/>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_QlJKK4XJEeirTuuA-yUhOg" id="GetLoanScoringV2-impl-2.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_QlJKLIXJEeirTuuA-yUhOg" key="GetLoanScoringV2-impl -- 2.0.0" value="GetLoanScoringV2-impl-2.0.0.jar" type="CONNECTOR"/>
           </children>
         </processDependencies>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_THcdj4CUEeiGGK_yHAMQeg" id="DATA_TYPES"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_THcdkICUEeiGGK_yHAMQeg" id="GROOVY_SCRIPT"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_THcdkYCUEeiGGK_yHAMQeg" id="OTHER"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_THcdkoCUEeiGGK_yHAMQeg" id="DATA_TYPES"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_THcdk4CUEeiGGK_yHAMQeg" id="GROOVY_SCRIPT"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_THcdlICUEeiGGK_yHAMQeg" id="VALIDATOR"/>
-        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_THcdlYCUEeiGGK_yHAMQeg" id="OTHER"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_THcdloCUEeiGGK_yHAMQeg" name="botActivated" value="true" typeClassname="java.lang.Boolean"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_THcdl4CUEeiGGK_yHAMQeg" name="smtpPassword" value="dfghj65789)IU" typeClassname="java.lang.String"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_THcdmICUEeiGGK_yHAMQeg" name="localUIRobotExecutable" value="C:\Users\pierr\AppData\Local\UiPath\app-18.2.3\UiRobot.exe" typeClassname="java.lang.String"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_THcdmYCUEeiGGK_yHAMQeg" name="uiPathLegacyBankSystemDescriptionFile" value="D:\Pierrick\Documents\US\Adoption\webinars\RPA\demo\bonita-ici-demo\UIPath\Read PDF\LegacyBankLoanApplication.xaml" typeClassname="java.lang.String"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_QlJKLYXJEeirTuuA-yUhOg" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_QlJKLoXJEeirTuuA-yUhOg" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_QlJKL4XJEeirTuuA-yUhOg" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_QlJKMIXJEeirTuuA-yUhOg" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_QlJKMYXJEeirTuuA-yUhOg" id="GROOVY_SCRIPT"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_QlJKMoXJEeirTuuA-yUhOg" id="VALIDATOR"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_QlJKM4XJEeirTuuA-yUhOg" id="OTHER"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_QlJKNIXJEeirTuuA-yUhOg" name="botActivated" value="true" typeClassname="java.lang.Boolean"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_QlJKNYXJEeirTuuA-yUhOg" name="smtpPassword" value="dfghj65789)IU" typeClassname="java.lang.String"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_QlJKNoXJEeirTuuA-yUhOg" name="localUIRobotExecutable" value="C:\Users\bonitasoft\AppData\Local\UiPath\app-18.2.3\UiRobot.exe" typeClassname="java.lang.String"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="_QlJKN4XJEeirTuuA-yUhOg" name="uiPathLegacyBankSystemDescriptionFile" value="D:\Studios\7.7.1\workspace\bonita-ici-demo-git\UIPath\Read PDF\LegacyBankLoanApplication.xaml" typeClassname="java.lang.String"/>
       </configurations>
       <parameters xmi:type="parameter:Parameter" xmi:id="_RLlACXH_Eei9Z4IY4QeFuA" name="botActivated" typeClassname="java.lang.Boolean"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_4_p4oHPDEeiw3J4-SJPrKA" name="smtpPassword" typeClassname="java.lang.String"/>

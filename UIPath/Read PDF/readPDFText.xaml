@@ -72,7 +72,7 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="10,521.19" Name="totalEndingBalance" />
     </Sequence.Variables>
-    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[&quot;D:\Pierrick\Desktop\&quot; + pdfLocation]" DisplayName="Open 'Acrobat Program'" FileName="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[&quot;D:\Studios\7.7.1\workspace\bonita-ici-demo-git\attachments\&quot; + pdfLocation]" DisplayName="Open 'Acrobat Program'" FileName="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
     <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:05" sap2010:WorkflowViewState.IdRef="Delay_1">
       <TextExpression.Namespaces>
         <sco:Collection x:TypeArguments="x:String">
@@ -114,13 +114,13 @@
         </sco:Collection>
       </TextExpression.References>
     </Delay>
-    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[&quot;-cp D:\Pierrick\Documents\US\Adoption\webinars\RPA\demo\bonita-ici-demo\UIPath\executecredithistorytask\target\executecredithistorytask-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.bonitasoft.rpa.Main &quot; +taskId + &quot; &quot; +equifaxBeacon + &quot; &quot; +transunionFico + &quot; &quot; +experianFair]" DisplayName="Execute task with contract info" FileName="C:\Program Files\Java\jdk1.8.0_171\bin\java.exe" sap2010:WorkflowViewState.IdRef="StartProcess_2" />
+    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[&quot;-cp D:\Studios\7.7.1\workspace\bonita-ici-demo-git\UIPath\executecredithistorytask\target\executecredithistorytask-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.bonitasoft.rpa.Main &quot; +taskId + &quot; &quot; +equifaxBeacon + &quot; &quot; +transunionFico + &quot; &quot; +experianFair]" DisplayName="Execute task with contract info" FileName="C:\Program Files\Java\jdk1.8.0_171\bin\java.exe" sap2010:WorkflowViewState.IdRef="StartProcess_2" />
     <ui:CloseApplication DisplayName="Close application 'AcroRd32.exe Sample'" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
       <ui:CloseApplication.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0895d4f85a098bb2e4785207c3c258c9" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' omit:title='Sample credit report - Adobe Acrobat Reader DC' /&gt;" WaitForReady="INTERACTIVE" />
       </ui:CloseApplication.Target>
     </ui:CloseApplication>
-    <sads:DebugSymbol.Symbol>d2REOlxQaWVycmlja1xEb2N1bWVudHNcVVNcQWRvcHRpb25cd2ViaW5hcnNcUlBBXGRlbW9cYm9uaXRhLWljaS1kZW1vXFVJUGF0aFxSZWFkIFBERlxyZWFkUERGVGV4dC54YW1sEQG4AQG8AQEGAZIBAZYBAQUB3AEB4AEBBAH6AQH8AQEDAV4BcQECRwN8DgIBAUk0ST8CAQJLBUuVAgIBDkwFdA0CAQx1BXWXBAIBBXYFehsCAQNLPEtuAgEQS50BS+EBAgEPTFdMYQIBDXU8dfoCAgEHdbIDdeMDAgEGeJgBeI0CAgEE</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d09EOlxTdHVkaW9zXDcuNy4xXHdvcmtzcGFjZVxib25pdGEtaWNpLWRlbW8tZ2l0XFVJUGF0aFxSZWFkIFBERlxyZWFkUERGVGV4dC54YW1sEQG4AQG8AQEGAZIBAZYBAQUB3AEB4AEBBAH6AQH8AQEDAV4BcQECRwN8DgIBAUk0ST8CAQJLBUu8AgIBDkwFdA0CAQx1BXWCBAIBBXYFehsCAQNLPEuVAQIBEEvEAUuIAgIBD0xXTGECAQ11PHXlAgIBB3WdA3XOAwIBBniYAXiNAgIBBA==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>

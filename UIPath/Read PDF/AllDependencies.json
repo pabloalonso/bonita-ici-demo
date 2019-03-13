@@ -37,15 +37,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pierr\\.nuget\\packages\\": {}
+    "C:\\Users\\bonitasoft\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Read PDF",
       "projectName": "Read PDF",
-      "projectPath": "D:\\Pierrick\\Documents\\US\\Adoption\\webinars\\RPA\\demo\\bonita-ici-demo\\UIPath\\Read PDF",
-      "packagesPath": "C:\\Users\\pierr\\.nuget\\packages\\",
-      "outputPath": "D:\\Pierrick\\Documents\\US\\Adoption\\webinars\\RPA\\demo\\bonita-ici-demo\\UIPath\\Read PDF"
+      "projectPath": "D:\\Studios\\7.7.1\\workspace\\bonita-ici-demo-git\\UIPath\\Read PDF",
+      "packagesPath": "C:\\Users\\bonitasoft\\.nuget\\packages\\",
+      "outputPath": "D:\\Studios\\7.7.1\\workspace\\bonita-ici-demo-git\\UIPath\\Read PDF"
     },
     "frameworks": {
       "net452": {

@@ -69,7 +69,7 @@
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="LegacyBankLoanApplication" sap2010:WorkflowViewState.IdRef="Sequence_10">
-    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="-cp D:\Pierrick\Documents\US\Adoption\webinars\RPA\demo\bonita-ici-demo\UIPath\legacybankterminal\target\legacybankterminal-0.0.1-SNAPSHOT.jar com.bonitasoft.rpa.Japp" DisplayName="Open 'Legacy Application'" FileName="C:\Program Files\Java\jdk1.8.0_171\bin\java.exe" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+    <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="-cp D:\Studios\7.7.1\workspace\bonita-ici-demo-git\UIPath\legacybankterminal\target\legacybankterminal-0.0.1-SNAPSHOT.jar com.bonitasoft.rpa.Japp" DisplayName="Open 'Legacy Application'" FileName="C:\Program Files\Java\jdk1.8.0_171\bin\java.exe" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
     <Delay Duration="00:00:05" sap2010:WorkflowViewState.IdRef="Delay_1" />
     <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Enter CREATE" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="%[k(enter)]">
       <ui:TypeInto.Target>
@@ -124,7 +124,7 @@
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ab2ae29981c5a5115630e924791632a3" Selector="&lt;wnd app='java.exe' cls='SunAwtFrame' title='Loan application' /&gt;&lt;java name='EXIT' role='push button' /&gt;" WaitForReady="INTERACTIVE" />
       </ui:TypeInto.Target>
     </ui:TypeInto>
-    <sads:DebugSymbol.Symbol>d3JEOlxQaWVycmlja1xEb2N1bWVudHNcVVNcQWRvcHRpb25cd2ViaW5hcnNcUlBBXGRlbW9cYm9uaXRhLWljaS1kZW1vXFVJUGF0aFxSZWFkIFBERlxMZWdhY3lCYW5rTG9hbkFwcGxpY2F0aW9uLnhhbWw2AawBAbUBAQYBeAGCAQEFAdoBAeUBAQQBjQIBlAIBAwG+AgHCAgECRwOAAQ4CAQFIBUj7AgIBNEkFSUwCATJKBU4TAgEvTwVPTAIBLVAFVBMCASlVBVVMAgEnVgVaEwIBI1sFW0wCASFcBWATAgEdYQVhTAIBG2IFZhMCARdnBWdMAgEVaAVsEwIBEW0FbUwCAQ9uBXITAgEMcwVzTAIBCnQFeBMCAQd5BXlMAgEFegV+EwIBAkg8SOQBAgE2SJYCSMcCAgE1SRVJHwIBM0yYAUyQAgIBMUqSAkqfAgIBME8VTx8CAS5SmAFSgwICASxQlQJQuQICASpVFVUfAgEoWJgBWIMCAgEmVpQCVrcCAgEkWxVbHwIBIl6YAV6DAgIBIFyPAlytAgIBHmEVYR8CARxkmAFkgwICARpikgJiswICARhnFWcfAgEWapgBaoMCAgEUaJQCaLcCAgESbRVtHwIBEHCYAXCOAgIBDm6QAm6dAgIBDXMVcx8CAQt2mAF2jAICAQl0jgJ0mwICAQh5FXkfAgEGfJgBfI4CAgEEepACerYCAgED</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d11EOlxTdHVkaW9zXDcuNy4xXHdvcmtzcGFjZVxib25pdGEtaWNpLWRlbW8tZ2l0XFVJUGF0aFxSZWFkIFBERlxMZWdhY3lCYW5rTG9hbkFwcGxpY2F0aW9uLnhhbWw2AawBAbUBAQYBeAGCAQEFAdoBAeUBAQQBjQIBlAIBAwG+AgHCAgECRwOAAQ4CAQFIBUjmAgIBNEkFSUwCATJKBU4TAgEvTwVPTAIBLVAFVBMCASlVBVVMAgEnVgVaEwIBI1sFW0wCASFcBWATAgEdYQVhTAIBG2IFZhMCARdnBWdMAgEVaAVsEwIBEW0FbUwCAQ9uBXITAgEMcwVzTAIBCnQFeBMCAQd5BXlMAgEFegV+EwIBAkg8SM8BAgE2SIECSLICAgE1SRVJHwIBM0yYAUyQAgIBMUqSAkqfAgIBME8VTx8CAS5SmAFSgwICASxQlQJQuQICASpVFVUfAgEoWJgBWIMCAgEmVpQCVrcCAgEkWxVbHwIBIl6YAV6DAgIBIFyPAlytAgIBHmEVYR8CARxkmAFkgwICARpikgJiswICARhnFWcfAgEWapgBaoMCAgEUaJQCaLcCAgESbRVtHwIBEHCYAXCOAgIBDm6QAm6dAgIBDXMVcx8CAQt2mAF2jAICAQl0jgJ0mwICAQh5FXkfAgEGfJgBfI4CAgEEepACerYCAgED</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>

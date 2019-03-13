@@ -2,7 +2,7 @@
   "designerVersion" : "1.8.0",
   "id" : "notifyCreditHistory",
   "name" : "notifyCreditHistory",
-  "lastUpdate" : 1530843787510,
+  "lastUpdate" : 1531396658815,
   "rows" : [ [ {
     "type" : "formContainer",
     "dimension" : {
@@ -721,7 +721,7 @@
     },
     "body" : {
       "type" : "expression",
-      "value" : "return {\n    \"command\": \"\\\"C:/Users/pierr/AppData/Local/UiPath/app-18.2.3/UiRobot.exe\\\" -file \\\"D:\\\\Pierrick\\\\Documents\\\\US\\\\Adoption\\\\webinars\\\\RPA\\\\demo\\\\bonita-ici-demo\\\\UIPath\\\\Read PDF\\\\readPDFText.xaml\\\"  -input \\\"{'pdfLocation':'\" + $data.pdfLocation + \"', 'taskId': '\" + $data.taskId + \"'}\\\"\"\n};\n",
+      "value" : "return {\n    \"command\": \"\\\"C:/Users/bonitasoft/AppData/Local/UiPath/app-18.2.3/UiRobot.exe\\\" -file \\\"D:\\\\Studios\\\\7.7.1\\\\workspace\\\\bonita-ici-demo-git\\\\UIPath\\\\Read PDF\\\\readPDFText.xaml\\\"  -input \\\"{'pdfLocation':'\" + $data.pdfLocation + \"', 'taskId': '\" + $data.taskId + \"'}\\\"\"\n};\n",
       "exposed" : false
     },
     "context" : {
